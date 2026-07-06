@@ -1,0 +1,52 @@
+title: Filoclastos
+tagline: "L'Italia in dati e fatti — ricerca assistita da IA, commento umano dove serve"
+description: >
+  Filoclastos raccoglie, verifica e mette in relazione dati pubblici italiani —
+  spesa pubblica, proprietà societaria, carriere politiche, cornici normative, e
+  altro nel tempo — con ricerca assistita da intelligenza artificiale, rigore
+  metodologico e un commento umano dove il dato da solo non basta. Le
+  conclusioni restano al lettore.
+url: "https://filoclastos.it"
+lang: it
+
+# Struttura dei "Titoli" tematici, in ordine di comparsa in home
+titoli:
+  - numero: "I"
+    slug: spesa-pubblica
+    titolo: "Della spesa pubblica"
+    sommario: "Bilanci, flussi e destinazione della finanza pubblica italiana ed europea."
+    stato: "in sviluppo"
+  - numero: "II"
+    slug: proprieta-societarie
+    titolo: "Della proprietà societaria"
+    sommario: "Strutture di controllo, azionariato e catene proprietarie delle società rilevanti."
+    stato: "in sviluppo"
+  - numero: "III"
+    slug: persone
+    titolo: "Delle persone"
+    sommario: "Traiettorie di carriera tra incarichi pubblici e privati — le porte girevoli."
+    stato: "in sviluppo"
+  - numero: "IV"
+    slug: norme
+    titolo: "Delle norme"
+    sommario: "Il quadro regolatorio e di vigilanza che governa i tre ambiti precedenti."
+    stato: "in sviluppo"
+
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

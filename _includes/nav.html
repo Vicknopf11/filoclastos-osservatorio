@@ -1,0 +1,8 @@
+<nav class="nav" aria-label="Navigazione principale">
+  {% for t in site.titoli %}
+    <a href="{{ '/' | append: t.slug | append: '/' | relative_url }}"
+       {% if page.url contains t.slug %}aria-current="page"{% endif %}>{{ t.titolo }}</a>
+  {% endfor %}
+  <a href="{{ '/metodologia/' | relative_url }}" {% if page.url contains 'metodologia' %}aria-current="page"{% endif %}>Metodologia</a>
+  <a href="{{ '/changelog/' | relative_url }}" {% if page.url contains 'changelog' %}aria-current="page"{% endif %}>Changelog</a>
+</nav>
