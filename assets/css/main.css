@@ -131,13 +131,7 @@ a:focus-visible, button:focus-visible {
 }
 
 /* the seal / signature element */
-.timbro {
-  width: 92px;
-  height: 92px;
-  flex-shrink: 0;
-  color: var(--gold);
-}
-.timbro text { font-family: var(--font-mono); }
+.timbro { width: 92px; height: 92px; flex-shrink: 0; object-fit: contain; }
 
 /* ---------- nav ---------- */
 
