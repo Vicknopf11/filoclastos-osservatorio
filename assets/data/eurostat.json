@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-06-30T00:00:00+00:00",
+  "year": "2023",
+  "status": "seed",
+  "source": "Eurostat — gov_10a_main, gov_10a_exp, gov_10dd_edpt1 (settore S13); compilazione iniziale, non ancora aggiornata dalla Action automatica",
+  "source_url": "https://ec.europa.eu/eurostat/web/government-finance-statistics",
+  "totale":     { "EL": 54.8, "FR": 57.3, "AT": 56.7, "BE": 56.4, "FI": 56.2, "IT": 56.1, "DK": 54.3, "SE": 52.6, "PT": 51.0, "DE": 48.5, "NL": 44.9, "ES": 43.8 },
+  "pensioni":   { "EL": 18.5, "FR": 23.3, "AT": 21.2, "BE": 20.1, "FI": 25.6, "IT": 21.0, "DK": 19.7, "SE": 18.9, "PT": 16.4, "DE": 19.5, "NL": 16.4, "ES": 18.5 },
+  "sanita":     { "EL": 5.9,  "FR": 8.5,  "AT": 7.8,  "BE": 8.2,  "FI": 7.5,  "IT": 6.7,  "DK": 9.2,  "SE": 8.9,  "PT": 6.4,  "DE": 7.7,  "NL": 7.5,  "ES": 7.4 },
+  "istruzione": { "EL": 3.8,  "FR": 5.1,  "AT": 5.0,  "BE": 5.9,  "FI": 5.5,  "IT": 4.0,  "DK": 6.5,  "SE": 6.8,  "PT": 4.8,  "DE": 4.6,  "NL": 5.3,  "ES": 4.5 },
+  "interessi":  { "EL": 3.1,  "FR": 2.0,  "AT": 1.7,  "BE": 2.5,  "FI": 0.8,  "IT": 4.3,  "DK": 0.5,  "SE": 0.4,  "PT": 2.8,  "DE": 1.1,  "NL": 0.8,  "ES": 2.3 },
+  "debito":     { "EL": 161, "IT": 137, "FR": 111, "BE": 105, "ES": 108, "PT": 99, "AT": 82, "DE": 66, "FI": 73, "IE": 43, "SE": 33, "NL": 48, "DK": 29 },
+  "ok": ["totale", "pensioni", "sanita", "istruzione", "interessi", "debito"],
+  "errori": []
+}
