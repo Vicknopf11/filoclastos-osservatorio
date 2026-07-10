@@ -12,7 +12,7 @@ title: "Titolo IV — Delle norme"
 
 <nav aria-label="Sezioni" style="margin:28px 0 36px;padding:14px 18px;background:rgba(31,44,66,0.05);border-radius:4px;">
   <p style="font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--gold);margin:0 0 10px">Sezioni</p>
-  <ol style="margin:0;padding-left:18px;font-size:15px;line-height:2;color:var(--teal);">
+  <ol style="margin:0;padding-left:18px;font-size:15px;line-height:2;">
     <li><a href="#corpus">Il corpus normativo</a></li>
     <li><a href="#gerarchia">Gerarchia delle fonti</a></li>
     <li><a href="#settori">Distribuzione per settore</a></li>
@@ -28,18 +28,18 @@ title: "Titolo IV — Delle norme"
   <strong>Nota metodologica.</strong> Il numero esatto di leggi vigenti in Italia non è desumibile da un unico registro ufficiale consolidato. I dati qui presentati sono stime derivate da fonti accademiche e istituzionali (OCSE, Istituto Bruno Leoni, Normattiva). Dove esiste una fonte ufficiale diretta essa è citata; dove si tratta di stima è indicato esplicitamente. Questa pagina non costituisce parere legale.
 </div>
 
----
+<hr style="border:none;border-top:1px solid var(--line-soft);margin:36px 0;">
 
 <a id="corpus"></a>
-## I — Il corpus normativo italiano
+<h2>I — Il corpus normativo italiano</h2>
 
-L'Italia è stimata avere tra le **150.000 e 160.000 norme vigenti** a livello statale, regionale e locale — una delle densità normative più alte in Europa, con un rapporto stimato di 5–10 volte superiore a quello della Germania (circa 30.000 norme) e circa il doppio rispetto alla Francia (circa 80.000).
+<p>L'Italia è stimata avere tra le <strong>150.000 e 160.000 norme vigenti</strong> a livello statale, regionale e locale — una delle densità normative più alte in Europa, con un rapporto stimato di 5–10 volte superiore a quello della Germania (circa 30.000 norme) e circa il doppio rispetto alla Francia (circa 80.000).</p>
 
-Questo dato va interpretato con cautela: il confronto tra paesi è metodologicamente difficile perché ogni ordinamento conta diversamente. L'Italia include nel computo decreti ministeriali, circolari con valore normativo e norme regionali; altri paesi contano solo le leggi parlamentari primarie.
+<p>Questo dato va interpretato con cautela: il confronto tra paesi è metodologicamente difficile perché ogni ordinamento conta diversamente. L'Italia include nel computo decreti ministeriali, circolari con valore normativo e norme regionali; altri paesi contano solo le leggi parlamentari primarie.</p>
 
-Le fonti più citate per la stima italiana sono l'**Istituto Bruno Leoni** e l'**OCSE** nel suo *Regulatory Policy Outlook*. Il portale **Normattiva** — gestito dall'Istituto Poligrafico dello Stato — è il registro ufficiale delle leggi statali vigenti, ma non include regolamenti e circolari.
+<p>Le fonti più citate per la stima italiana sono l'<strong>Istituto Bruno Leoni</strong> e l'<strong>OCSE</strong> nel suo <em>Regulatory Policy Outlook</em>. Il portale <strong>Normattiva</strong> — gestito dall'Istituto Poligrafico dello Stato — è il registro ufficiale delle leggi statali vigenti, ma non include regolamenti e circolari.</p>
 
-### Confronto europeo
+<h3>Confronto europeo</h3>
 
 <div style="overflow-x:auto;margin:20px 0;">
 <table style="width:100%;border-collapse:collapse;font-size:15px;">
@@ -66,39 +66,39 @@ Le fonti più citate per la stima italiana sono l'**Istituto Bruno Leoni** e l'*
 
 <p class="fonti">Fonti: OCSE iREG 2023; Bertelsmann Stiftung SGI Rule of Law Index; Istituto Bruno Leoni, Indice delle liberalizzazioni.</p>
 
-Il problema italiano non è solo quantitativo — è strutturale. Le leggi tendono a essere brevi, generiche, e rinviano a decreti attuativi che spesso non vengono emanati o arrivano con anni di ritardo. Per compensare, si producono circolari interpretative e sentenze che diventano norme *de facto*. Si legifera per **addizione**: nuove norme si sovrappongono alle vecchie senza abrogarle.
+<p>Il problema italiano non è solo quantitativo — è strutturale. Le leggi tendono a essere brevi, generiche, e rinviano a decreti attuativi che spesso non vengono emanati o arrivano con anni di ritardo. Per compensare, si producono circolari interpretative e sentenze che diventano norme <em>de facto</em>. Si legifera per <strong>addizione</strong>: nuove norme si sovrappongono alle vecchie senza abrogarle.</p>
 
----
+<hr style="border:none;border-top:1px solid var(--line-soft);margin:36px 0;">
 
 <a id="gerarchia"></a>
-## II — Gerarchia delle fonti
+<h2>II — Gerarchia delle fonti</h2>
 
-L'ordinamento italiano organizza le norme in una gerarchia formale in cui ogni livello deve essere compatibile con quello superiore. Dal punto di vista quantitativo la piramide è rovesciata: le norme di rango più basso sono le più numerose.
+<p>L'ordinamento italiano organizza le norme in una gerarchia formale in cui ogni livello deve essere compatibile con quello superiore. Dal punto di vista quantitativo la piramide è rovesciata: le norme di rango più basso sono le più numerose.</p>
 
-**Livello 1 — Costituzione e fonti primarie** (~60 testi)
-Costituzione (139 articoli, 1948), 16 leggi costituzionali approvate con procedura aggravata ex art. 138, regolamenti parlamentari, cinque statuti speciali delle regioni. Il livello più stabile: in 76 anni sono state approvate solo 16 leggi costituzionali.
+<p><strong>Livello 1 — Costituzione e fonti primarie</strong> (~60 testi)<br>
+Costituzione (139 articoli, 1948), 16 leggi costituzionali approvate con procedura aggravata ex art. 138, regolamenti parlamentari, cinque statuti speciali delle regioni. Il livello più stabile: in 76 anni sono state approvate solo 16 leggi costituzionali.</p>
 
-**Livello 2 — Leggi parlamentari** (~12.500 testi)
-Leggi ordinarie approvate dal Parlamento. Includono i grandi codici (Civile, Penale, di Procedura Civile, di Procedura Penale, della Navigazione) e tutta la legislazione di settore.
+<p><strong>Livello 2 — Leggi parlamentari</strong> (~12.500 testi)<br>
+Leggi ordinarie approvate dal Parlamento. Includono i grandi codici (Civile, Penale, di Procedura Civile, di Procedura Penale, della Navigazione) e tutta la legislazione di settore.</p>
 
-**Livello 3 — Decreti legislativi e decreti legge convertiti** (~22.500 testi)
-Atti aventi forza di legge emanati dal Governo: i decreti legislativi sono delegati dal Parlamento, i decreti legge sono d'urgenza e devono essere convertiti entro 60 giorni. Negli ultimi decenni questo livello ha prodotto più testo normativo del Parlamento.
+<p><strong>Livello 3 — Decreti legislativi e decreti legge convertiti</strong> (~22.500 testi)<br>
+Atti aventi forza di legge emanati dal Governo: i decreti legislativi sono delegati dal Parlamento, i decreti legge sono d'urgenza e devono essere convertiti entro 60 giorni. Negli ultimi decenni questo livello ha prodotto più testo normativo del Parlamento.</p>
 
-**Livello 4 — Regolamenti ministeriali** (~45.000 testi)
-Atti normativi secondari che danno attuazione alle leggi. Non hanno forza di legge ma vincolano cittadini e imprese nella pratica quotidiana.
+<p><strong>Livello 4 — Regolamenti ministeriali</strong> (~45.000 testi)<br>
+Atti normativi secondari che danno attuazione alle leggi. Non hanno forza di legge ma vincolano cittadini e imprese nella pratica quotidiana.</p>
 
-**Livello 5 — Circolari con valore normativo** (~35.000 testi)
-Tecnicamente non sono fonti del diritto, ma interpretano le norme superiori in modo operativo. Sono quelle che professionisti e imprese consultano quotidianamente.
+<p><strong>Livello 5 — Circolari con valore normativo</strong> (~35.000 testi)<br>
+Tecnicamente non sono fonti del diritto, ma interpretano le norme superiori in modo operativo. Sono quelle che professionisti e imprese consultano quotidianamente.</p>
 
-**Livello 6 — Norme regionali e locali** (~35.000 testi)
-Leggi regionali, regolamenti comunali, piani urbanistici. Possono variare significativamente da regione a regione nelle materie di competenza concorrente.
+<p><strong>Livello 6 — Norme regionali e locali</strong> (~35.000 testi)<br>
+Leggi regionali, regolamenti comunali, piani urbanistici. Possono variare significativamente da regione a regione nelle materie di competenza concorrente.</p>
 
----
+<hr style="border:none;border-top:1px solid var(--line-soft);margin:36px 0;">
 
 <a id="settori"></a>
-## III — Distribuzione per settore
+<h2>III — Distribuzione per settore</h2>
 
-Non esiste una classificazione ufficiale univoca dei settori normativi italiani. La tassonomia seguente è basata sulla classificazione Normattiva, integrata con la categorizzazione OCSE. I valori sono stime.
+<p>Non esiste una classificazione ufficiale univoca dei settori normativi italiani. La tassonomia seguente è basata sulla classificazione Normattiva, integrata con la categorizzazione OCSE. I valori sono stime.</p>
 
 <div style="overflow-x:auto;margin:20px 0;">
 <table style="width:100%;border-collapse:collapse;font-size:15px;">
@@ -110,69 +110,87 @@ Non esiste una classificazione ufficiale univoca dei settori normativi italiani.
 </tr>
 </thead>
 <tbody>
-{% assign rows = "Diritto amministrativo e P.A.,~45.000,Alta|Fisco e tributi,~28.000,Alta|Ambiente e territorio,~22.000,Alta|Lavoro e previdenza sociale,~18.000,Alta|Sanità e farmaceutico,~14.000,Alta|Urbanistica ed edilizia,~12.000,Alta|Diritto commerciale e societario,~11.000,Media|Infrastrutture e trasporti,~10.000,Media|Istruzione e ricerca,~9.500,Media|Energia e risorse naturali,~8.500,Alta|Diritto civile e famiglia,~8.000,Media|Sicurezza pubblica,~7.500,Media|Difesa e forze armate,~6.800,Bassa|Comunicazioni e media,~6.500,Media|Diritto penale e proc. penale,~6.200,Alta|Banche finanza e assicurazioni,~6.000,Alta|Appalti e contratti pubblici,~5.800,Alta|Agricoltura e pesca,~5.500,Media|Protezione civile,~4.500,Media|Diritto proc. civile e arbitrato,~4.200,Media|Immigrazione e cittadinanza,~3.800,Alta|Sport e tempo libero,~3.200,Bassa|Cultura e beni culturali,~3.000,Media|Politica estera e cooperazione,~2.800,Bassa|Diritto internazionale e UE,~2.500,Media|Ordinamento giudiziario,~2.200,Media|Diritto costituzionale,~800,Bassa" | split: "|" %}
-{% for row in rows %}
-{% assign cells = row | split: "," %}
-<tr style="border-bottom:1px solid var(--line-soft);">
-  <td style="padding:7px 12px;">{{ cells[0] }}</td>
-  <td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">{{ cells[1] }}</td>
-  <td style="padding:7px 12px;color:var(--ink-soft);">{{ cells[2] }}</td>
-</tr>
-{% endfor %}
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Diritto amministrativo e P.A.</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~45.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Fisco e tributi</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~28.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Ambiente e territorio</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~22.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Lavoro e previdenza sociale</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~18.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Sanità e farmaceutico</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~14.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Urbanistica ed edilizia</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~12.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Diritto commerciale e societario</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~11.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Infrastrutture e trasporti</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~10.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Istruzione e ricerca</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~9.500</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Energia e risorse naturali</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~8.500</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Diritto civile e famiglia</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~8.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Sicurezza pubblica</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~7.500</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Difesa e forze armate</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~6.800</td><td style="padding:7px 12px;color:var(--ink-soft);">Bassa</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Comunicazioni e media</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~6.500</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Diritto penale e proc. penale</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~6.200</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Banche, finanza e assicurazioni</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~6.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Appalti e contratti pubblici</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~5.800</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Agricoltura e pesca</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~5.500</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Protezione civile</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~4.500</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Diritto proc. civile e arbitrato</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~4.200</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Immigrazione e cittadinanza</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~3.800</td><td style="padding:7px 12px;color:var(--ink-soft);">Alta</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Sport e tempo libero</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~3.200</td><td style="padding:7px 12px;color:var(--ink-soft);">Bassa</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Cultura e beni culturali</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~3.000</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Politica estera e cooperazione</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~2.800</td><td style="padding:7px 12px;color:var(--ink-soft);">Bassa</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Diritto internazionale e UE</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~2.500</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr style="border-bottom:1px solid var(--line-soft);"><td style="padding:7px 12px;">Ordinamento giudiziario</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~2.200</td><td style="padding:7px 12px;color:var(--ink-soft);">Media</td></tr>
+<tr><td style="padding:7px 12px;">Diritto costituzionale</td><td style="text-align:right;padding:7px 12px;font-family:var(--font-mono);">~800</td><td style="padding:7px 12px;color:var(--ink-soft);">Bassa</td></tr>
 </tbody>
 </table>
 </div>
 
 <p class="fonti">Fonti: Normattiva; OCSE iREG; World Bank Regulatory Quality Index; Transparency International. L'indice di complessità considera frequenza di modifica annua, densità di rinvii interni e volume di contenzioso generato.</p>
 
----
+<hr style="border:none;border-top:1px solid var(--line-soft);margin:36px 0;">
 
 <a id="tensioni"></a>
-## IV — Tensioni interne alla Costituzione
+<h2>IV — Tensioni interne alla Costituzione</h2>
 
-La Costituzione italiana del 1948 contiene alcune tensioni interne — punti in cui due o più articoli producono indicazioni parzialmente incompatibili. Non sono errori del Costituente: riflettono compromessi politici del 1947–48, l'evoluzione della società in 76 anni, e le revisioni costituzionali successive sovrapposte al testo originario.
+<p>La Costituzione italiana del 1948 contiene alcune tensioni interne — punti in cui due o più articoli producono indicazioni parzialmente incompatibili. Non sono errori del Costituente: riflettono compromessi politici del 1947–48, l'evoluzione della società in 76 anni, e le revisioni costituzionali successive sovrapposte al testo originario.</p>
 
-La Corte Costituzionale gestisce queste tensioni in via interpretativa, caso per caso. È un equilibrio funzionale ma strutturalmente fragile: dipende dalla composizione della Corte e non produce regole generali prevedibili ex ante.
+<p>La Corte Costituzionale gestisce queste tensioni in via interpretativa, caso per caso. È un equilibrio funzionale ma strutturalmente fragile: dipende dalla composizione della Corte e non produce regole generali prevedibili ex ante.</p>
 
-### Tensioni di intensità alta
+<h3>Tensioni di intensità alta</h3>
 
-**Art. 3 c.2 vs Art. 81** — *Uguaglianza sostanziale vs pareggio di bilancio.*
-L'art. 3 c.2 impone un obbligo attivo di spesa per rimuovere diseguaglianze. L'art. 81 (riformato dalla legge cost. 1/2012) impone l'equilibrio di bilancio. I due obblighi hanno pari rango costituzionale senza gerarchia esplicita. La Corte ha parzialmente risolto la tensione con la sentenza 275/2016 ("è la garanzia dei diritti incomprimibili ad incidere sul bilancio, e non l'inverso"), ma il conflitto strutturale rimane. *Stato: irrisolta.*
+<p><strong>Art. 3 c.2 vs Art. 81</strong> — <em>Uguaglianza sostanziale vs pareggio di bilancio.</em><br>
+L'art. 3 c.2 impone un obbligo attivo di spesa per rimuovere diseguaglianze. L'art. 81 (riformato dalla legge cost. 1/2012) impone l'equilibrio di bilancio. I due obblighi hanno pari rango costituzionale senza gerarchia esplicita. La Corte ha parzialmente risolto la tensione con la sentenza 275/2016 ("è la garanzia dei diritti incomprimibili ad incidere sul bilancio, e non l'inverso"), ma il conflitto strutturale rimane. <em>Stato: irrisolta.</em></p>
 
-**Art. 7 vs Art. 8** — *Privilegio della Chiesa cattolica vs uguaglianza tra confessioni.*
-L'art. 7 costituzionalizza i Patti Lateranensi (ora di religione, effetti civili del matrimonio canonico, 8‰). L'art. 8 afferma che "tutte le confessioni religiose sono egualmente libere davanti alla legge". Il regime asimmetrico è stato mantenuto dalla Corte in nome della lex specialis. *Stato: irrisolta.*
+<p><strong>Art. 7 vs Art. 8</strong> — <em>Privilegio della Chiesa cattolica vs uguaglianza tra confessioni.</em><br>
+L'art. 7 costituzionalizza i Patti Lateranensi (ora di religione, effetti civili del matrimonio canonico, 8‰). L'art. 8 afferma che "tutte le confessioni religiose sono egualmente libere davanti alla legge". Il regime asimmetrico è stato mantenuto dalla Corte in nome della lex specialis. <em>Stato: irrisolta.</em></p>
 
-**Art. 11 vs Artt. 10, 27, 78** — *Ripudio della guerra vs missioni militari.*
-L'art. 11 ripudia la guerra ma consente limitazioni di sovranità per organizzazioni internazionali. Dal 1948 l'Italia ha partecipato a decine di missioni militari (Afghanistan, Iraq, Kosovo, Libia) senza mai dichiarare guerra ex art. 78. La Corte non si è mai pronunciata sulla legittimità costituzionale di queste missioni. *Stato: gestita in via legislativa ordinaria.*
+<p><strong>Art. 11 vs Artt. 10, 27, 78</strong> — <em>Ripudio della guerra vs missioni militari.</em><br>
+Dal 1948 l'Italia ha partecipato a decine di missioni militari (Afghanistan, Iraq, Kosovo, Libia) senza mai dichiarare guerra ex art. 78, usando la copertura dell'art. 11. La Corte non si è mai pronunciata sulla legittimità costituzionale di queste missioni. <em>Stato: gestita in via legislativa ordinaria.</em></p>
 
-**Art. 21 vs Artt. 3 c.1 e 2** — *Libertà di espressione vs dignità e uguaglianza.*
-La Legge Mancino (L. 654/1975, mod. 1993) punisce l'istigazione all'odio razziale. La Corte ha sempre richiesto che si punisca l'istigazione concreta, non la sola opinione. *Stato: gestita caso per caso.*
+<p><strong>Art. 21 vs Artt. 3 c.1 e 2</strong> — <em>Libertà di espressione vs dignità e uguaglianza.</em><br>
+La Legge Mancino (L. 654/1975, mod. 1993) punisce l'istigazione all'odio razziale. La Corte ha sempre richiesto che si punisca l'istigazione concreta, non la sola opinione. <em>Stato: gestita caso per caso.</em></p>
 
-**Art. 117 c.2 vs Art. 117 c.3-4** — *Competenze statali vs competenze regionali.*
-La riforma del Titolo V (legge cost. 3/2001) ha ridisegnato il riparto con tre categorie dai confini indeterminati. Dal 2001 al 2024 la Corte ha ricevuto oltre 1.200 ricorsi su questo riparto — più di tutti gli altri motivi messi insieme. *Stato: irrisolta in modo strutturale.*
+<p><strong>Art. 117 c.2 vs Art. 117 c.3-4</strong> — <em>Competenze statali vs competenze regionali.</em><br>
+La riforma del Titolo V (legge cost. 3/2001) ha ridisegnato il riparto con tre categorie dai confini indeterminati. Dal 2001 al 2024 la Corte ha ricevuto oltre 1.200 ricorsi su questo riparto. <em>Stato: irrisolta in modo strutturale.</em></p>
 
-### Tensioni di intensità media
+<h3>Tensioni di intensità media</h3>
 
-**Art. 24 vs Art. 111** — *Diritto di difesa vs ragionevole durata del processo.* Il diritto di difesa implica la possibilità di impugnare in ogni grado; la durata ragionevole impone limiti. L'Italia ha il record europeo di durata dei processi civili. *Stato: irrisolta.*
+<p><strong>Art. 24 vs Art. 111</strong> — <em>Diritto di difesa vs ragionevole durata del processo.</em> L'Italia ha il record europeo di durata dei processi civili. <em>Stato: irrisolta.</em></p>
 
-**Art. 27 c.3 vs Art. 13** — *Funzione rieducativa della pena vs carcere ostativo.* La sentenza 253/2019 ha dichiarato il carcere ostativo assoluto parzialmente incostituzionale. *Stato: parzialmente risolta.*
+<p><strong>Art. 27 c.3 vs Art. 13</strong> — <em>Funzione rieducativa della pena vs carcere ostativo.</em> La sentenza 253/2019 ha dichiarato il carcere ostativo assoluto parzialmente incostituzionale. <em>Stato: parzialmente risolta.</em></p>
 
-**Art. 29 vs Artt. 2 e 3** — *Famiglia e uguaglianza.* Approfondito nella sezione V.
+<p><strong>Art. 29 vs Artt. 2 e 3</strong> — <em>Famiglia e uguaglianza.</em> Approfondito nella sezione V.</p>
 
-**Art. 41 vs Artt. 9 e 32** — *Libertà economica vs tutela dell'ambiente.* La costituzionalizzazione dell'ambiente (legge cost. 1/2022) ha alzato il rango del conflitto. *Stato: parzialmente risolta.*
+<p><strong>Art. 41 vs Artt. 9 e 32</strong> — <em>Libertà economica vs tutela dell'ambiente.</em> La costituzionalizzazione dell'ambiente (legge cost. 1/2022) ha alzato il rango del conflitto. <em>Stato: parzialmente risolta.</em></p>
 
-### Tensioni di intensità bassa
+<h3>Tensioni di intensità bassa</h3>
 
-**Art. 53 vs Art. 23** — *Progressività fiscale vs regimi sostitutivi.* La Corte interpreta la progressività come principio del sistema complessivo, non di ogni singola imposta. *Stato: gestita.*
+<p><strong>Art. 53 vs Art. 23</strong> — <em>Progressività fiscale vs regimi sostitutivi.</em> La Corte interpreta la progressività come principio del sistema complessivo, non di ogni singola imposta. <em>Stato: gestita.</em></p>
 
-**Art. 138 vs Art. 1 c.2** — *Revisione costituzionale vs sovranità popolare.* La Costituzione può essere modificata senza referendum popolare se approvata dai due terzi del Parlamento. La dottrina dei "controlimiti" (sentenza 1146/1988) fissa un nucleo non modificabile. *Stato: parzialmente risolta.*
+<p><strong>Art. 138 vs Art. 1 c.2</strong> — <em>Revisione costituzionale vs sovranità popolare.</em> La dottrina dei "controlimiti" (sentenza 1146/1988) fissa un nucleo non modificabile anche con procedura aggravata. <em>Stato: parzialmente risolta.</em></p>
 
----
+<hr style="border:none;border-top:1px solid var(--line-soft);margin:36px 0;">
 
 <a id="caso-famiglia"></a>
-## V — Caso studio: famiglia e diritti (Art. 29 vs Artt. 2 e 3)
+<h2>V — Caso studio: famiglia e diritti (Art. 29 vs Artt. 2 e 3)</h2>
 
-### I testi
+<h3>I testi</h3>
 
 <div class="callout">
   <strong>Art. 29:</strong> «La Repubblica riconosce i diritti della famiglia come società naturale fondata sul matrimonio. Il matrimonio è ordinato sull'eguaglianza morale e giuridica dei coniugi, con i limiti stabiliti dalla legge a garanzia dell'unità familiare.»
@@ -186,110 +204,100 @@ La riforma del Titolo V (legge cost. 3/2001) ha ridisegnato il riparto con tre c
   <strong>Art. 2:</strong> «La Repubblica riconosce e garantisce i diritti inviolabili dell'uomo, sia come singolo, sia nelle formazioni sociali ove si svolge la sua personalità.»
 </div>
 
-### La natura della tensione
+<h3>La natura della tensione</h3>
 
-L'art. 29 non menziona il sesso dei coniugi. Il testo è letteralmente neutro su questo punto. La tensione con gli artt. 2 e 3 non nasce dal testo, ma dall'interpretazione storica che ne è stata data.
+<p>L'art. 29 non menziona il sesso dei coniugi. Il testo è letteralmente neutro su questo punto. La tensione con gli artt. 2 e 3 non nasce dal testo, ma dall'interpretazione storica che ne è stata data.</p>
 
-La Corte Costituzionale, con la sentenza 138/2010, ha letto l'art. 29 in chiave storica: il matrimonio a cui si riferisce la Costituzione è "quello tra uomo e donna", non perché il testo lo dica, ma perché così lo intendevano i Costituenti nel 1948. È una scelta interpretativa, non una necessità testuale.
+<p>La Corte Costituzionale, con la sentenza 138/2010, ha letto l'art. 29 in chiave storica: il matrimonio a cui si riferisce la Costituzione è "quello tra uomo e donna", non perché il testo lo dica, ma perché così lo intendevano i Costituenti nel 1948. È una scelta interpretativa, non una necessità testuale.</p>
 
-L'espressione "società naturale" — spesso al centro del dibattito — deriva nel linguaggio giuridico del 1948 dal diritto canonico e significava che la famiglia precede lo Stato: è un'istituzione che lo Stato riconosce, non crea. Non aveva contenuto biologico nella formulazione originaria.
+<p>L'espressione "società naturale" deriva nel linguaggio giuridico del 1948 dal diritto canonico e significava che la famiglia precede lo Stato — è un'istituzione che lo Stato riconosce, non crea. Non aveva contenuto biologico nella formulazione originaria.</p>
 
-### Lo stato attuale del diritto
+<h3>Lo stato attuale del diritto</h3>
 
-Il diritto italiano vigente prevede tre istituti distinti:
+<p>Il diritto italiano vigente prevede tre istituti distinti: il <strong>matrimonio civile</strong> (Codice Civile, artt. 79–158), riservato alle coppie eterosessuali secondo l'interpretazione consolidata; le <strong>unioni civili</strong> (L. 76/2016), disponibili per le coppie dello stesso sesso con effetti sostanzialmente equivalenti al matrimonio sui rapporti tra i partner; le <strong>convivenze di fatto</strong> (L. 76/2016, commi 36–67), disponibili per qualsiasi coppia convivente con tutele più limitate.</p>
 
-- **Matrimonio civile** (Codice Civile, artt. 79–158): riservato alle coppie eterosessuali secondo l'interpretazione consolidata (sentenza 138/2010).
-- **Unioni civili** (L. 76/2016): disponibili per le coppie dello stesso sesso, con effetti sostanzialmente equivalenti al matrimonio sui rapporti tra i partner.
-- **Convivenze di fatto** (L. 76/2016, commi 36–67): disponibili per qualsiasi coppia convivente, con tutele più limitate.
+<p>La questione attualmente aperta non riguarda il riconoscimento delle coppie — risolto dalla L. 76/2016 — ma la disciplina dei figli nati o cresciuti in famiglie con genitori dello stesso sesso. Le sentenze 32-33/2021 della Corte hanno riconosciuto che il "superiore interesse del minore" impone tutele, ma hanno rinviato al legislatore la forma specifica.</p>
 
-La questione attualmente aperta non riguarda il riconoscimento delle coppie — risolto dalla L. 76/2016 — ma la **disciplina dei figli**: i bambini nati o cresciuti in famiglie con genitori dello stesso sesso esistono indipendentemente dalla struttura giuridica dei loro genitori. Le sentenze 32-33/2021 della Corte hanno riconosciuto che il "superiore interesse del minore" impone tutele, ma hanno rinviato al legislatore la forma specifica.
-
----
+<hr style="border:none;border-top:1px solid var(--line-soft);margin:36px 0;">
 
 <a id="corte-edu"></a>
-## VI — Il ruolo della Corte Europea dei Diritti dell'Uomo
+<h2>VI — Il ruolo della Corte Europea dei Diritti dell'Uomo</h2>
 
-La Corte EDU (Strasburgo) non può annullare leggi italiane né modificare la Costituzione. Produce però uno stimolo esterno con effetti concreti attraverso tre canali: l'obbligo di esecuzione delle sentenze ex art. 46 CEDU, la pressione politica internazionale, e — attraverso l'art. 117 c.1 Cost. — la possibilità di usare la CEDU come parametro indiretto di incostituzionalità interna.
+<p>La Corte EDU (Strasburgo) non può annullare leggi italiane né modificare la Costituzione. Produce però uno stimolo esterno con effetti concreti attraverso tre canali: l'obbligo di esecuzione delle sentenze ex art. 46 CEDU, la pressione politica internazionale, e — attraverso l'art. 117 c.1 Cost. — la possibilità di usare la CEDU come parametro indiretto di incostituzionalità interna.</p>
 
-### Le sentenze rilevanti in ordine cronologico
+<p><strong>Schalk e Kopf c. Austria (2010).</strong> Le coppie dello stesso sesso costituiscono una "vita familiare" tutelata dall'art. 8 CEDU. Stabilisce il principio di riferimento per i ricorsi successivi contro l'Italia.</p>
 
-**Schalk e Kopf c. Austria (2010).** Le coppie dello stesso sesso costituiscono una "vita familiare" tutelata dall'art. 8 CEDU. La sentenza non riguarda l'Italia ma stabilisce il principio di riferimento per i ricorsi successivi.
+<p><strong>Vallianatos e altri c. Grecia — Grande Camera (2013).</strong> Le unioni civili non possono essere riservate alle coppie eterosessuali senza violare l'art. 14 CEDU combinato con l'art. 8. Il principio si applica direttamente all'Italia.</p>
 
-**Vallianatos e altri c. Grecia — Grande Camera (2013).** Le unioni civili non possono essere riservate alle coppie eterosessuali senza violare l'art. 14 CEDU (divieto di discriminazione) combinato con l'art. 8. Il principio si applica direttamente all'Italia.
+<p><strong>Oliari e altri c. Italia (2015).</strong> Prima condanna diretta dell'Italia: l'assenza di qualsiasi forma di riconoscimento legale per le coppie same-sex viola l'art. 8 CEDU. La sentenza cita esplicitamente l'inerzia del Parlamento nonostante l'invito della Corte Costituzionale del 2010.</p>
 
-**Oliari e altri c. Italia (2015).** Prima condanna diretta dell'Italia: l'assenza di qualsiasi forma di riconoscimento legale per le coppie same-sex viola l'art. 8 CEDU. La sentenza cita esplicitamente l'inerzia del Parlamento nonostante l'invito della Corte Costituzionale del 2010.
+<p><strong>L. 76/2016.</strong> Il Parlamento approva le unioni civili un anno dopo la condanna. La sequenza causale è documentata nei lavori parlamentari.</p>
 
-**L. 76/2016.** Il Parlamento approva le unioni civili un anno dopo la condanna. La sequenza causale è documentata nei lavori parlamentari.
+<p><strong>Sentenze 32-33/2021 (Corte Costituzionale).</strong> Il superiore interesse del minore impone tutele per i figli di coppie same-sex. Il legislatore non interviene organicamente.</p>
 
-**Sentenze 32-33/2021 (Corte Costituzionale).** Il superiore interesse del minore impone tutele per i figli di coppie same-sex. Il legislatore non interviene organicamente.
+<p><strong>Fronte aperto (2023–2026).</strong> Dopo il divieto di trascrizione dei figli nati da GPA all'estero, decine di ricorsi italiani sono stati dichiarati ricevibili dalla Corte EDU.</p>
 
-**Fronte aperto (2023–2026).** Dopo il divieto di trascrizione dei figli nati da GPA all'estero (circolare 2023), decine di ricorsi italiani sono stati dichiarati ricevibili dalla Corte EDU. Una nuova condanna è attesa.
+<div class="callout">
+  Lo stimolo EDU sblocca impasse politiche che il sistema interno non riesce a risolvere, ma produce riforme minime — il sufficiente a far cessare la condanna, non necessariamente una soluzione strutturale. L'art. 29 è rimasto invariato dal 1948.
+</div>
 
-### Il limite strutturale del meccanismo
-
-Lo stimolo EDU sblocca impasse politiche che il sistema interno non riesce a risolvere, ma produce riforme minime — il sufficiente a far cessare la condanna, non necessariamente una soluzione strutturale. L'art. 29 è rimasto invariato dal 1948.
-
----
+<hr style="border:none;border-top:1px solid var(--line-soft);margin:36px 0;">
 
 <a id="dibattito"></a>
-## VII — Matrimonio e unioni civili: le posizioni in campo
+<h2>VII — Matrimonio e unioni civili: le posizioni in campo</h2>
 
-Il dibattito sulla natura e il rango degli istituti che regolano le unioni si articola intorno a due posizioni principali, entrambe internamente coerenti e sostenute da tradizioni giuridiche e filosofiche consolidate. Questa pagina le espone senza endorsement.
+<p>Il dibattito sulla natura e il rango degli istituti che regolano le unioni si articola intorno a due posizioni principali, entrambe internamente coerenti e sostenute da tradizioni giuridiche e filosofiche consolidate. Questa pagina le espone senza endorsement.</p>
 
-### Posizione A — Il matrimonio ha una funzione sociale riproduttiva
+<h3>Posizione A — Il matrimonio ha una funzione sociale riproduttiva</h3>
 
-In questa lettura, il matrimonio è l'istituto che crea il contesto stabile per la riproduzione e l'educazione dei figli. La sua funzione sociale primaria è demografica e di continuità generazionale.
+<p>In questa lettura, il matrimonio è l'istituto che crea il contesto stabile per la riproduzione e l'educazione dei figli. La sua funzione sociale primaria è demografica e di continuità generazionale. L'infertilità di una coppia eterosessuale è un'eccezione accidentale rispetto a questa funzione — la struttura biologica è orientata alla riproduzione anche quando per cause esterne non vi riesce. L'assenza di figli in una coppia dello stesso sesso è invece una condizione strutturale, non accidentale.</p>
 
-L'infertilità di una coppia eterosessuale è un'eccezione accidentale rispetto a questa funzione — la struttura biologica è orientata alla riproduzione anche quando per cause esterne non vi riesce. L'assenza di figli in una coppia dello stesso sesso è invece una condizione strutturale, non accidentale.
+<p>Sul piano etimologico, il termine <em>matrimonium</em> deriva dal latino <em>mater</em> + <em>monium</em> (la condizione della madre), riflettendo l'origine riproduttiva dell'istituto nel diritto romano. Il diritto canonico, che ha influenzato profondamente la tradizione giuridica italiana, considera la <em>procreatio prolis</em> tra i fini essenziali del matrimonio. Le unioni non riproduttive possono essere riconosciute con strumenti giuridici distinti, senza equipararle al matrimonio in senso proprio. Questa posizione è sostenuta, tra gli altri, dal filosofo del diritto John Finnis e dalla dottrina sociale della Chiesa cattolica.</p>
 
-Sul piano etimologico, il termine *matrimonium* deriva dal latino *mater* + *monium* (la condizione della madre), riflettendo l'origine riproduttiva dell'istituto nel diritto romano. Il diritto canonico, che ha influenzato profondamente la tradizione giuridica italiana, considera la procreatio prolis tra i fini essenziali del matrimonio.
+<h3>Posizione B — Il matrimonio è un contratto civile di vita comune</h3>
 
-Le unioni non riproduttive possono essere riconosciute con strumenti giuridici distinti, senza equipararle al matrimonio in senso proprio.
+<p>In questa lettura, il matrimonio tutela diritti e obblighi tra due persone che costruiscono una vita comune: successione, assistenza sanitaria, previdenza, responsabilità patrimoniale condivisa. Nessuno di questi diritti dipende dalla capacità riproduttiva. Il diritto italiano già consente il matrimonio a coppie anziane, sterili per patologia, o che dichiarano di non volere figli, senza richiedere prove di fertilità né prevedere la nullità dei matrimoni senza prole. Il diritto ha quindi già separato l'istituto dalla funzione riproduttiva, rendendo l'esclusione delle coppie dello stesso sesso una scelta di valore sulla definizione dell'istituto, non una necessità funzionale. Questa posizione è alla base della sentenza <em>Obergefell v. Hodges</em> della Corte Suprema degli Stati Uniti (2015) e delle riforme legislative di 35 paesi che hanno introdotto il matrimonio egualitario.</p>
 
-Questa posizione è sostenuta, tra gli altri, dal filosofo del diritto John Finnis e dalla dottrina sociale della Chiesa cattolica.
+<h3>La questione aperta: i figli</h3>
 
-### Posizione B — Il matrimonio è un contratto civile di vita comune
+<p>Indipendentemente dalla posizione sulla definizione del matrimonio, rimane irrisolta nel diritto italiano la disciplina dei figli nati o cresciuti in famiglie con genitori dello stesso sesso. La Corte Costituzionale ha riconosciuto questa necessità (sentenze 32-33/2021) senza che il legislatore abbia ancora disciplinato la materia in modo organico.</p>
 
-In questa lettura, il matrimonio tutela una serie di diritti e obblighi tra due persone che costruiscono una vita comune: successione, assistenza sanitaria, previdenza, responsabilità patrimoniale condivisa.
-
-Nessuno di questi diritti dipende dalla capacità riproduttiva. Il diritto italiano già consente il matrimonio a coppie anziane, sterili per patologia, o che dichiarano di non volere figli, senza richiedere prove di fertilità né prevedere la nullità dei matrimoni senza prole. Il diritto ha quindi già separato l'istituto dalla funzione riproduttiva.
-
-Su questa base, l'esclusione delle coppie dello stesso sesso non è giustificata dalla funzione riproduttiva — che non è requisito del matrimonio eterosessuale — ma da una scelta di valore sulla definizione dell'istituto.
-
-Questa posizione è alla base della sentenza Obergefell v. Hodges della Corte Suprema degli Stati Uniti (2015) e delle riforme legislative di 35 paesi che hanno introdotto il matrimonio egualitario.
-
-### Cosa rimane aperto
-
-Indipendentemente dalla posizione sulla definizione del matrimonio, rimane una questione pratica irrisolta nel diritto italiano: i figli nati o cresciuti in famiglie con genitori dello stesso sesso esistono e hanno bisogno di tutele giuridiche certe. La Corte Costituzionale ha riconosciuto questa necessità (sentenze 32-33/2021) senza che il legislatore abbia ancora disciplinato la materia in modo organico.
-
----
+<hr style="border:none;border-top:1px solid var(--line-soft);margin:36px 0;">
 
 <a id="fonti"></a>
-## Fonti e riferimenti
+<h2>Fonti e riferimenti</h2>
 
-### Normativa ufficiale
-- Costituzione della Repubblica Italiana (G.U. n. 298 del 27 dicembre 1947): [normattiva.it](https://www.normattiva.it)
-- Legge costituzionale 1/2012, pareggio di bilancio (G.U. n. 75 del 30 marzo 2012)
-- Legge costituzionale 3/2001, riforma Titolo V (G.U. n. 248 del 24 ottobre 2001)
-- Legge costituzionale 1/2022, tutela dell'ambiente (G.U. n. 44 del 22 febbraio 2022)
-- Legge 76/2016, unioni civili e convivenze (G.U. n. 88 del 21 aprile 2016)
+<h3>Normativa ufficiale</h3>
+<ul>
+  <li>Costituzione della Repubblica Italiana (G.U. n. 298 del 27 dicembre 1947): <a href="https://www.normattiva.it">normattiva.it</a></li>
+  <li>Legge costituzionale 1/2012, pareggio di bilancio (G.U. n. 75 del 30 marzo 2012)</li>
+  <li>Legge costituzionale 3/2001, riforma Titolo V (G.U. n. 248 del 24 ottobre 2001)</li>
+  <li>Legge costituzionale 1/2022, tutela dell'ambiente (G.U. n. 44 del 22 febbraio 2022)</li>
+  <li>Legge 76/2016, unioni civili e convivenze (G.U. n. 88 del 21 aprile 2016)</li>
+</ul>
 
-### Giurisprudenza
-- Corte Costituzionale, sentenze n. 138/2010, 170/2014, 275/2016, 253/2019, 32-33/2021, 1146/1988, 303/2003
-- Corte EDU, *Schalk e Kopf c. Austria*, n. 30141/04, 24 giugno 2010
-- Corte EDU, *Vallianatos e altri c. Grecia*, n. 29381/09, 7 novembre 2013
-- Corte EDU, *Oliari e altri c. Italia*, n. 18766/11 e 36030/11, 21 luglio 2015
+<h3>Giurisprudenza</h3>
+<ul>
+  <li>Corte Costituzionale, sentenze n. 138/2010, 170/2014, 275/2016, 253/2019, 32-33/2021, 1146/1988, 303/2003</li>
+  <li>Corte EDU, <em>Schalk e Kopf c. Austria</em>, n. 30141/04, 24 giugno 2010</li>
+  <li>Corte EDU, <em>Vallianatos e altri c. Grecia</em>, n. 29381/09, 7 novembre 2013</li>
+  <li>Corte EDU, <em>Oliari e altri c. Italia</em>, n. 18766/11 e 36030/11, 21 luglio 2015</li>
+</ul>
 
-### Studi e rapporti istituzionali
-- OCSE, *Regulatory Policy Outlook 2023*, OECD Publishing, Parigi
-- Istituto Bruno Leoni, *Indice delle liberalizzazioni*, edizioni 2018–2023
-- Bertelsmann Stiftung, *SGI Rule of Law Index*, 2022
-- Banca d'Italia, *L'economia italiana: problemi strutturali e prospettive*, 2023
+<h3>Studi e rapporti istituzionali</h3>
+<ul>
+  <li>OCSE, <em>Regulatory Policy Outlook 2023</em>, OECD Publishing, Parigi</li>
+  <li>Istituto Bruno Leoni, <em>Indice delle liberalizzazioni</em>, edizioni 2018–2023</li>
+  <li>Bertelsmann Stiftung, <em>SGI Rule of Law Index</em>, 2022</li>
+  <li>Banca d'Italia, <em>L'economia italiana: problemi strutturali e prospettive</em>, 2023</li>
+</ul>
 
-### Dottrina
-- Zagrebelsky, G., *Il diritto mite*, Einaudi, 1992
-- Bin, R., Pitruzzella, G., *Diritto costituzionale*, Giappichelli, 2023 (24ª ed.)
-- Finnis, J., *Natural Law and Natural Rights*, Oxford University Press, 2011
+<h3>Dottrina</h3>
+<ul>
+  <li>Zagrebelsky, G., <em>Il diritto mite</em>, Einaudi, 1992</li>
+  <li>Bin, R., Pitruzzella, G., <em>Diritto costituzionale</em>, Giappichelli, 2023 (24ª ed.)</li>
+  <li>Finnis, J., <em>Natural Law and Natural Rights</em>, Oxford University Press, 2011</li>
+</ul>
 
 <p class="fonti">Pagina aggiornata: luglio 2026 — Per segnalare errori o aggiornamenti: <a href="mailto:osservatorio@filoclastos.it">osservatorio@filoclastos.it</a></p>
 
