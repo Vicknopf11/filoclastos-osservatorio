@@ -348,7 +348,7 @@ title: "Titolo I — Della spesa pubblica"
   </div>
 
   <div class="insight">
-    <strong>Il circolo vizioso:</strong> più debito → più interessi da pagare → meno risorse per investimenti → crescita lenta → più difficile ridurre il debito. L'Italia paga oggi ~87 miliardi solo di interessi — il doppio della spesa per l'istruzione. Ogni punto percentuale di aumento dei tassi di interesse costa circa 28 miliardi in più all'anno sul medio termine, man mano che i titoli esistenti vanno a scadenza.
+    <strong>Il circolo vizioso:</strong> più debito → più interessi da pagare → meno risorse per investimenti → crescita lenta → più difficile ridurre il debito. L'Italia paga oggi ~87 miliardi solo di interessi — poco più della spesa per l'istruzione (circa 80 miliardi). Ogni punto percentuale di aumento dei tassi di interesse costa circa 28 miliardi in più all'anno sul medio termine, man mano che i titoli esistenti vanno a scadenza.
   </div>
 </section>
 
@@ -1317,7 +1317,7 @@ function buildStoriaChart(anni, gf10, gf1002) {
         y: {
           grid: { color: '#e8e5de' },
           ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
-          min: 10, max: 28,
+          min: 0, max: 28,
           title: { display: true, text: '% PIL', font: { size: 10 }, color: '#7a7a7a' }
         }
       }
