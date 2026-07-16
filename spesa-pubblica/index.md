@@ -28,6 +28,7 @@ title: "Titolo I — Della spesa pubblica"
     <a href="#debito">Debito</a>
     <a href="#aggiornamenti">Manovre</a>
     <a href="#pensioni-dettaglio">Pensioni dettaglio</a>
+    <a href="#flussi">Flussi finanziari</a>
   </div>
   <div class="nav-tag" id="dataStatus">⏺ carico dati…</div>
 </nav>
@@ -528,6 +529,112 @@ title: "Titolo I — Della spesa pubblica"
     <strong>Nota metodologica:</strong> i dati di questa sezione sono estratti dai Bilanci Preventivi INPS 2025 e 2026, approvati dal Consiglio di Amministrazione. I valori di importo medio sono al lordo delle ritenute fiscali. Le pensioni di anzianità/anticipate hanno importi medi molto più alti (2.372 €/mese per il FPLD) rispetto alle pensioni di vecchiaia (1.050 €/mese) perché calcolate prevalentemente con il sistema retributivo — quelle erogate a lavoratori con carriere lunghe iniziate prima del 1996. Le gestioni degli autonomi (artigiani, commercianti, coltivatori) sono in deficit strutturale: hanno meno di 100 contribuenti per ogni 100 pensioni e ricevono trasferimenti dalle gestioni in surplus. Per approfondire: <a href="https://www.inps.it/it/it/dati-e-bilanci.html" target="_blank" rel="noopener" style="color:var(--is-ink); text-decoration:underline;">INPS — Dati e bilanci</a>.
   </div>
 
+</section>
+
+<!-- SEZIONE 07: FLUSSI FINANZIARI -->
+<section class="section" id="flussi">
+  <div class="section-header">
+    <span class="section-num">07 /</span>
+    <h2 class="section-title">Flussi finanziari INPS — serie storica 2020–2025</h2>
+  </div>
+  <p class="section-desc">Come si evolve il bilancio di cassa dell'INPS negli ultimi sei anni: entrate contributive, trasferimenti dallo Stato e uscite per prestazioni. La differenza tra ciò che l'INPS incassa dai contributi e ciò che paga è il <strong>deficit strutturale</strong> — il buco che lo Stato copre ogni anno con trasferimenti dalla fiscalità generale.</p>
+  <p class="section-desc" style="margin-bottom:2rem;">Fonte: INPS — Note tecniche sui flussi finanziari dicembre 2020, 2021, 2022, 2023, 2024 e 2025. Tutti i valori sono in miliardi di euro, dati annuali consuntivi (dicembre suppletivo per 2020–2022, dicembre per 2023–2025).</p>
+
+  <!-- CARDS CHIAVE -->
+  <div class="cards-grid" style="margin-bottom:1.5rem;">
+    <div class="stat-card">
+      <div class="stat-card-label">Contributi raccolti 2025</div>
+      <div class="stat-card-val ok">244 mld €</div>
+      <div class="stat-card-sub">+11.2% vs 2024 — fine esonero contributivo</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Pensioni pagate 2025</div>
+      <div class="stat-card-val warn">288 mld €</div>
+      <div class="stat-card-sub">+1.3% vs 2024 — rallentamento crescita</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Deficit strutturale 2025</div>
+      <div class="stat-card-val danger">~160 mld €</div>
+      <div class="stat-card-sub">gap contributi → prestazioni, coperto dallo Stato</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Trasferimenti Stato 2025</div>
+      <div class="stat-card-val warn">165 mld €</div>
+      <div class="stat-card-sub">-8.4% vs 2024 — riduzione misure eccezionali</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Prestazioni temporanee 2025</div>
+      <div class="stat-card-val">41 mld €</div>
+      <div class="stat-card-sub">NASPI, CIG, Assegno Unico, ADI</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Invalidi civili 2025</div>
+      <div class="stat-card-val danger">23,4 mld €</div>
+      <div class="stat-card-sub">+23% in 5 anni — crescita più rapida del sistema</div>
+    </div>
+  </div>
+
+  <!-- GRAFICO 1: ENTRATE VS USCITE -->
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Entrate contributive vs pagamenti totali — 2020–2025 (mld €)</div>
+    <span class="source-tag static"><span class="source-dot"></span>INPS — Note tecniche flussi finanziari dicembre 2020–2025</span>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin:0.75rem 0;font-size:11px;color:var(--is-ink-3);">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:16px;height:3px;background:#1d4ed8;display:inline-block;"></span>Entrate contributive totali</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:16px;height:3px;background:#e34948;display:inline-block;"></span>Pagamenti correnti totali</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:16px;height:3px;background:#eda100;display:inline-block;border-top:3px dashed #eda100;height:0;"></span>Trasferimenti dallo Stato</span>
+    </div>
+    <div class="canvas-wrap" style="height:320px;">
+      <canvas id="flussiChart" role="img" aria-label="Entrate contributive vs pagamenti INPS 2020-2025. Il gap tra le due linee è il deficit strutturale coperto dai trasferimenti statali.">Serie storica flussi finanziari INPS 2020-2025.</canvas>
+    </div>
+  </div>
+
+  <!-- GRAFICO 2: DEFICIT STRUTTURALE -->
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Deficit strutturale annuo — differenza tra pagamenti e contributi (mld €)</div>
+    <span class="source-tag static"><span class="source-dot"></span>INPS — elaborazione su flussi finanziari annuali</span>
+    <div class="canvas-wrap" style="height:260px;">
+      <canvas id="deficitChart" role="img" aria-label="Deficit strutturale INPS per anno: 2020 circa 160 miliardi, minimo 2021 a 145, poi risalita a 179 nel 2024, discesa a 160 nel 2025.">Deficit strutturale INPS 2020-2025.</canvas>
+    </div>
+    <div class="insight" style="margin-top:1rem;">
+      Il deficit 2020 è gonfiato dalla pandemia (prestazioni Covid straordinarie). Il 2024 tocca il picco a 179 miliardi principalmente per i maggiori trasferimenti verso i pensionati e la crescita delle pensioni pubbliche. Il calo 2025 è quasi interamente dovuto alla fine dell'esonero contributivo del 6–7%, che ha fatto rientrare ~19 miliardi di contributi che negli anni precedenti non venivano versati.
+    </div>
+  </div>
+
+  <!-- GRAFICO 3: SCOMPOSIZIONE PENSIONI -->
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Pensioni pagate per componente — 2020–2025 (mld €)</div>
+    <span class="source-tag static"><span class="source-dot"></span>INPS — quadri di dettaglio pagamenti, flussi finanziari annuali</span>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin:0.75rem 0;font-size:11px;color:var(--is-ink-3);">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#2a78d6;display:inline-block;"></span>Gestioni private (netto IC)</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#4a3aa7;display:inline-block;"></span>Gestioni pubbliche</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#e34948;display:inline-block;"></span>Invalidi civili</span>
+    </div>
+    <div class="canvas-wrap" style="height:300px;">
+      <canvas id="pensioniTrendChart" role="img" aria-label="Scomposizione pensioni pagate 2020-2025. Gestioni private crescono da 168 a 195 miliardi. Gestioni pubbliche da 57 a 70 miliardi. Invalidi civili da 19 a 23 miliardi.">Scomposizione pensioni pagate INPS 2020-2025.</canvas>
+    </div>
+  </div>
+
+  <!-- GRAFICO 4: PRESTAZIONI TEMPORANEE -->
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Prestazioni temporanee — evoluzione 2020–2025 (mld €)</div>
+    <span class="source-tag static"><span class="source-dot"></span>INPS — quadri di dettaglio pagamenti, flussi finanziari annuali</span>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin:0.75rem 0;font-size:11px;color:var(--is-ink-3);">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#2a78d6;display:inline-block;"></span>NASPI</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#008300;display:inline-block;"></span>Assegno Unico</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#e34948;display:inline-block;"></span>RdC / ADI</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#eda100;display:inline-block;"></span>CIG e altre</span>
+    </div>
+    <div class="canvas-wrap" style="height:300px;">
+      <canvas id="temporaneeChart" role="img" aria-label="Prestazioni temporanee 2020-2025. NASPI stabile intorno a 9-10 miliardi. Assegno Unico introdotto nel 2022, raggiunge 20 miliardi nel 2024. RdC cala da 9 miliardi a quasi zero nel 2024, sostituito da ADI.">Prestazioni temporanee INPS 2020-2025.</canvas>
+    </div>
+    <div class="insight" style="margin-top:1rem;">
+      <strong>Tre discontinuità visibili nel grafico:</strong> il picco 2020 delle prestazioni Covid (11 mld straordinari); l'introduzione dell'Assegno Unico nel 2022 (12 mld al primo anno, poi crescita costante); la sostituzione del Reddito di Cittadinanza con l'Assegno di Inclusione nel 2024, che ha dimezzato la spesa da 7,4 a 0,1 miliardi in un solo anno (chi non rientrava nei nuovi criteri ha perso il sussidio).
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>Nota metodologica:</strong> il "deficit strutturale" in questa sezione è calcolato come differenza tra pagamenti correnti totali e riscossioni dalla produzione (contributi + recupero crediti, esclusi trasferimenti Stato). Non coincide con il deficit di bilancio in senso contabile, che segue regole diverse. È piuttosto la misura di quanto il sistema previdenziale dipende ogni anno dalla fiscalità generale per funzionare — indipendentemente da come viene classificato contabilmente. Il 2020 include un'anticipazione di tesoreria straordinaria di 8 miliardi che non è trasferimento strutturale. Il 2021 include 12 miliardi di anticipazioni a gestioni previdenziali anch'esse straordinarie legate al Covid.
+  </div>
 </section>
 
 <footer>
@@ -1485,4 +1592,161 @@ loadStoriaEurostat()
     console.warn('Serie storica Eurostat non disponibile:', e.message);
     setSourceTag('storiaSourceTag', false, '— dati statici (Eurostat non raggiungibile)');
   });
+// ── SEZIONE 07: FLUSSI FINANZIARI INPS 2020–2025 ─────────────────────────────
+// Fonte: Note tecniche flussi finanziari INPS dicembre di ogni anno (annuale consuntivo)
+// Valori in miliardi di euro
+
+const flussiAnni = [2020, 2021, 2022, 2023, 2024, 2025];
+const flussiContrib  = [183.4, 194.1, 205.5, 214.6, 219.8, 244.4];
+const flussiProd     = [196.4, 207.8, 218.7, 229.9, 234.9, 262.2];
+const flussiStato    = [139.9, 142.3, 154.7, 160.4, 179.9, 164.8];
+const flussiPag      = [356.3, 352.6, 365.3, 392.6, 414.1, 421.8];
+const flussiDeficit  = flussiAnni.map((_, i) => parseFloat((flussiPag[i] - flussiProd[i]).toFixed(1)));
+
+const pensPrivate    = [168.6, 165.6, 170.9, 182.9, 192.4, 194.5];
+const pensPubbliche  = [57.4, 58.6, 62.2, 65.4, 68.8, 69.7];
+const pensIC         = [19.0, 19.9, 20.4, 21.4, 22.6, 23.4];
+
+const tempNaspi    = [9.5, 7.5, 7.9, 8.8, 9.6, 10.1];
+const tempAunico   = [0, 0, 12.3, 17.4, 20.0, 19.8];
+const tempRdcAdi   = [7.2, 9.1, 9.0, 7.4, 4.8, 6.1];
+const tempTotArr   = [34.5, 30.9, 35.1, 38.7, 39.3, 41.1];
+const tempCigAltre = flussiAnni.map((_, i) => parseFloat((tempTotArr[i] - tempNaspi[i] - tempAunico[i] - tempRdcAdi[i]).toFixed(1)));
+
+const gridC = '#e8e5de';
+const tickC = '#7a7a7a';
+const baseOpts = { responsive: true, maintainAspectRatio: false };
+
+(function() {
+  const ctx = document.getElementById('flussiChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: flussiAnni,
+      datasets: [
+        { label: 'Entrate contributive', data: flussiContrib,
+          borderColor: '#1d4ed8', backgroundColor: 'rgba(29,78,216,0.07)',
+          borderWidth: 2.5, pointRadius: 4, fill: true, tension: 0.3 },
+        { label: 'Pagamenti correnti', data: flussiPag,
+          borderColor: '#e34948', backgroundColor: 'rgba(227,73,72,0.07)',
+          borderWidth: 2.5, pointRadius: 4, fill: true, tension: 0.3 },
+        { label: 'Trasferimenti Stato', data: flussiStato,
+          borderColor: '#eda100', backgroundColor: 'transparent',
+          borderWidth: 2, borderDash: [6,3], pointRadius: 4, fill: false, tension: 0.3 }
+      ]
+    },
+    options: {
+      ...baseOpts,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y} mld \u20ac` } }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 12 }, color: tickC } },
+        y: { grid: { color: gridC }, min: 0, max: 480,
+          ticks: { font: { size: 11 }, color: tickC, callback: v => v + ' mld' } }
+      }
+    }
+  });
+})();
+
+(function() {
+  const ctx = document.getElementById('deficitChart').getContext('2d');
+  const noteDeficit = [
+    'Anno Covid — prestazioni straordinarie', 'Minimo — recupero post-Covid',
+    'Stabilizzazione post-Covid', 'Perequazione +7% e Assegno Unico',
+    'Picco — trasf. Stato eccezionali', 'Calo — fine esonero contributivo'
+  ];
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: flussiAnni,
+      datasets: [{
+        label: 'Deficit strutturale',
+        data: flussiDeficit,
+        borderColor: '#e34948', backgroundColor: 'rgba(227,73,72,0.12)',
+        borderWidth: 2.5, pointRadius: 5,
+        pointBackgroundColor: ['#e34948','#008300','#e34948','#e34948','#e34948','#008300'],
+        fill: true, tension: 0.3
+      }]
+    },
+    options: {
+      ...baseOpts,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: {
+          label: ctx => ` Deficit strutturale: ${ctx.parsed.y} mld \u20ac`,
+          afterLabel: ctx => ' ' + (noteDeficit[ctx.dataIndex] || '')
+        }}
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 12 }, color: tickC } },
+        y: { grid: { color: gridC }, min: 100, max: 220,
+          ticks: { font: { size: 11 }, color: tickC, callback: v => v + ' mld' } }
+      }
+    }
+  });
+})();
+
+(function() {
+  const ctx = document.getElementById('pensioniTrendChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: flussiAnni,
+      datasets: [
+        { label: 'Gestioni private (netto IC)', data: pensPrivate,   backgroundColor: '#2a78d6', borderRadius: 2, stack: 'p' },
+        { label: 'Gestioni pubbliche',          data: pensPubbliche, backgroundColor: '#4a3aa7', borderRadius: 2, stack: 'p' },
+        { label: 'Invalidi civili',             data: pensIC,        backgroundColor: '#e34948', borderRadius: 2, stack: 'p' }
+      ]
+    },
+    options: {
+      ...baseOpts,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: {
+          label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y} mld \u20ac`,
+          footer: items => ` Totale: ${items.reduce((s,i) => s+i.parsed.y, 0).toFixed(1)} mld \u20ac`
+        }}
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 12 }, color: tickC }, stacked: true },
+        y: { grid: { color: gridC }, stacked: true, min: 0, max: 330,
+          ticks: { font: { size: 11 }, color: tickC, callback: v => v + ' mld' } }
+      }
+    }
+  });
+})();
+
+(function() {
+  const ctx = document.getElementById('temporaneeChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: flussiAnni,
+      datasets: [
+        { label: 'NASPI',         data: tempNaspi,    backgroundColor: '#2a78d6', borderRadius: 2, stack: 't' },
+        { label: 'Assegno Unico', data: tempAunico,   backgroundColor: '#008300', borderRadius: 2, stack: 't' },
+        { label: 'RdC / ADI',     data: tempRdcAdi,   backgroundColor: '#e34948', borderRadius: 2, stack: 't' },
+        { label: 'CIG e altre',   data: tempCigAltre, backgroundColor: '#eda100', borderRadius: 2, stack: 't' }
+      ]
+    },
+    options: {
+      ...baseOpts,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: {
+          label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)} mld \u20ac`,
+          footer: items => ` Totale: ${items.reduce((s,i) => s+i.parsed.y, 0).toFixed(1)} mld \u20ac`
+        }}
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 12 }, color: tickC }, stacked: true },
+        y: { grid: { color: gridC }, stacked: true, min: 0, max: 50,
+          ticks: { font: { size: 11 }, color: tickC, callback: v => v + ' mld' } }
+      }
+    }
+  });
+})();
+
 </script>
