@@ -27,6 +27,7 @@ title: "Titolo I — Della spesa pubblica"
     <a href="#confronto">Europa</a>
     <a href="#debito">Debito</a>
     <a href="#aggiornamenti">Manovre</a>
+    <a href="#pensioni-dettaglio">Pensioni dettaglio</a>
   </div>
   <div class="nav-tag" id="dataStatus">⏺ carico dati…</div>
 </nav>
@@ -414,6 +415,88 @@ title: "Titolo I — Della spesa pubblica"
 
   <div class="insight" style="margin-top: 2rem;">
     <strong>Dove trovare i documenti ufficiali:</strong> il <a href="https://www.mef.gov.it/documenti-pubblicazioni/doc-finanza-pubblica/" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:underline;">MEF</a> pubblica il Documento di Economia e Finanza (DEF) e la Nota di Aggiornamento (NADEF) ogni anno in primavera e autunno. Il testo definitivo delle leggi è sempre su <a href="https://www.gazzettaufficiale.it" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:underline;">Gazzetta Ufficiale</a>, mentre i dossier tecnici di accompagnamento (più leggibili del testo di legge) sono su <a href="https://www.senato.it" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:underline;">Senato</a> e <a href="https://www.camera.it" target="_blank" rel="noopener" style="color:var(--ink); text-decoration:underline;">Camera</a>.
+  </div>
+</section>
+
+<!-- SEZIONE 06: PENSIONI DETTAGLIO -->
+<section class="section" id="pensioni-dettaglio">
+  <div class="section-header">
+    <span class="section-num">06 /</span>
+    <h2 class="section-title">Pensioni — serie storica e scomposizione</h2>
+  </div>
+  <p class="section-desc">Come è cambiata l'incidenza della spesa pensionistica sul PIL dal 1995 ad oggi, e come si distribuisce tra le principali categorie di pensione.</p>
+
+  <!-- GRAFICO STORICO -->
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Spesa pensionistica e protezione sociale % PIL — Italia 1995–2023</div>
+    <span class="source-tag static" id="storiaSourceTag"><span class="source-dot"></span>caricamento da Eurostat…</span>
+    <div class="canvas-wrap" style="height:320px;">
+      <canvas id="storiaChart" role="img" aria-label="Serie storica spesa pensionistica italiana in percentuale del PIL">Serie storica disponibile dopo il caricamento dei dati.</canvas>
+    </div>
+    <div class="insight" style="margin-top:1rem;">
+      La linea <strong>blu scuro</strong> mostra la spesa per protezione sociale totale (GF10, include pensioni, invalidità, superstiti, sussidi familiari). La linea <strong>rossa</strong> mostra la sola spesa per vecchiaia (GF1002), se disponibile nel dataset Eurostat per tutti gli anni. La tendenza di lungo periodo riflette l'invecchiamento demografico e le riforme successive: Dini (1995), Maroni (2004), Fornero (2011).
+    </div>
+  </div>
+
+  <!-- SCOMPOSIZIONE INPS -->
+  <h3 style="font-size:1rem; font-weight:500; margin: 2.5rem 0 0.5rem;">Scomposizione per categoria — dati INPS 2023</h3>
+  <p class="section-desc" style="margin-bottom:1.5rem;">I 16,2 milioni di pensionati italiani si distribuiscono in categorie molto diverse per numero, importo medio e peso sul bilancio. Fonte: INPS Osservatorio statistico pensioni 2023 — <strong>dati statici, aggiornamento manuale</strong>.</p>
+
+  <div class="cards-grid" style="margin-bottom:1.5rem;">
+    <div class="stat-card">
+      <div class="stat-card-label">Vecchiaia</div>
+      <div class="stat-card-val">8,4 mln</div>
+      <div class="stat-card-sub">media ~1.380 €/mese lordi</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Anzianità / anticipata</div>
+      <div class="stat-card-val">3,2 mln</div>
+      <div class="stat-card-sub">media ~1.620 €/mese lordi</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Invalidità previdenziale</div>
+      <div class="stat-card-val">0,9 mln</div>
+      <div class="stat-card-sub">media ~780 €/mese lordi</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Invalidità civile</div>
+      <div class="stat-card-val">1,2 mln</div>
+      <div class="stat-card-sub">media ~310 €/mese lordi — a carico fiscale</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Superstiti (reversibilità)</div>
+      <div class="stat-card-val">2,4 mln</div>
+      <div class="stat-card-sub">media ~680 €/mese lordi</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Indennitarie / altre</div>
+      <div class="stat-card-val">~0,1 mln</div>
+      <div class="stat-card-sub">include assegni sociali e simili</div>
+    </div>
+  </div>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Numero pensionati per categoria — Italia 2023 (milioni)</div>
+    <span class="source-tag static"><span class="source-dot"></span>dati statici INPS 2023 — aggiornamento manuale</span>
+    <div class="canvas-wrap" style="height:260px;">
+      <canvas id="categoriePensioniChart" role="img" aria-label="Pensionati per categoria">Dati INPS per categoria pensione.</canvas>
+    </div>
+  </div>
+
+  <!-- SCOMPOSIZIONE PER GESTIONE -->
+  <h3 style="font-size:1rem; font-weight:500; margin: 2.5rem 0 0.5rem;">Scomposizione per gestione — pubblico, privato, autonomi</h3>
+  <p class="section-desc" style="margin-bottom:1.5rem;">Le pensioni INPS si dividono tra diverse gestioni, ognuna con regole storicamente diverse. Le pensioni ex-INPDAP (dipendenti pubblici) hanno mediamente importi più alti perché calcolate con il sistema retributivo più a lungo.</p>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Pensionati per gestione INPS — 2023 (milioni) e importo medio mensile lordo</div>
+    <span class="source-tag static"><span class="source-dot"></span>dati statici INPS 2023 — aggiornamento manuale</span>
+    <div class="canvas-wrap" style="height:300px;">
+      <canvas id="gestioniChart" role="img" aria-label="Pensionati per gestione INPS">Dati INPS per gestione previdenziale.</canvas>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>Nota metodologica:</strong> i dati INPS di questa sezione sono estratti dall'Osservatorio statistico pensioni (inps.it) e aggiornati manualmente. I valori di importo medio sono al lordo delle ritenute fiscali. La distinzione tra invalidità previdenziale (contributiva) e invalidità civile (assistenziale, a carico della fiscalità generale) è rilevante per il confronto europeo: le classificazioni ESSPROS di Eurostat includono entrambe nella voce "disability", ma il peso sul bilancio contributivo vs fiscale è molto diverso. Per approfondire: <a href="https://www.inps.it/it/it/dati-e-bilanci/osservatori-statistici/pensioni.html" target="_blank" rel="noopener" style="color:var(--is-ink); text-decoration:underline;">INPS Osservatorio pensioni</a>.
   </div>
 </section>
 
@@ -927,7 +1010,7 @@ function rebuildPensioniEuropaChart() {
         x: {
           grid: { color: '#e8e5de' },
           ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
-          min: 0, max: 28
+          min: 0, max: 18
         },
         y: { grid: { display: false }, ticks: { font: { size: 12 }, color: '#3a3a3a' } }
       }
@@ -1149,4 +1232,245 @@ function selectCat(cat) {
   event.target.classList.add('active');
   renderEuropaChart(cat);
 }
+
+// ── SEZIONE 06: PENSIONI DETTAGLIO ────────────────────────────────────────────
+
+// Dati statici di fallback per la serie storica (Eurostat GF10 % PIL Italia).
+// Fonte: Eurostat gov_10a_exp, cofog99=GF10, unit=PC_GDP, geo=IT.
+// Aggiornare quando disponibili dati più recenti.
+const storiaStatica = {
+  anni:    [1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023],
+  gf10:    [21.3,21.7,22.0,21.8,21.9,21.7,21.8,22.2,22.5,22.5,22.7,22.4,22.1,22.5,23.9,24.0,23.9,24.5,24.5,24.5,24.2,24.0,23.8,23.7,23.8,25.4,24.5,23.8,21.0],
+  // GF1002 (solo vecchiaia) ha copertura storica più limitata — disponibile da ~2001
+  gf1002:  [null,null,null,null,null,null,13.1,13.4,13.6,13.7,13.9,13.7,13.5,13.8,14.7,14.8,14.7,15.1,15.2,15.1,14.9,14.8,14.6,14.5,14.6,15.6,15.1,14.7,null]
+};
+
+// Dati INPS per categoria (statici, aggiornamento manuale)
+const categoriePensioni = {
+  labels: ['Vecchiaia','Anzianità /\nanticipata','Invalidità\nprevidenziale','Invalidità\ncivile','Superstiti','Altre'],
+  numeri: [8.4, 3.2, 0.9, 1.2, 2.4, 0.1],
+  importoMedio: [1380, 1620, 780, 310, 680, 420]
+};
+
+// Dati INPS per gestione (statici, aggiornamento manuale)
+const gestioniPensioni = {
+  labels: ['FPLD\n(dip. privati)','Ex-INPDAP\n(dip. pubblici)','Artigiani','Commercianti','Coltivatori\ndiretti','Gestione\nseparata','Altre\ngestioni'],
+  numeri:        [7.1,  4.1,  1.5,  1.2,  0.8,  0.3,  1.2],
+  importoMedio:  [1180, 1740, 870,  810,  620,  580,  650]
+};
+
+// Grafico storia — costruito prima con dati statici, poi eventualmente sostituito da Eurostat live
+let storiaChartInstance = null;
+
+function buildStoriaChart(anni, gf10, gf1002) {
+  if (storiaChartInstance) storiaChartInstance.destroy();
+  const ctx = document.getElementById('storiaChart').getContext('2d');
+  const datasets = [
+    {
+      label: 'Protezione sociale (GF10)',
+      data: anni.map((a, i) => ({ x: a, y: gf10[i] })),
+      borderColor: '#1d4ed8',
+      backgroundColor: 'rgba(29,78,216,0.08)',
+      borderWidth: 2,
+      pointRadius: 3,
+      pointHoverRadius: 5,
+      fill: true,
+      tension: 0.3
+    }
+  ];
+  const gf1002Validi = gf1002 && gf1002.some(v => v !== null);
+  if (gf1002Validi) {
+    datasets.push({
+      label: 'Solo vecchiaia (GF1002)',
+      data: anni.map((a, i) => ({ x: a, y: gf1002[i] })),
+      borderColor: '#c0392b',
+      backgroundColor: 'transparent',
+      borderWidth: 2,
+      borderDash: [4, 3],
+      pointRadius: 3,
+      pointHoverRadius: 5,
+      fill: false,
+      tension: 0.3,
+      spanGaps: true
+    });
+  }
+  storiaChartInstance = new Chart(ctx, {
+    type: 'line',
+    data: { datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      animation: { duration: 500 },
+      plugins: {
+        legend: {
+          display: true,
+          labels: { font: { size: 11, family: "'IBM Plex Mono', monospace" }, color: '#7a7a7a', boxWidth: 20 }
+        },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y !== null ? ctx.parsed.y + '% PIL' : 'n.d.'}` } }
+      },
+      scales: {
+        x: {
+          type: 'linear',
+          grid: { color: '#e8e5de' },
+          ticks: { font: { size: 11 }, color: '#7a7a7a', stepSize: 5, callback: v => String(v) },
+          min: 1995, max: 2023
+        },
+        y: {
+          grid: { color: '#e8e5de' },
+          ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
+          min: 10, max: 28,
+          title: { display: true, text: '% PIL', font: { size: 10 }, color: '#7a7a7a' }
+        }
+      }
+    }
+  });
+}
+
+// Grafico categorie pensioni
+(function() {
+  const ctx = document.getElementById('categoriePensioniChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: categoriePensioni.labels.map(l => l.includes('\n') ? l.split('\n') : l),
+      datasets: [
+        {
+          label: 'Pensionati (milioni)',
+          data: categoriePensioni.numeri,
+          backgroundColor: ['#1d4ed8','#2a78d6','#e34948','#f09595','#4a3aa7','#aaa'],
+          borderRadius: 3,
+          yAxisID: 'y'
+        }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          callbacks: {
+            label: ctx => ` ${ctx.parsed.y}M pensionati`,
+            afterLabel: ctx => ` importo medio: ~${categoriePensioni.importoMedio[ctx.dataIndex]} €/mese`
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#7a7a7a' } },
+        y: { grid: { color: '#e8e5de' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + 'M' } }
+      }
+    }
+  });
+})();
+
+// Grafico gestioni — grafico orizzontale con doppia metrica (numero + importo medio)
+(function() {
+  const ctx = document.getElementById('gestioniChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: gestioniPensioni.labels.map(l => l.includes('\n') ? l.split('\n') : l),
+      datasets: [
+        {
+          label: 'Pensionati (milioni)',
+          data: gestioniPensioni.numeri,
+          backgroundColor: '#b5d4f4',
+          borderRadius: 3,
+          yAxisID: 'y'
+        },
+        {
+          label: 'Importo medio (€/mese, scala destra)',
+          data: gestioniPensioni.importoMedio,
+          backgroundColor: 'rgba(192,57,43,0.75)',
+          borderRadius: 3,
+          yAxisID: 'y2',
+          type: 'line',
+          borderColor: '#c0392b',
+          borderWidth: 2,
+          pointRadius: 4,
+          fill: false
+        }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          display: true,
+          labels: { font: { size: 11, family: "'IBM Plex Mono', monospace" }, color: '#7a7a7a', boxWidth: 16 }
+        },
+        tooltip: {
+          callbacks: {
+            label: ctx => ctx.datasetIndex === 0
+              ? ` ${ctx.parsed.y}M pensionati`
+              : ` importo medio: ${ctx.parsed.y} €/mese`
+          }
+        }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#7a7a7a' } },
+        y:  { grid: { color: '#e8e5de' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + 'M' }, position: 'left' },
+        y2: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#c0392b', callback: v => v + ' €' }, position: 'right' }
+      }
+    }
+  });
+})();
+
+// Fetch Eurostat serie storica — tenta di sostituire i dati statici con valori live
+async function loadStoriaEurostat() {
+  const anni = [1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
+  const timeParams = anni.map(a => `time=${a}`).join('&');
+
+  // GF10 — protezione sociale totale
+  const urlGF10 = `${EUROSTAT_BASE}gov_10a_exp?format=JSON&unit=PC_GDP&sector=S13&cofog99=GF10&na_item=TE&geo=IT&${timeParams}`;
+  const res = await fetchWithTimeout(urlGF10, EUROSTAT_TIMEOUT_MS);
+  if (!res.ok) throw new Error(`HTTP ${res.status}`);
+  const json = await res.json();
+
+  // In questo caso la dimensione libera è 'time', non 'geo'
+  const timeDim = json.dimension.time;
+  const timeIndex = timeDim.category.index; // { '1995': 0, '1996': 1, ... }
+  const values = json.value;
+  const gf10Live = anni.map(a => {
+    const idx = timeIndex[String(a)];
+    if (idx === undefined) return null;
+    const v = Array.isArray(values) ? values[idx] : values[String(idx)];
+    return (v !== undefined && v !== null) ? Number(v) : null;
+  });
+
+  // GF1002 — solo vecchiaia (può avere gaps)
+  let gf1002Live = anni.map(() => null);
+  try {
+    const urlGF1002 = `${EUROSTAT_BASE}gov_10a_exp?format=JSON&unit=PC_GDP&sector=S13&cofog99=GF1002&na_item=TE&geo=IT&${timeParams}`;
+    const res2 = await fetchWithTimeout(urlGF1002, EUROSTAT_TIMEOUT_MS);
+    if (res2.ok) {
+      const json2 = await res2.json();
+      const ti2 = json2.dimension.time.category.index;
+      const v2 = json2.value;
+      gf1002Live = anni.map(a => {
+        const idx = ti2[String(a)];
+        if (idx === undefined) return null;
+        const val = Array.isArray(v2) ? v2[idx] : v2[String(idx)];
+        return (val !== undefined && val !== null) ? Number(val) : null;
+      });
+    }
+  } catch(e) { /* GF1002 resta null, grafico mostra solo GF10 */ }
+
+  const hasData = gf10Live.some(v => v !== null);
+  if (!hasData) throw new Error('Nessun valore GF10 nella risposta');
+  return { anni, gf10: gf10Live, gf1002: gf1002Live };
+}
+
+// Avvio: prima costruisce il grafico con dati statici (immediato),
+// poi tenta il fetch live e aggiorna se disponibile
+buildStoriaChart(storiaStatica.anni, storiaStatica.gf10, storiaStatica.gf1002);
+setSourceTag('storiaSourceTag', false, '— dati statici Eurostat 2023');
+
+loadStoriaEurostat()
+  .then(({ anni, gf10, gf1002 }) => {
+    buildStoriaChart(anni, gf10, gf1002);
+    setSourceTag('storiaSourceTag', true, '— Eurostat live');
+  })
+  .catch(e => {
+    console.warn('Serie storica Eurostat non disponibile, uso dati statici:', e.message);
+    setSourceTag('storiaSourceTag', false, '— dati statici (Eurostat non raggiungibile)');
+  });
 </script>
