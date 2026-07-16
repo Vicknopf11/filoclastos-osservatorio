@@ -348,7 +348,7 @@ title: "Titolo I — Della spesa pubblica"
   </div>
 
   <div class="insight">
-    <strong>Il circolo vizioso:</strong> più debito → più interessi da pagare → meno risorse per investimenti → crescita lenta → più difficile ridurre il debito. L'Italia paga oggi ~87 miliardi solo di interessi — poco più della spesa per l'istruzione (circa 80 miliardi). Ogni punto percentuale di aumento dei tassi di interesse costa circa 28 miliardi in più all'anno sul medio termine, man mano che i titoli esistenti vanno a scadenza.
+    <strong>Il circolo vizioso:</strong> più debito → più interessi da pagare → meno risorse per investimenti → crescita lenta → più difficile ridurre il debito. L'Italia paga oggi ~87 miliardi solo di interessi — il doppio della spesa per l'istruzione. Ogni punto percentuale di aumento dei tassi di interesse costa circa 28 miliardi in più all'anno sul medio termine, man mano che i titoli esistenti vanno a scadenza.
   </div>
 </section>
 
@@ -438,66 +438,96 @@ title: "Titolo I — Della spesa pubblica"
     </div>
   </div>
 
-  <!-- SCOMPOSIZIONE INPS -->
-  <h3 style="font-size:1rem; font-weight:500; margin: 2.5rem 0 0.5rem;">Scomposizione per categoria — dati INPS 2023</h3>
-  <p class="section-desc" style="margin-bottom:1.5rem;">I 16,2 milioni di pensionati italiani si distribuiscono in categorie molto diverse per numero, importo medio e peso sul bilancio. Fonte: INPS Osservatorio statistico pensioni 2023 — <strong>dati statici, aggiornamento manuale</strong>.</p>
+  <!-- METRICHE CHIAVE INPS -->
+  <h3 style="font-size:1rem; font-weight:500; margin: 2.5rem 0 0.5rem;">Dati INPS — bilancio preventivo 2025–2026</h3>
+  <p class="section-desc" style="margin-bottom:1.5rem;">Fonte: INPS — Bilancio preventivo 2025 (CA2024_0109) e Bilancio preventivo 2026 (CA2025_0181). I valori 2025 e 2026 sono previsioni approvate dal Consiglio di Amministrazione INPS. Non includono invalidi civili e pensioni assistenziali salvo dove indicato.</p>
 
   <div class="cards-grid" style="margin-bottom:1.5rem;">
     <div class="stat-card">
-      <div class="stat-card-label">Vecchiaia</div>
-      <div class="stat-card-val">8,4 mln</div>
-      <div class="stat-card-sub">media ~1.380 €/mese lordi</div>
+      <div class="stat-card-label">Pensioni totali 2025</div>
+      <div class="stat-card-val">20,7 mln</div>
+      <div class="stat-card-sub">incluse assistenziali e invalidi civili</div>
     </div>
     <div class="stat-card">
-      <div class="stat-card-label">Anzianità / anticipata</div>
-      <div class="stat-card-val">3,2 mln</div>
-      <div class="stat-card-sub">media ~1.620 €/mese lordi</div>
+      <div class="stat-card-label">Solo gestioni contributive</div>
+      <div class="stat-card-val">17,5 mln</div>
+      <div class="stat-card-sub">escluse assistenziali e invalidi civili</div>
     </div>
     <div class="stat-card">
-      <div class="stat-card-label">Invalidità previdenziale</div>
-      <div class="stat-card-val">0,9 mln</div>
-      <div class="stat-card-sub">media ~780 €/mese lordi</div>
+      <div class="stat-card-label">Spesa contributiva 2025</div>
+      <div class="stat-card-val danger">320 mld €</div>
+      <div class="stat-card-sub">solo gestioni previdenziali</div>
     </div>
     <div class="stat-card">
-      <div class="stat-card-label">Invalidità civile</div>
-      <div class="stat-card-val">1,2 mln</div>
-      <div class="stat-card-sub">media ~310 €/mese lordi — a carico fiscale</div>
+      <div class="stat-card-label">Importo medio annuo</div>
+      <div class="stat-card-val warn">18.280 €</div>
+      <div class="stat-card-sub">~1.523 €/mese lordi — gestioni contributive</div>
     </div>
     <div class="stat-card">
-      <div class="stat-card-label">Superstiti (reversibilità)</div>
-      <div class="stat-card-val">2,4 mln</div>
-      <div class="stat-card-sub">media ~680 €/mese lordi</div>
+      <div class="stat-card-label">Contribuenti / 100 pensioni</div>
+      <div class="stat-card-val warn">146,8</div>
+      <div class="stat-card-sub">2025 — in lieve miglioramento vs 2024</div>
     </div>
     <div class="stat-card">
-      <div class="stat-card-label">Indennitarie / altre</div>
-      <div class="stat-card-val">~0,1 mln</div>
-      <div class="stat-card-sub">include assegni sociali e simili</div>
+      <div class="stat-card-label">Pensioni previste 2026</div>
+      <div class="stat-card-val">21,0 mln</div>
+      <div class="stat-card-sub">+1,6% vs 2025 — previsione INPS</div>
     </div>
   </div>
 
+  <!-- GRAFICO: PER TIPO -->
   <div class="chart-wrap" style="margin-bottom:1.5rem;">
-    <div class="chart-title">Numero pensionati per categoria — Italia 2023 (milioni)</div>
-    <span class="source-tag static"><span class="source-dot"></span>dati statici INPS 2023 — aggiornamento manuale</span>
+    <div class="chart-title">Pensioni per tipo — numero (mln) e spesa annua (mld €) — 2025</div>
+    <span class="source-tag static"><span class="source-dot"></span>INPS — Bilancio preventivo 2025, Tabella pensioni vigenti al 31.12.2025</span>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin:0.75rem 0;font-size:11px;color:var(--is-ink-3);">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#2a78d6;display:inline-block;"></span>Numero pensioni (scala sinistra)</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#e34948;display:inline-block;"></span>Spesa annua mld € (scala destra)</span>
+    </div>
     <div class="canvas-wrap" style="height:260px;">
-      <canvas id="categoriePensioniChart" role="img" aria-label="Pensionati per categoria">Dati INPS per categoria pensione.</canvas>
+      <canvas id="tipoChart" role="img" aria-label="Pensioni per tipo: anzianità/anticipate 6,7 milioni per 186 miliardi, vecchiaia 5,8 milioni per 73 miliardi, indirette/reversibilità 4,2 milioni per 47 miliardi, invalidità 0,86 milioni per 12,8 miliardi.">Dati INPS bilancio preventivo 2025.</canvas>
     </div>
   </div>
 
-  <!-- SCOMPOSIZIONE PER GESTIONE -->
+  <!-- GRAFICO: IMPORTO MEDIO PER GESTIONE -->
   <h3 style="font-size:1rem; font-weight:500; margin: 2.5rem 0 0.5rem;">Scomposizione per gestione — pubblico, privato, autonomi</h3>
-  <p class="section-desc" style="margin-bottom:1.5rem;">Le pensioni INPS si dividono tra diverse gestioni, ognuna con regole storicamente diverse. Le pensioni ex-INPDAP (dipendenti pubblici) hanno mediamente importi più alti perché calcolate con il sistema retributivo più a lungo.</p>
+  <p class="section-desc" style="margin-bottom:1.5rem;">Le pensioni INPS si distribuiscono tra gestioni con storie contributive molto diverse. L'importo medio per le pensioni di anzianità/anticipate — quelle che meglio riflettono una carriera completa — rivela la profonda disomogeneità del sistema.</p>
 
   <div class="chart-wrap" style="margin-bottom:1.5rem;">
-    <div class="chart-title">Pensionati per gestione INPS — 2023 (milioni) e importo medio mensile lordo</div>
-    <span class="source-tag static"><span class="source-dot"></span>dati statici INPS 2023 — aggiornamento manuale</span>
-    <div class="canvas-wrap" style="height:300px;">
-      <canvas id="gestioniChart" role="img" aria-label="Pensionati per gestione INPS">Dati INPS per gestione previdenziale.</canvas>
+    <div class="chart-title">Importo medio mensile lordo — pensioni anzianità/anticipate per gestione (€) — 2025</div>
+    <span class="source-tag static"><span class="source-dot"></span>INPS — Bilancio preventivo 2025, importo medio annuo ÷ 12</span>
+    <div class="canvas-wrap" style="height:320px;">
+      <canvas id="gestioniChart" role="img" aria-label="Importo medio mensile pensioni di anzianità: ex INPDAI dirigenti 6203 euro, Ferrovie 2756, CTPS statali 2789, FPLD privati 2372, CPDEL enti locali 2351, commercianti 1828, artigiani 1696, coltivatori diretti 1235.">Dati INPS bilancio preventivo 2025 per gestione.</canvas>
+    </div>
+  </div>
+
+  <!-- GRAFICO: RAPPORTO CONTRIBUENTI/PENSIONI -->
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Rapporto contribuenti / 100 pensioni per gestione — 2025</div>
+    <span class="source-tag static"><span class="source-dot"></span>INPS — Bilancio preventivo 2025, Tabella contribuenti/pensioni. Sotto 100 = deficit strutturale.</span>
+    <div class="canvas-wrap" style="height:260px;">
+      <canvas id="rapportoChart" role="img" aria-label="Contribuenti per 100 pensioni: FPLD privati 169, parasubordinati 167, CTPS statali 109, CPDEL enti locali 96, commercianti 92, artigiani 74, coltivatori diretti circa 60. Soglia di equilibrio: 100.">Rapporto contribuenti/pensioni per gestione INPS 2025.</canvas>
+    </div>
+  </div>
+
+  <!-- GRAFICO: TREND 2024-2026 -->
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Evoluzione pensioni per tipo — 2024 / 2025 / 2026 (milioni)</div>
+    <span class="source-tag static"><span class="source-dot"></span>INPS — Bilancio preventivo 2025 (valori 2024 consuntivi, 2025 previsione) e Bilancio preventivo 2026 (previsione 2026)</span>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin:0.75rem 0;font-size:11px;color:var(--is-ink-3);">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:16px;height:3px;background:#2a78d6;display:inline-block;"></span>Vecchiaia</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:16px;height:3px;background:#008300;display:inline-block;border-top: 3px dashed #008300;height:0;"></span>Anzianità/Anticipate</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:16px;height:3px;background:#e34948;display:inline-block;"></span>Invalidità</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:16px;height:3px;background:#eda100;display:inline-block;"></span>Indirette/Reversibilità</span>
+    </div>
+    <div class="canvas-wrap" style="height:240px;">
+      <canvas id="trendPensioniChart" role="img" aria-label="Trend pensioni per tipo 2024-2026. Anzianità stabile a 6,7 milioni. Vecchiaia cresce da 5,78 a 5,96 milioni. Invalidità cala da 0,88 a 0,83 milioni. Indirette in lieve calo da 4,18 a 4,12 milioni.">Trend 2024-2026 pensioni per tipo da bilanci preventivi INPS.</canvas>
     </div>
   </div>
 
   <div class="insight">
-    <strong>Nota metodologica:</strong> i dati INPS di questa sezione sono estratti dall'Osservatorio statistico pensioni (inps.it) e aggiornati manualmente. I valori di importo medio sono al lordo delle ritenute fiscali. La distinzione tra invalidità previdenziale (contributiva) e invalidità civile (assistenziale, a carico della fiscalità generale) è rilevante per il confronto europeo: le classificazioni ESSPROS di Eurostat includono entrambe nella voce "disability", ma il peso sul bilancio contributivo vs fiscale è molto diverso. Per approfondire: <a href="https://www.inps.it/it/it/dati-e-bilanci/osservatori-statistici/pensioni.html" target="_blank" rel="noopener" style="color:var(--is-ink); text-decoration:underline;">INPS Osservatorio pensioni</a>.
+    <strong>Nota metodologica:</strong> i dati di questa sezione sono estratti dai Bilanci Preventivi INPS 2025 e 2026, approvati dal Consiglio di Amministrazione. I valori di importo medio sono al lordo delle ritenute fiscali. Le pensioni di anzianità/anticipate hanno importi medi molto più alti (2.372 €/mese per il FPLD) rispetto alle pensioni di vecchiaia (1.050 €/mese) perché calcolate prevalentemente con il sistema retributivo — quelle erogate a lavoratori con carriere lunghe iniziate prima del 1996. Le gestioni degli autonomi (artigiani, commercianti, coltivatori) sono in deficit strutturale: hanno meno di 100 contribuenti per ogni 100 pensioni e ricevono trasferimenti dalle gestioni in surplus. Per approfondire: <a href="https://www.inps.it/it/it/dati-e-bilanci.html" target="_blank" rel="noopener" style="color:var(--is-ink); text-decoration:underline;">INPS — Dati e bilanci</a>.
   </div>
+
 </section>
 
 <footer>
@@ -1245,189 +1275,176 @@ const storiaStatica = {
   gf1002:  [null,null,null,null,null,null,13.1,13.4,13.6,13.7,13.9,13.7,13.5,13.8,14.7,14.8,14.7,15.1,15.2,15.1,14.9,14.8,14.6,14.5,14.6,15.6,15.1,14.7,null]
 };
 
-// Dati INPS per categoria (statici, aggiornamento manuale)
-const categoriePensioni = {
-  labels: ['Vecchiaia','Anzianità /\nanticipata','Invalidità\nprevidenziale','Invalidità\ncivile','Superstiti','Altre'],
-  numeri: [8.4, 3.2, 0.9, 1.2, 2.4, 0.1],
-  importoMedio: [1380, 1620, 780, 310, 680, 420]
-};
+// Dati INPS reali — Bilancio Preventivo 2025 (CA2024_0109) e 2026 (CA2025_0181)
+// Pensioni vigenti al 31.12.2025, gestioni contributive, escluse assistenziali e invalidi civili
 
-// Dati INPS per gestione (statici, aggiornamento manuale)
-const gestioniPensioni = {
-  labels: ['FPLD\n(dip. privati)','Ex-INPDAP\n(dip. pubblici)','Artigiani','Commercianti','Coltivatori\ndiretti','Gestione\nseparata','Altre\ngestioni'],
-  numeri:        [7.1,  4.1,  1.5,  1.2,  0.8,  0.3,  1.2],
-  importoMedio:  [1180, 1740, 870,  810,  620,  580,  650]
-};
-
-// Grafico storia — costruito prima con dati statici, poi eventualmente sostituito da Eurostat live
+// GRAFICO STORIA — costruito prima con dati statici, poi eventualmente sostituito da Eurostat live
 let storiaChartInstance = null;
-
 function buildStoriaChart(anni, gf10, gf1002) {
   if (storiaChartInstance) storiaChartInstance.destroy();
   const ctx = document.getElementById('storiaChart').getContext('2d');
-  const datasets = [
-    {
-      label: 'Protezione sociale (GF10)',
-      data: anni.map((a, i) => ({ x: a, y: gf10[i] })),
-      borderColor: '#1d4ed8',
-      backgroundColor: 'rgba(29,78,216,0.08)',
-      borderWidth: 2,
-      pointRadius: 3,
-      pointHoverRadius: 5,
-      fill: true,
-      tension: 0.3
-    }
-  ];
-  const gf1002Validi = gf1002 && gf1002.some(v => v !== null);
-  if (gf1002Validi) {
+  const datasets = [{
+    label: 'Protezione sociale (GF10)',
+    data: anni.map((a, i) => ({ x: a, y: gf10[i] })),
+    borderColor: '#1d4ed8', backgroundColor: 'rgba(29,78,216,0.08)',
+    borderWidth: 2, pointRadius: 3, pointHoverRadius: 5, fill: true, tension: 0.3
+  }];
+  if (gf1002 && gf1002.some(v => v !== null)) {
     datasets.push({
       label: 'Solo vecchiaia (GF1002)',
       data: anni.map((a, i) => ({ x: a, y: gf1002[i] })),
-      borderColor: '#c0392b',
-      backgroundColor: 'transparent',
-      borderWidth: 2,
-      borderDash: [4, 3],
-      pointRadius: 3,
-      pointHoverRadius: 5,
-      fill: false,
-      tension: 0.3,
-      spanGaps: true
+      borderColor: '#c0392b', backgroundColor: 'transparent',
+      borderWidth: 2, borderDash: [4, 3], pointRadius: 3, pointHoverRadius: 5,
+      fill: false, tension: 0.3, spanGaps: true
     });
   }
   storiaChartInstance = new Chart(ctx, {
-    type: 'line',
-    data: { datasets },
+    type: 'line', data: { datasets },
     options: {
-      responsive: true, maintainAspectRatio: false,
-      animation: { duration: 500 },
+      responsive: true, maintainAspectRatio: false, animation: { duration: 500 },
       plugins: {
-        legend: {
-          display: true,
-          labels: { font: { size: 11, family: "'IBM Plex Mono', monospace" }, color: '#7a7a7a', boxWidth: 20 }
-        },
+        legend: { display: true, labels: { font: { size: 11, family: "'IBM Plex Mono', monospace" }, color: '#7a7a7a', boxWidth: 20 } },
         tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y !== null ? ctx.parsed.y + '% PIL' : 'n.d.'}` } }
       },
       scales: {
-        x: {
-          type: 'linear',
-          grid: { color: '#e8e5de' },
-          ticks: { font: { size: 11 }, color: '#7a7a7a', stepSize: 5, callback: v => String(v) },
-          min: 1995, max: 2023
-        },
-        y: {
-          grid: { color: '#e8e5de' },
-          ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
-          min: 0, max: 28,
-          title: { display: true, text: '% PIL', font: { size: 10 }, color: '#7a7a7a' }
-        }
+        x: { type: 'linear', grid: { color: '#e8e5de' }, ticks: { font: { size: 11 }, color: '#7a7a7a', stepSize: 5, callback: v => String(v) }, min: 1995, max: 2023 },
+        y: { grid: { color: '#e8e5de' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' }, min: 0, max: 28,
+          title: { display: true, text: '% PIL', font: { size: 10 }, color: '#7a7a7a' } }
       }
     }
   });
 }
 
-// Grafico categorie pensioni
+// GRAFICO 1: PER TIPO — barre + linea doppio asse
 (function() {
-  const ctx = document.getElementById('categoriePensioniChart').getContext('2d');
+  const ctx = document.getElementById('tipoChart').getContext('2d');
   new Chart(ctx, {
-    type: 'bar',
     data: {
-      labels: categoriePensioni.labels.map(l => l.includes('\n') ? l.split('\n') : l),
+      labels: ['Anzianit\u00e0 /\nAnticipate', 'Vecchiaia', 'Indirette /\nReversibilit\u00e0', 'Invalidit\u00e0 /\nInabilit\u00e0'],
       datasets: [
-        {
-          label: 'Pensionati (milioni)',
-          data: categoriePensioni.numeri,
-          backgroundColor: ['#1d4ed8','#2a78d6','#e34948','#f09595','#4a3aa7','#aaa'],
-          borderRadius: 3,
-          yAxisID: 'y'
-        }
+        { type: 'bar', label: 'Numero (milioni)', data: [6.68, 5.82, 4.16, 0.86],
+          backgroundColor: '#2a78d6', borderRadius: 3, yAxisID: 'y' },
+        { type: 'line', label: 'Spesa annua (mld \u20ac)', data: [186.6, 73.8, 47.1, 12.8],
+          borderColor: '#e34948', backgroundColor: 'transparent', borderWidth: 2,
+          pointRadius: 5, pointBackgroundColor: '#e34948', yAxisID: 'y2' }
       ]
     },
     options: {
       responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: { display: false },
-        tooltip: {
-          callbacks: {
-            label: ctx => ` ${ctx.parsed.y}M pensionati`,
-            afterLabel: ctx => ` importo medio: ~${categoriePensioni.importoMedio[ctx.dataIndex]} €/mese`
-          }
-        }
+      plugins: { legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ctx.datasetIndex === 0 ? ` ${ctx.parsed.y}M pensioni` : ` ${ctx.parsed.y} mld \u20ac/anno` } }
       },
       scales: {
         x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#7a7a7a' } },
-        y: { grid: { color: '#e8e5de' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + 'M' } }
+        y:  { grid: { color: '#e8e5de' }, position: 'left',  ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + 'M' } },
+        y2: { grid: { display: false },  position: 'right', ticks: { font: { size: 11 }, color: '#e34948', callback: v => v + ' mld' } }
       }
     }
   });
 })();
 
-// Grafico gestioni — grafico orizzontale con doppia metrica (numero + importo medio)
+// GRAFICO 2: IMPORTO MEDIO PER GESTIONE — orizzontale, ordinato decrescente
 (function() {
   const ctx = document.getElementById('gestioniChart').getContext('2d');
   new Chart(ctx, {
     type: 'bar',
     data: {
-      labels: gestioniPensioni.labels.map(l => l.includes('\n') ? l.split('\n') : l),
-      datasets: [
-        {
-          label: 'Pensionati (milioni)',
-          data: gestioniPensioni.numeri,
-          backgroundColor: '#b5d4f4',
-          borderRadius: 3,
-          yAxisID: 'y'
-        },
-        {
-          label: 'Importo medio (€/mese, scala destra)',
-          data: gestioniPensioni.importoMedio,
-          backgroundColor: 'rgba(192,57,43,0.75)',
-          borderRadius: 3,
-          yAxisID: 'y2',
-          type: 'line',
-          borderColor: '#c0392b',
-          borderWidth: 2,
-          pointRadius: 4,
-          fill: false
-        }
-      ]
+      labels: ['Ex INPDAI\n(dirigenti)', 'Ferrovie\ndello Stato', 'CTPS\n(dip. statali)', 'FPLD\n(dip. privati)', 'CPDEL\n(enti locali)', 'Commercianti', 'Artigiani', 'Coltivatori\ndiretti'],
+      datasets: [{
+        label: '\u20ac/mese lordi',
+        data: [6203, 2756, 2789, 2372, 2351, 1828, 1696, 1235],
+        backgroundColor: ['#e34948','#2a78d6','#2a78d6','#2a78d6','#2a78d6','#eda100','#eda100','#eda100'],
+        borderRadius: 3
+      }]
     },
     options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          display: true,
-          labels: { font: { size: 11, family: "'IBM Plex Mono', monospace" }, color: '#7a7a7a', boxWidth: 16 }
-        },
-        tooltip: {
-          callbacks: {
-            label: ctx => ctx.datasetIndex === 0
-              ? ` ${ctx.parsed.y}M pensionati`
-              : ` importo medio: ${ctx.parsed.y} €/mese`
-          }
-        }
+      indexAxis: 'y', responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.x.toLocaleString('it-IT') + ' \u20ac/mese lordi (pensioni anzianit\u00e0)' } }
       },
       scales: {
-        x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#7a7a7a' } },
-        y:  { grid: { color: '#e8e5de' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + 'M' }, position: 'left' },
-        y2: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#c0392b', callback: v => v + ' €' }, position: 'right' }
+        x: { grid: { color: '#e8e5de' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v.toLocaleString('it-IT') + ' \u20ac' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#7a7a7a' } }
       }
     }
   });
 })();
 
-// Fetch Eurostat serie storica — tenta di sostituire i dati statici con valori live
+// GRAFICO 3: RAPPORTO CONTRIBUENTI/PENSIONI
+(function() {
+  const ctx = document.getElementById('rapportoChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['FPLD\ndip. privati', 'Parasubord.', 'CTPS\nstatali', 'CPDEL\nenti locali', 'Commercianti', 'Artigiani', 'Coltivatori\ndiretti'],
+      datasets: [{
+        label: 'Contribuenti per 100 pensioni',
+        data: [169, 167, 109, 96, 92, 74, 60],
+        backgroundColor: ['#008300','#008300','#2a78d6','#e34948','#e34948','#e34948','#e34948'],
+        borderRadius: 3
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ' ' + ctx.parsed.y + ' contribuenti per 100 pensioni' } }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#7a7a7a' } },
+        y: { grid: { color: '#e8e5de' }, min: 0, max: 200,
+          ticks: { font: { size: 11 }, color: '#7a7a7a' },
+          afterDatasetsDraw(chart) {
+            const ctx2 = chart.ctx, yS = chart.scales.y, xS = chart.scales.x;
+            const y100 = yS.getPixelForValue(100);
+            ctx2.save();
+            ctx2.beginPath();
+            ctx2.moveTo(xS.left, y100); ctx2.lineTo(xS.right, y100);
+            ctx2.strokeStyle = '#e34948'; ctx2.lineWidth = 2;
+            ctx2.setLineDash([6, 3]); ctx2.stroke(); ctx2.restore();
+          }
+        }
+      }
+    }
+  });
+})();
+
+// GRAFICO 4: TREND 2024-2026 PER TIPO
+(function() {
+  const ctx = document.getElementById('trendPensioniChart').getContext('2d');
+  new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: ['2024', '2025', '2026'],
+      datasets: [
+        { label: 'Vecchiaia',           data: [5.78, 5.82, 5.96], borderColor: '#2a78d6', backgroundColor: 'rgba(42,120,214,0.08)', borderWidth: 2, pointRadius: 4, fill: false, tension: 0.3 },
+        { label: 'Anzianit\u00e0/Anticipate', data: [6.68, 6.68, 6.67], borderColor: '#008300', backgroundColor: 'transparent', borderWidth: 2, pointRadius: 4, fill: false, tension: 0.3, borderDash: [5,3] },
+        { label: 'Invalidit\u00e0',          data: [0.88, 0.86, 0.83], borderColor: '#e34948', backgroundColor: 'transparent', borderWidth: 2, pointRadius: 4, fill: false, tension: 0.3, borderDash: [2,3] },
+        { label: 'Indirette/Rev.',       data: [4.18, 4.16, 4.12], borderColor: '#eda100', backgroundColor: 'transparent', borderWidth: 2, pointRadius: 4, fill: false, tension: 0.3, borderDash: [8,3] }
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(2)}M pensioni` } }
+      },
+      scales: {
+        x: { grid: { display: false }, ticks: { font: { size: 12 }, color: '#7a7a7a' } },
+        y: { grid: { color: '#e8e5de' }, min: 0, max: 8,
+          ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v.toFixed(1) + 'M' } }
+      }
+    }
+  });
+})();
+
+// FETCH EUROSTAT SERIE STORICA
 async function loadStoriaEurostat() {
   const anni = [1995,1996,1997,1998,1999,2000,2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023];
   const timeParams = anni.map(a => `time=${a}`).join('&');
-
-  // GF10 — protezione sociale totale
   const urlGF10 = `${EUROSTAT_BASE}gov_10a_exp?format=JSON&unit=PC_GDP&sector=S13&cofog99=GF10&na_item=TE&geo=IT&${timeParams}`;
   const res = await fetchWithTimeout(urlGF10, EUROSTAT_TIMEOUT_MS);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
   const json = await res.json();
-
-  // In questo caso la dimensione libera è 'time', non 'geo'
-  const timeDim = json.dimension.time;
-  const timeIndex = timeDim.category.index; // { '1995': 0, '1996': 1, ... }
+  const timeIndex = json.dimension.time.category.index;
   const values = json.value;
   const gf10Live = anni.map(a => {
     const idx = timeIndex[String(a)];
@@ -1435,8 +1452,6 @@ async function loadStoriaEurostat() {
     const v = Array.isArray(values) ? values[idx] : values[String(idx)];
     return (v !== undefined && v !== null) ? Number(v) : null;
   });
-
-  // GF1002 — solo vecchiaia (può avere gaps)
   let gf1002Live = anni.map(() => null);
   try {
     const urlGF1002 = `${EUROSTAT_BASE}gov_10a_exp?format=JSON&unit=PC_GDP&sector=S13&cofog99=GF1002&na_item=TE&geo=IT&${timeParams}`;
@@ -1452,15 +1467,12 @@ async function loadStoriaEurostat() {
         return (val !== undefined && val !== null) ? Number(val) : null;
       });
     }
-  } catch(e) { /* GF1002 resta null, grafico mostra solo GF10 */ }
-
-  const hasData = gf10Live.some(v => v !== null);
-  if (!hasData) throw new Error('Nessun valore GF10 nella risposta');
+  } catch(e) {}
+  if (!gf10Live.some(v => v !== null)) throw new Error('Nessun valore GF10');
   return { anni, gf10: gf10Live, gf1002: gf1002Live };
 }
 
-// Avvio: prima costruisce il grafico con dati statici (immediato),
-// poi tenta il fetch live e aggiorna se disponibile
+// AVVIO
 buildStoriaChart(storiaStatica.anni, storiaStatica.gf10, storiaStatica.gf1002);
 setSourceTag('storiaSourceTag', false, '— dati statici Eurostat 2023');
 
@@ -1470,7 +1482,7 @@ loadStoriaEurostat()
     setSourceTag('storiaSourceTag', true, '— Eurostat live');
   })
   .catch(e => {
-    console.warn('Serie storica Eurostat non disponibile, uso dati statici:', e.message);
+    console.warn('Serie storica Eurostat non disponibile:', e.message);
     setSourceTag('storiaSourceTag', false, '— dati statici (Eurostat non raggiungibile)');
   });
 </script>
