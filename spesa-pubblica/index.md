@@ -927,7 +927,7 @@ function rebuildPensioniEuropaChart() {
         x: {
           grid: { color: '#e8e5de' },
           ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
-          min: 0, max: 18
+          min: 0, max: 28
         },
         y: { grid: { display: false }, ticks: { font: { size: 12 }, color: '#3a3a3a' } }
       }
