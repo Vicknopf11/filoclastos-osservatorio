@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Home
+description: "Dati pubblici italiani verificati: spesa pubblica, proprietà societarie, carriere politiche, norme. Fonti citate, metodologia trasparente, nessuna narrazione."
 ---
 
 <p class="prose__kicker" style="margin-top:34px;">Presentazione</p>

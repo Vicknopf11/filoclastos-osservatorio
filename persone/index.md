@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Titolo III — Delle persone"
+description: "Traiettorie di carriera tra incarichi pubblici e privati in Italia — le porte girevoli, ricostruite con fonti verificate."
+---
 ---
 <div class="prose">
 <span class="prose__kicker">Titolo III</span>

@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Titolo II — Della proprietà societaria"
+description: "Strutture di controllo, azionariato e catene proprietarie delle società italiane rilevanti, ricostruite da fonti pubbliche."
 ---
 <div class="prose">
 <span class="prose__kicker">Titolo II</span>

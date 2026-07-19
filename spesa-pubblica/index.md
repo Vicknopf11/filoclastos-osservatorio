@@ -1,6 +1,8 @@
 ---
 layout: default
 title: "Titolo I — Della spesa pubblica"
+description: "Bilanci e flussi della finanza pubblica italiana ed europea, con grafici aggiornati da dati Eurostat e fonti sempre citate."
+---
 ---
 <div class="prose">
 <span class="prose__kicker">Titolo I</span>
@@ -628,7 +630,7 @@ title: "Titolo I — Della spesa pubblica"
       <canvas id="temporaneeChart" role="img" aria-label="Prestazioni temporanee 2020-2025. NASPI stabile intorno a 9-10 miliardi. Assegno Unico introdotto nel 2022, raggiunge 20 miliardi nel 2024. RdC cala da 9 miliardi a quasi zero nel 2024, sostituito da ADI.">Prestazioni temporanee INPS 2020-2025.</canvas>
     </div>
     <div class="insight" style="margin-top:1rem;">
-      <strong>Tre discontinuità visibili nel grafico:</strong> il picco 2020 delle prestazioni Covid (11 mld straordinari); l'introduzione dell'Assegno Unico nel 2022 (12 mld al primo anno, poi crescita costante); la sostituzione del Reddito di Cittadinanza con l'Assegno di Inclusione nel 2024, che ha dimezzato la spesa da 7,4 a 0,1 miliardi in un solo anno (chi non rientrava nei nuovi criteri ha perso il sussidio).
+      <strong>Tre discontinuità visibili nel grafico:</strong> il picco 2020 delle prestazioni Covid (11 mld straordinari); l'introduzione dell'Assegno Unico nel 2022 (12 mld al primo anno, poi crescita costante); la sostituzione del Reddito di Cittadinanza con l'Assegno di Inclusione nel 2024: il RdC è sceso da 7,4 a 0,1 miliardi, ma l'ADI che lo ha sostituito ha erogato 4,7 miliardi — la spesa complessiva della categoria è calata da 7,4 a 4,8 miliardi (-35%), non azzerata, perché una parte dei beneficiari rientrava nei nuovi criteri più restrittivi.
     </div>
   </div>
 
@@ -1147,7 +1149,7 @@ function rebuildPensioniEuropaChart() {
         x: {
           grid: { color: '#e8e5de' },
           ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
-          min: 0, max: 18
+          min: 0, max: 28
         },
         y: { grid: { display: false }, ticks: { font: { size: 12 }, color: '#3a3a3a' } }
       }

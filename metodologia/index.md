@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Nota metodologica"
+description: "Come l'Osservatorio Civico raccoglie, verifica e cita i dati pubblici italiani: fonti, limiti e metodo di lavoro."
 ---
 <div class="prose">
 <span class="prose__kicker">Annesso</span>

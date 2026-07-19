@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Titolo IV — Delle norme"
+description: "Il quadro regolatorio e di vigilanza italiano ed europeo che governa spesa pubblica, proprietà societaria e carriere politiche."
 ---
 
 <div class="prose">
