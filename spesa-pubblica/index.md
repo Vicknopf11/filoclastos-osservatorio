@@ -23,14 +23,22 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
 
 <nav>
   <div class="nav-brand">ITALIA<span>SPENDE</span></div>
-  <div class="nav-links">
+  <button class="nav-toggle" id="navToggle" aria-label="Apri il menu" aria-expanded="false" aria-controls="navLinks">
+    <span></span><span></span><span></span>
+  </button>
+  <div class="nav-links" id="navLinks">
     <a href="#spesa">Spesa</a>
-    <a href="#pensioni">Pensioni</a>
+    <div class="nav-group" id="pensioniGroup">
+      <button class="nav-group__toggle" aria-haspopup="true" aria-expanded="false">Pensioni <span class="nav-caret">▾</span></button>
+      <div class="nav-group__menu">
+        <a href="#pensioni">Panoramica</a>
+        <a href="#pensioni-dettaglio">Dettaglio</a>
+        <a href="#flussi">Flussi finanziari</a>
+      </div>
+    </div>
     <a href="#confronto">Europa</a>
     <a href="#debito">Debito</a>
     <a href="#aggiornamenti">Manovre</a>
-    <a href="#pensioni-dettaglio">Pensioni dettaglio</a>
-    <a href="#flussi">Flussi finanziari</a>
   </div>
   <div class="nav-tag" id="dataStatus">⏺ carico dati…</div>
 </nav>
@@ -683,36 +691,77 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
     font-size: 15px;
     line-height: 1.6;
   }
-
   
-  .ita-spende nav {
+ .ita-spende nav {
     position: sticky; top: 0; z-index: 100;
     background: var(--is-ink);
     display: flex; align-items: center; justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 1.5rem;
     height: 52px;
     border-bottom: 2px solid var(--is-red);
+    gap: 1rem;
   }
   .ita-spende .nav-brand {
     font-family: var(--is-font-mono);
     font-size: 14px; font-weight: 500;
     color: #fff; letter-spacing: 0.02em;
+    flex-shrink: 0;
   }
   .ita-spende .nav-brand span { color: var(--is-red); }
-  .ita-spende .nav-links { display: flex; gap: 2rem; }
-  .ita-spende .nav-links a {
+
+  .ita-spende .nav-links { display: flex; align-items: center; gap: 1.4rem; }
+  .ita-spende .nav-links > a {
     font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
     text-transform: uppercase; color: #aaa;
     text-decoration: none; transition: color 0.15s;
+    white-space: nowrap;
   }
-  .ita-spende .nav-links a:hover { color: #fff; }
+  .ita-spende .nav-links > a:hover { color: #fff; }
+
+  .ita-spende .nav-group { position: relative; }
+  .ita-spende .nav-group__toggle {
+    background: none; border: none; cursor: pointer; padding: 0;
+    font-family: var(--is-font-sans);
+    font-size: 12px; font-weight: 500; letter-spacing: 0.08em;
+    text-transform: uppercase; color: #aaa;
+    display: flex; align-items: center; gap: 4px;
+    white-space: nowrap;
+  }
+  .ita-spende .nav-group__toggle:hover,
+  .ita-spende .nav-group.open .nav-group__toggle { color: #fff; }
+  .ita-spende .nav-caret { font-size: 10px; transition: transform 0.15s; }
+  .ita-spende .nav-group.open .nav-caret { transform: rotate(180deg); }
+
+  .ita-spende .nav-group__menu {
+    display: none;
+    position: absolute; top: 100%; left: 0; margin-top: 10px;
+    background: var(--is-ink); border: 1px solid #333; border-top: 2px solid var(--is-red);
+    min-width: 170px; padding: 6px 0;
+    flex-direction: column;
+  }
+  .ita-spende .nav-group.open .nav-group__menu { display: flex; }
+  .ita-spende .nav-group__menu a {
+    padding: 9px 16px; font-size: 12px; font-weight: 500;
+    letter-spacing: 0.06em; text-transform: uppercase;
+    color: #aaa; text-decoration: none; white-space: nowrap;
+  }
+  .ita-spende .nav-group__menu a:hover { color: #fff; background: rgba(255,255,255,0.05); }
+
   .ita-spende .nav-tag {
     font-family: var(--is-font-mono);
     font-size: 11px; color: #555;
+    flex-shrink: 0; white-space: nowrap;
   }
 
-  
-  .ita-spende .hero {
+  .ita-spende .nav-toggle {
+    display: none;
+    flex-direction: column; justify-content: center; gap: 4px;
+    background: none; border: none; cursor: pointer; padding: 8px;
+    flex-shrink: 0;
+  }
+  .ita-spende .nav-toggle span { width: 20px; height: 2px; background: #fff; display: block; }
+
+    .ita-spende .hero {
     background: var(--is-ink);
     color: #fff;
     padding: 5rem 2rem 4rem;
@@ -996,11 +1045,38 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
 
   @media (max-width: 640px)  {
     .ita-spende .manovra-item { grid-template-columns: 1fr; gap: 0.5rem; }
-    .ita-spende .nav-links { display: none; }
+
+    .ita-spende .nav-toggle { display: flex; }
+    .ita-spende .nav-tag { display: none; }
+    .ita-spende .nav-links {
+      display: none;
+      position: absolute; top: 52px; left: 0; right: 0;
+      background: var(--is-ink);
+      flex-direction: column; align-items: stretch; gap: 0;
+      padding: 6px 0;
+      border-bottom: 2px solid var(--is-red);
+      max-height: calc(100vh - 52px);
+      overflow-y: auto;
+    }
+    .ita-spende .nav-links.open { display: flex; }
+    .ita-spende .nav-links > a { padding: 13px 1.5rem; }
+
+    .ita-spende .nav-group { width: 100%; }
+    .ita-spende .nav-group__toggle {
+      width: 100%; padding: 13px 1.5rem; justify-content: space-between;
+    }
+    .ita-spende .nav-group__menu {
+      display: none;
+      position: static; border: none; margin: 0; padding: 0 0 6px 2.5rem;
+      background: none;
+    }
+    .ita-spende .nav-group.open .nav-group__menu { display: flex; }
+
     .ita-spende .hero { padding: 3rem 1rem 2.5rem; }
     .ita-spende .section { padding: 2.5rem 1rem; }
     .ita-spende .hero-num { padding: 1rem 1rem 1rem 0; }
   }
+
 </style>
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.js"></script>
@@ -1363,6 +1439,36 @@ async function loadStaticData() {
 
 window.addEventListener('DOMContentLoaded', () => {
   setTimeout(loadStaticData, 200);
+
+  // Menu mobile (hamburger)
+  const navToggle = document.getElementById('navToggle');
+  const navLinks = document.getElementById('navLinks');
+  if (navToggle && navLinks) {
+    navToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+    navLinks.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navLinks.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
+
+  // Dropdown "Pensioni"
+  document.querySelectorAll('.nav-group__toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.closest('.nav-group');
+      const isOpen = group.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-group.open').forEach(g => {
+      if (!g.contains(e.target)) g.classList.remove('open');
+    });
+  });
 });
 
 function selectCat(cat) {
