@@ -2,7 +2,7 @@ name: Aggiorna dati Eurostat
 
 on:
   schedule:
-    - cron: '0 6 * * 1'   # ogni lunedì alle 6:00 UTC
+    - cron: '0 6 1 * *'   # il 1° giorno di ogni mese alle 6:00 UTC
   workflow_dispatch: {}    # permette di lanciarlo anche a mano da GitHub
 
 permissions:
