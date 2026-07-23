@@ -34,6 +34,7 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <a href="#pensioni">Panoramica</a>
         <a href="#pensioni-dettaglio">Dettaglio</a>
         <a href="#flussi">Flussi finanziari</a>
+        <a href="#pensioni-regioni">Regioni</a>
       </div>
     </div>
     <a href="#confronto">Europa</a>
@@ -644,6 +645,30 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
 
   <div class="insight">
     <strong>Nota metodologica:</strong> il "deficit strutturale" in questa sezione è calcolato come differenza tra pagamenti correnti totali e riscossioni dalla produzione (contributi + recupero crediti, esclusi trasferimenti Stato). Non coincide con il deficit di bilancio in senso contabile, che segue regole diverse. È piuttosto la misura di quanto il sistema previdenziale dipende ogni anno dalla fiscalità generale per funzionare — indipendentemente da come viene classificato contabilmente. Il 2020 include un'anticipazione di tesoreria straordinaria di 8 miliardi che non è trasferimento strutturale. Il 2021 include 12 miliardi di anticipazioni a gestioni previdenziali anch'esse straordinarie legate al Covid.
+  </div>
+</section>
+
+<!-- SEZIONE 08: PENSIONI PER REGIONE — COEFFICIENTE STANDARDIZZATO -->
+<section class="section" id="pensioni-regioni">
+  <div class="section-header">
+    <span class="section-num">08 /</span>
+    <h2 class="section-title">Pensioni per regione — coefficiente standardizzato</h2>
+  </div>
+  <p class="section-desc">Confrontare le regioni sul numero grezzo di pensioni per abitante è fuorviante: una regione con più anziani ha naturalmente più pensionati, a parità di generosità del sistema. Il coefficiente standardizzato corregge per questo effetto demografico.</p>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Coefficiente di pensionamento standardizzato per regione (pensioni per 1.000 residenti, corretto per età) — 1.1.2026</div>
+    <span class="source-tag static"><span class="source-dot"></span>Elaborazione propria su dati INPS (Osservatorio statistico sulle pensioni erogate) e ISTAT (popolazione residente 1.1.2026), standardizzazione indiretta</span>
+    <div class="canvas-wrap" style="height:520px;">
+      <canvas id="regioneChart" role="img" aria-label="Coefficiente di pensionamento standardizzato per regione, dal più basso al più alto: Valle d'Aosta 322,7, Trentino-Alto Adige 326,8, Sicilia 333,5, Liguria 337,6, Lazio 338,3, Toscana 342,3, Veneto 348,6, Sardegna 351,0, Piemonte 352,1, Friuli Venezia Giulia 354,3, Abruzzo 355,2, Campania 355,8, Lombardia 356,5, Molise 361,2, Basilicata 365,5, Emilia Romagna 367,7, Puglia 372,8, Marche 379,0, Umbria 387,7, Calabria 401,5. Media nazionale 360,7.">Coefficiente di pensionamento standardizzato per regione, elaborazione su dati INPS/ISTAT 1.1.2026.</canvas>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>Come è calcolato:</strong> non esiste una tavola INPS che incrocia direttamente regione ed età dei pensionati — quell'incrocio è bloccato dalle regole sul segreto statistico (troppe celle piccole a livello regionale). Il coefficiente qui è quindi calcolato con <strong>standardizzazione indiretta</strong> (lo stesso principio dello standardized mortality ratio usato in epidemiologia): si prende il tasso di pensionamento età-specifico a livello nazionale, lo si applica alla struttura anagrafica reale di ciascuna regione (dati ISTAT) per ottenere le pensioni "attese" in quella regione, e si confronta con le pensioni osservate realmente. Una regione con un coefficiente sopra la media ha più pensionati di quanti ce ne aspetteremmo dalla sola sua composizione per età — quindi per ragioni diverse dall'invecchiamento (storia industriale, occupazionale, migratoria).
+  </div>
+  <div class="insight" style="margin-top:1rem;">
+    <strong>Attenzione — Valle d'Aosta e Trentino-Alto Adige:</strong> queste due regioni (le più piccole per popolazione) mostrano uno scarto di circa 15-20 punti rispetto a una stima precedente basata su una tavola PDF trascritta manualmente. Non potendo verificare con un terzo metodo indipendente quale valore sia più accurato, il dato va considerato con più cautela per queste due regioni rispetto alle altre 18.
   </div>
 </section>
 
@@ -1852,6 +1877,44 @@ const baseOpts = { responsive: true, maintainAspectRatio: false };
         x: { grid: { display: false }, ticks: { font: { size: 12 }, color: tickC }, stacked: true },
         y: { grid: { color: gridC }, stacked: true, min: 0, max: 50,
           ticks: { font: { size: 11 }, color: tickC, callback: v => v + ' mld' } }
+      }
+    }
+  });
+})();
+
+// ── SEZIONE 08: PENSIONI PER REGIONE — COEFFICIENTE STANDARDIZZATO ───────────
+// Elaborazione propria: standardizzazione indiretta su dati INPS (Osservatorio
+// statistico sulle pensioni erogate, stock regionale + distribuzione nazionale
+// per età) e ISTAT (popolazione residente per regione ed età, 1.1.2026).
+// Vedi nota metodologica nella sezione per il dettaglio del calcolo.
+(function() {
+  const ctx = document.getElementById('regioneChart').getContext('2d');
+  const regioni = ["Valle d'Aosta", 'Trentino-Alto Adige', 'Sicilia', 'Liguria', 'Lazio', 'Toscana', 'Veneto', 'Sardegna', 'Piemonte', 'Friuli V.G.', 'Abruzzo', 'Campania', 'Lombardia', 'Molise', 'Basilicata', 'Emilia Romagna', 'Puglia', 'Marche', 'Umbria', 'Calabria'];
+  const coeff = [322.7, 326.8, 333.5, 337.6, 338.3, 342.3, 348.6, 351.0, 352.1, 354.3, 355.2, 355.8, 356.5, 361.2, 365.5, 367.7, 372.8, 379.0, 387.7, 401.5];
+  const media = 360.7;
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: regioni,
+      datasets: [{
+        label: 'Pensioni per 1.000 residenti (standardizzato)',
+        data: coeff,
+        backgroundColor: coeff.map(v => v < media ? '#2a78d6' : '#e34948'),
+        borderRadius: 3
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x.toFixed(1)} per 1.000 residenti (standardizzato)` } },
+        annotation: undefined
+      },
+      scales: {
+        x: { grid: { color: '#e8e5de' }, ticks: { font: { size: 11 }, color: '#7a7a7a' },
+          title: { display: true, text: 'Pensioni per 1.000 residenti', font: { size: 10 }, color: '#7a7a7a' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#3a3a3a' } }
       }
     }
   });
