@@ -1,0 +1,167 @@
+{
+  "generated_at": "2026-07-23T15:13:47.836158+00:00",
+  "fonte": "INPS — Osservatorio statistico sulle pensioni erogate dall'INPS (inclusa Gestione Dipendenti Pubblici), dati al 1.1.2026",
+  "note_metodologiche": "per_regione e per_tipologia: stock di pensioni vigenti al 1.1.2026, categoria Totale/tutte le categorie. per_eta: fasce aggregate da 14 classi INPS originali (Fino a 14...90 e oltre) in 4 fasce larghe, con importo medio come media ponderata sul numero di pensioni in ciascuna sotto-fascia. Nota: 'numero pensioni' non equivale a 'numero pensionati' — una persona può percepire più trattamenti.",
+  "totali": null,
+  "per_gestione": null,
+  "per_tipologia": [
+    {
+      "tipo": "vecchiaia_anticipata",
+      "label": "Vecchiaia/Anticipata",
+      "numero_pensioni": 11902813,
+      "importo_medio_mensile_eur": 1717.5
+    },
+    {
+      "tipo": "invalidita",
+      "label": "Invalidità",
+      "numero_pensioni": 820707,
+      "importo_medio_mensile_eur": 1144.4
+    },
+    {
+      "tipo": "superstiti",
+      "label": "Superstiti",
+      "numero_pensioni": 4116710,
+      "importo_medio_mensile_eur": 878.07
+    },
+    {
+      "tipo": "assegni_sociali",
+      "label": "Assegno/pensione sociale",
+      "numero_pensioni": 914621,
+      "importo_medio_mensile_eur": 556.04
+    },
+    {
+      "tipo": "invalidi_civili",
+      "label": "Invalidi civili",
+      "numero_pensioni": 3503140,
+      "importo_medio_mensile_eur": 509.32
+    }
+  ],
+  "per_regione": [
+    {
+      "regione": "Abruzzo",
+      "numero_pensioni": 470622,
+      "importo_medio_mensile_eur": 1181.86
+    },
+    {
+      "regione": "Basilicata",
+      "numero_pensioni": 200019,
+      "importo_medio_mensile_eur": 1093.24
+    },
+    {
+      "regione": "Calabria",
+      "numero_pensioni": 718745,
+      "importo_medio_mensile_eur": 1023.29
+    },
+    {
+      "regione": "Campania",
+      "numero_pensioni": 1719157,
+      "importo_medio_mensile_eur": 1107.93
+    },
+    {
+      "regione": "Emilia-Romagna",
+      "numero_pensioni": 1663593,
+      "importo_medio_mensile_eur": 1385.32
+    },
+    {
+      "regione": "Friuli-Venezia Giulia",
+      "numero_pensioni": 468097,
+      "importo_medio_mensile_eur": 1401.98
+    },
+    {
+      "regione": "Lazio",
+      "numero_pensioni": 1876594,
+      "importo_medio_mensile_eur": 1404.08
+    },
+    {
+      "regione": "Liguria",
+      "numero_pensioni": 596436,
+      "importo_medio_mensile_eur": 1399.42
+    },
+    {
+      "regione": "Lombardia",
+      "numero_pensioni": 3488543,
+      "importo_medio_mensile_eur": 1432.94
+    },
+    {
+      "regione": "Marche",
+      "numero_pensioni": 600876,
+      "importo_medio_mensile_eur": 1217.24
+    },
+    {
+      "regione": "Molise",
+      "numero_pensioni": 112494,
+      "importo_medio_mensile_eur": 1118.12
+    },
+    {
+      "regione": "Piemonte",
+      "numero_pensioni": 1613592,
+      "importo_medio_mensile_eur": 1410.56
+    },
+    {
+      "regione": "Puglia",
+      "numero_pensioni": 1433938,
+      "importo_medio_mensile_eur": 1099.86
+    },
+    {
+      "regione": "Sardegna",
+      "numero_pensioni": 597532,
+      "importo_medio_mensile_eur": 1186.15
+    },
+    {
+      "regione": "Sicilia",
+      "numero_pensioni": 1513886,
+      "importo_medio_mensile_eur": 1110.51
+    },
+    {
+      "regione": "Toscana",
+      "numero_pensioni": 1350324,
+      "importo_medio_mensile_eur": 1348.69
+    },
+    {
+      "regione": "Trentino-Alto Adige",
+      "numero_pensioni": 330537,
+      "importo_medio_mensile_eur": 1536.91
+    },
+    {
+      "regione": "Umbria",
+      "numero_pensioni": 363773,
+      "importo_medio_mensile_eur": 1217.19
+    },
+    {
+      "regione": "Valle d'Aosta",
+      "numero_pensioni": 41248,
+      "importo_medio_mensile_eur": 1527.07
+    },
+    {
+      "regione": "Veneto",
+      "numero_pensioni": 1712439,
+      "importo_medio_mensile_eur": 1358.8
+    }
+  ],
+  "per_genere": null,
+  "per_eta": [
+    {
+      "fascia_eta": "under_65",
+      "numero_pensioni": 3384417,
+      "importo_medio_mensile_eur": 970.03
+    },
+    {
+      "fascia_eta": "65_74",
+      "numero_pensioni": 6502395,
+      "importo_medio_mensile_eur": 1621.64
+    },
+    {
+      "fascia_eta": "75_84",
+      "numero_pensioni": 6781414,
+      "importo_medio_mensile_eur": 1322.97
+    },
+    {
+      "fascia_eta": "85_plus",
+      "numero_pensioni": 4589765,
+      "importo_medio_mensile_eur": 978.44
+    }
+  ],
+  "distribuzione_importi": null,
+  "serie_storiche": null,
+  "rapporto_contributi_prestazioni": null
+}
