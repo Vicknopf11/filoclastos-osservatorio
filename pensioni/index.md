@@ -101,6 +101,72 @@ description: "Approfondimento sul sistema pensionistico italiano: numero di pens
   </div>
 </section>
 
+<!-- SEZIONE 04: SCOMPOSIZIONE IVS / GIAS -->
+<section class="section" id="pens-ivs-gias">
+  <div class="section-header">
+    <span class="section-num">04 /</span>
+    <h2 class="section-title">Scomposizione IVS / GIAS</h2>
+  </div>
+  <p class="section-desc">Non tutta la spesa pensionistica italiana è finanziata dai contributi. Una parte è finanziata dalla fiscalità generale attraverso la <strong>GIAS</strong> — Gestione degli Interventi Assistenziali e di Sostegno alle gestioni previdenziali — una gestione separata dell'INPS che copre oneri di natura assistenziale (non contributiva). Distinguerla dalla componente <strong>IVS</strong> — Invalidità, Vecchiaia, Superstiti, cioè la gestione previdenziale ordinaria finanziata dai contributi — è necessario per non gonfiare il dato di spesa pensionistica italiana nei confronti con l'Europa, dove questa distinzione spesso non esiste o è contabilizzata diversamente.</p>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Spesa GIAS per tipologia di intervento — Consuntivo 2025</div>
+    <span class="source-tag static"><span class="source-dot"></span>INPS — Rendiconto Generale 2025, Gestione n. 24 (GIAS), Conto Economico</span>
+    <div style="overflow-x:auto; margin-top:0.75rem;">
+      <table class="data-table">
+        <thead>
+          <tr>
+            <th>Voce di spesa GIAS</th>
+            <th class="num">2025 (mln €)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="ita">
+            <td>Oneri pensionistici</td>
+            <td class="num" style="color:var(--red)">71.280</td>
+          </tr>
+          <tr>
+            <td>Oneri per interventi a sostegno della famiglia</td>
+            <td class="num">24.203</td>
+          </tr>
+          <tr>
+            <td>Oneri per ADI e RDC (assegno di inclusione, reddito/pensione di cittadinanza)</td>
+            <td class="num">5.620</td>
+          </tr>
+          <tr>
+            <td>Oneri per il mantenimento del salario</td>
+            <td class="num">6.781</td>
+          </tr>
+          <tr>
+            <td>Oneri per riduzioni di oneri previdenziali</td>
+            <td class="num">503</td>
+          </tr>
+          <tr>
+            <td>Oneri per supporto alla formazione e al lavoro</td>
+            <td class="num">439</td>
+          </tr>
+          <tr>
+            <td>Oneri diversi</td>
+            <td class="num">128</td>
+          </tr>
+          <tr>
+            <td><strong>Totale spese per prestazioni istituzionali GIAS</strong></td>
+            <td class="num"><strong>108.954</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>Il numero che conta per il confronto europeo:</strong> su 108.954 milioni di euro di spesa GIAS nel 2025, <strong>71.280 milioni</strong> (contro i 72.340 milioni del 2024) sono classificati come "oneri pensionistici" — cioè finanziati dalla fiscalità generale, non dai contributi, ma che finiscono comunque dentro le statistiche aggregate di "spesa pensionistica" italiana. Questa componente assistenziale va tenuta distinta dalla spesa previdenziale/contributiva pura, gestita separatamente dalla Gestione Previdenziale e C/Terzi dell'INPS, che nel 2025 ha erogato prestazioni per 295.526 milioni di euro (288.776 milioni nel 2024).
+  </div>
+
+  <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
+    <strong>Limite dichiarato:</strong> la cifra di 295.526 milioni di euro della Gestione Previdenziale e C/Terzi include, oltre alle pensioni, anche altre prestazioni previdenziali non pensionistiche erogate dalle stesse gestioni (es. indennità di malattia e maternità, NASpI in alcuni casi). Non è quindi ancora possibile isolare da questa fonte una cifra "solo pensioni IVS" perfettamente pulita — per farlo servirebbe un'ulteriore tavola disaggregata dell'Osservatorio statistico INPS, che verrà integrata in un aggiornamento successivo.
+  </div>
+</section>
+
 <!-- SEZIONE: DATI IN ARRIVO -->
 <section class="section" id="pens-in-arrivo">
   <div class="section-header">
@@ -109,7 +175,6 @@ description: "Approfondimento sul sistema pensionistico italiano: numero di pens
   </div>
   <p class="section-desc">Coerentemente con il principio di questo Osservatorio di non pubblicare mai dati stimati o inventati, le seguenti sezioni previste per questa pagina restano in attesa delle tavole sorgente e non sono ancora popolate:</p>
   <ul style="margin: 0 0 1rem 1.4rem; color: var(--is-ink-2); line-height: 1.9;">
-    <li><strong>Scomposizione IVS / GIAS</strong> — separazione tra spesa previdenziale (contributiva) e assistenziale (fiscalità generale), necessaria per non gonfiare il dato di spesa pensionistica sul PIL nei confronti europei</li>
     <li><strong>Per gestione</strong> — confronto tra FPLD (privato), Gestione Dipendenti Pubblici, autonomi e gestione separata</li>
     <li><strong>Per genere</strong> — scomposizione uomini/donne per numero e importo medio</li>
     <li><strong>Distribuzione per fascia di importo mensile</strong> — quante pensioni sono sotto i 1.000€, tra 1.000 e 2.000€, ecc.</li>
