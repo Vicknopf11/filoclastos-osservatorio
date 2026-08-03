@@ -382,8 +382,6 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <div class="manovra-desc">Manovra da circa 30 miliardi di euro. Proroga del cuneo fiscale, riforma IRPEF a tre aliquote, taglio del bonus elettrodomestici, interventi su pensioni e sanità.</div>
         <div class="manovra-links">
           <a class="manovra-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2024;207" target="_blank" rel="noopener">Normattiva</a>
-          <a class="manovra-link" href="https://www.senato.it/leg/19/BGT/Schede/Ddliter/57954.htm" target="_blank" rel="noopener">Dossier Senato</a>
-          <a class="manovra-link" href="https://www.mef.gov.it/" target="_blank" rel="noopener">MEF</a>
         </div>
       </div>
     </div>
@@ -395,7 +393,6 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <div class="manovra-desc">Manovra da circa 24 miliardi. Conferma del taglio del cuneo fiscale, riforma IRPEF a quattro aliquote (poi sostituita), stop a Superbonus al 110%.</div>
         <div class="manovra-links">
           <a class="manovra-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2023;213" target="_blank" rel="noopener">Normattiva</a>
-          <a class="manovra-link" href="https://www.camera.it/leg19/126?leg=19&idDocumento=1627" target="_blank" rel="noopener">Dossier Camera</a>
         </div>
       </div>
     </div>
@@ -407,7 +404,6 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <div class="manovra-desc">Prima manovra del governo Meloni, circa 35 miliardi, in gran parte assorbiti dal caro energia. Tetto al contante, flat tax incrementale per autonomi, riforma pensioni con Quota 103.</div>
         <div class="manovra-links">
           <a class="manovra-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2022;197" target="_blank" rel="noopener">Normattiva</a>
-          <a class="manovra-link" href="https://www.senato.it/leg/19/BGT/Schede/Ddliter/56625.htm" target="_blank" rel="noopener">Dossier Senato</a>
         </div>
       </div>
     </div>
@@ -419,7 +415,6 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <div class="manovra-desc">Governo Draghi. Riforma IRPEF a quattro aliquote, taglio cuneo fiscale, proroga Superbonus 110% con nuove regole, fondo complementare al PNRR.</div>
         <div class="manovra-links">
           <a class="manovra-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2021;234" target="_blank" rel="noopener">Normattiva</a>
-          <a class="manovra-link" href="https://www.camera.it/leg18/126?leg=18&idDocumento=3424" target="_blank" rel="noopener">Dossier Camera</a>
         </div>
       </div>
     </div>
