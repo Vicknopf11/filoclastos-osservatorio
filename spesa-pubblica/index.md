@@ -381,7 +381,7 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <div class="manovra-title">Legge di Bilancio 2025 (L. 30 dicembre 2024, n. 207)</div>
         <div class="manovra-desc">Manovra da circa 30 miliardi di euro. Proroga del cuneo fiscale, riforma IRPEF a tre aliquote, taglio del bonus elettrodomestici, interventi su pensioni e sanità.</div>
         <div class="manovra-links">
-          <a class="manovra-link" href="https://www.gazzettaufficiale.it/eli/id/2024/12/30/24G00237/sg" target="_blank" rel="noopener">Testo in Gazzetta Ufficiale</a>
+          <a class="manovra-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2024;207" target="_blank" rel="noopener">Normattiva</a>
           <a class="manovra-link" href="https://www.senato.it/leg/19/BGT/Schede/Ddliter/57954.htm" target="_blank" rel="noopener">Dossier Senato</a>
           <a class="manovra-link" href="https://www.mef.gov.it/" target="_blank" rel="noopener">MEF</a>
         </div>
@@ -394,7 +394,7 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <div class="manovra-title">Legge di Bilancio 2024 (L. 30 dicembre 2023, n. 213)</div>
         <div class="manovra-desc">Manovra da circa 24 miliardi. Conferma del taglio del cuneo fiscale, riforma IRPEF a quattro aliquote (poi sostituita), stop a Superbonus al 110%.</div>
         <div class="manovra-links">
-          <a class="manovra-link" href="https://www.gazzettaufficiale.it/eli/id/2023/12/30/23G00220/sg" target="_blank" rel="noopener">Testo in Gazzetta Ufficiale</a>
+          <a class="manovra-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2023;213" target="_blank" rel="noopener">Normattiva</a>
           <a class="manovra-link" href="https://www.camera.it/leg19/126?leg=19&idDocumento=1627" target="_blank" rel="noopener">Dossier Camera</a>
         </div>
       </div>
@@ -406,7 +406,7 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <div class="manovra-title">Legge di Bilancio 2023 (L. 29 dicembre 2022, n. 197)</div>
         <div class="manovra-desc">Prima manovra del governo Meloni, circa 35 miliardi, in gran parte assorbiti dal caro energia. Tetto al contante, flat tax incrementale per autonomi, riforma pensioni con Quota 103.</div>
         <div class="manovra-links">
-          <a class="manovra-link" href="https://www.gazzettaufficiale.it/eli/id/2022/12/29/22G00211/sg" target="_blank" rel="noopener">Testo in Gazzetta Ufficiale</a>
+          <a class="manovra-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2022;197" target="_blank" rel="noopener">Normattiva</a>
           <a class="manovra-link" href="https://www.senato.it/leg/19/BGT/Schede/Ddliter/56625.htm" target="_blank" rel="noopener">Dossier Senato</a>
         </div>
       </div>
@@ -418,7 +418,7 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <div class="manovra-title">Legge di Bilancio 2022 (L. 30 dicembre 2021, n. 234)</div>
         <div class="manovra-desc">Governo Draghi. Riforma IRPEF a quattro aliquote, taglio cuneo fiscale, proroga Superbonus 110% con nuove regole, fondo complementare al PNRR.</div>
         <div class="manovra-links">
-          <a class="manovra-link" href="https://www.gazzettaufficiale.it/eli/id/2021/12/30/21G00208/sg" target="_blank" rel="noopener">Testo in Gazzetta Ufficiale</a>
+          <a class="manovra-link" href="https://www.normattiva.it/uri-res/N2Ls?urn:nir:stato:legge:2021;234" target="_blank" rel="noopener">Normattiva</a>
           <a class="manovra-link" href="https://www.camera.it/leg18/126?leg=18&idDocumento=3424" target="_blank" rel="noopener">Dossier Camera</a>
         </div>
       </div>
