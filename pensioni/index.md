@@ -28,10 +28,15 @@ description: "Approfondimento sul sistema pensionistico italiano: numero di pens
     <a href="#pens-regione">Per regione</a>
     <a href="#pens-eta">Per età</a>
     <a href="#pens-tipologia">Per tipologia</a>
-    <a href="#pens-ivs-gias">IVS/GIAS</a>
-    <a href="#pensioni-dettaglio">Serie storica</a>
-    <a href="#flussi">Flussi INPS</a>
-    <a href="#pensioni-regioni">Regioni (standard.)</a>
+    <div class="nav-group" id="approfondimentiGroup">
+      <button class="nav-group__toggle" aria-haspopup="true" aria-expanded="false">Approfondimenti <span class="nav-caret">▾</span></button>
+      <div class="nav-group__menu">
+        <a href="#pens-ivs-gias">IVS/GIAS</a>
+        <a href="#pensioni-dettaglio">Serie storica</a>
+        <a href="#flussi">Flussi INPS</a>
+        <a href="#pensioni-regioni">Regioni (standard.)</a>
+      </div>
+    </div>
     <a href="{{ '/spesa-pubblica/#pensioni' | relative_url }}">← Panoramica generale</a>
   </div>
 </nav>
@@ -890,6 +895,20 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Dropdown "Approfondimenti"
+  document.querySelectorAll('.nav-group__toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.closest('.nav-group');
+      const isOpen = group.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-group.open').forEach(g => {
+      if (!g.contains(e.target)) g.classList.remove('open');
+    });
+  });
 
   // ── DATI: Pensioni per regione (fonte: INPS, vedi assets/data/pensioni.json) ──
   (function() {
