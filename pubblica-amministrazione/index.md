@@ -154,6 +154,10 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </div>
   <p class="section-desc">Personale a tempo indeterminato e dirigenti in servizio al 31 dicembre 2024, per comparto di contrattazione. Esclude personale con contratti flessibili/a termine (rilevati separatamente dal Conto Annuale) e non è espresso in equivalenti a tempo pieno — chi lavora part-time è conteggiato come una unità di personale, non come frazione.</p>
 
+  <div class="insight" style="margin-bottom:1.5rem; border-color: var(--is-ink-3);">
+    <strong>Attenzione a non confondere questo dato con "PA generale" nella panoramica della spesa:</strong> nel grafico di <a href="{{ '/spesa-pubblica/#spesa' | relative_url }}">Della spesa pubblica</a>, la voce "PA generale" (~115 miliardi di euro) è una categoria funzionale COFOG — spesa per l'amministrazione generale in senso stretto (Stato ed enti locali). Il costo del personale qui sotto (186 miliardi di euro) è invece la spesa per <strong>tutti</strong> i dipendenti pubblici di <strong>tutti</strong> i comparti, incluse Sanità, Scuola e Difesa/ordine pubblico — funzioni che nel grafico COFOG sono contabilizzate sotto le rispettive voci ("Sanità", "Istruzione", "Difesa e ordine pubblico"), non sotto "PA generale". Sono due aggregati diversi, con perimetri diversi: non sommarli né confrontarli direttamente.
+  </div>
+
   <div class="chart-wrap" style="margin-bottom:1.5rem;">
     <div class="chart-title">Dipendenti pubblici per comparto — Anno 2024</div>
     <span class="source-tag static"><span class="source-dot"></span>RGS — Conto Annuale 2024, dati aperti (tabella OCCUPAZIONE)</span>
@@ -867,7 +871,7 @@ window.addEventListener('DOMContentLoaded', () => {
     new Chart(ctx, {
       type: 'bar',
       data: {
-        labels: ['Corpi di\\npolizia', 'Forze\\narmate', 'Vigili del\\nfuoco', 'Enti Lista\\nS13 ISTAT', 'Enti di\\nricerca', 'Magistratura', 'Altri enti\\nminori'],
+        labels: [['Corpi di','polizia'], ['Forze','armate'], ['Vigili del','fuoco'], ['Enti Lista','S13 ISTAT'], ['Enti di','ricerca'], 'Magistratura', ['Altri enti','minori']],
         datasets: [{
           label: 'Dipendenti',
           data: [302695, 173747, 36299, 32974, 24604, 11224, 24036],
