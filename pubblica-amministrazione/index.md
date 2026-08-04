@@ -30,6 +30,7 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
     <a href="#pa-sottosettori">Per livello di governo</a>
     <a href="#pa-saldo">Saldo nazionale</a>
     <a href="#pa-dipendenti">Dipendenti per comparto</a>
+    <a href="#pa-europa">Confronto europeo</a>
     <a href="{{ '/spesa-pubblica/' | relative_url }}">← Panoramica generale</a>
   </div>
 </nav>
@@ -306,6 +307,38 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </div>
 </section>
 
+<!-- SEZIONE 4: CONFRONTO EUROPEO -->
+<section class="section" id="pa-europa">
+  <div class="section-header">
+    <span class="section-num">04 /</span>
+    <h2 class="section-title">Confronto europeo — spesa per servizi generali della PA</h2>
+  </div>
+  <p class="section-desc">La categoria COFOG <strong>GF01 "Servizi generali delle pubbliche amministrazioni"</strong> è l'indicatore Eurostat più vicino alla nozione di "costo della macchina amministrativa" in percentuale del PIL, comparabile tra paesi europei.</p>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Servizi generali della PA (COFOG GF01) — % del PIL, 2024</div>
+    <span class="source-tag static"><span class="source-dot"></span>Eurostat — gov_10a_exp, cofog99=GF01, sector=S13, unit=PC_GDP</span>
+    <div class="canvas-wrap" style="height:340px;">
+      <canvas id="paEuropaChart" role="img" aria-label="Servizi generali PA percentuale PIL 2024: Irlanda 2,0%, Paesi Bassi 4,1%, Spagna 5,8%, Svezia 5,5%, Portogallo 5,8%, Francia 6,2%, Austria 6,0%, Germania 6,4%, Danimarca 5,7%, Finlandia 7,1%, Italia 7,7%, Belgio 7,1%, Grecia 8,3%.">Confronto europeo servizi generali PA, 2024.</canvas>
+    </div>
+  </div>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Italia — serie storica 2016-2024 (% del PIL)</div>
+    <span class="source-tag static"><span class="source-dot"></span>Eurostat — gov_10a_exp, cofog99=GF01, sector=S13, unit=PC_GDP</span>
+    <div class="canvas-wrap" style="height:260px;">
+      <canvas id="paEuropaStoriaChart" role="img" aria-label="Italia servizi generali PA percentuale PIL: 8,0% nel 2016, sceso a 7,3% nel 2019, risalito a 8,0-8,1% nel 2020-2022 per la pandemia, poi 7,4% nel 2023 e 7,7% nel 2024.">Serie storica Italia, servizi generali PA 2016-2024.</canvas>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>L'Italia è tra i paesi che spendono di più</strong> per servizi generali della PA in rapporto al PIL (7,7% nel 2024) — più di Francia (6,2%), Germania (6,4%) e Spagna (5,8%), superata in Europa solo da Grecia (8,3%). All'estremo opposto, Irlanda (2,0%) e Paesi Bassi (4,1%) spendono meno della metà.
+  </div>
+  <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
+    <strong>Nota metodologica importante:</strong> la categoria COFOG GF01 non misura solo la "burocrazia" in senso stretto — include anche gli <strong>interessi sul debito pubblico</strong> e i trasferimenti generali tra livelli di governo, classificati da Eurostat come "servizi generali". Per un paese con un debito pubblico alto come l'Italia, una parte non trascurabile di questo 7,7% è probabilmente spesa per interessi, non per amministrazione in senso proprio — non disponiamo ancora di un dato scorporato per confermare quanto esattamente. Questo numero va quindi letto come limite superiore del costo amministrativo, non come stima pura della burocrazia.
+  </div>
+</section>
+
 <!-- SEZIONE: DATI IN ARRIVO -->
 <section class="section" id="pa-in-arrivo">
   <div class="section-header">
@@ -314,7 +347,7 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </div>
   <p class="section-desc">Coerentemente con il principio di questo Osservatorio di non pubblicare mai dati stimati o inventati, le seguenti sezioni previste per questa pagina restano in attesa delle tavole sorgente e non sono ancora popolate:</p>
   <ul style="margin: 0 0 1rem 1.4rem; color: var(--is-ink-2); line-height: 1.9;">
-    <li><strong>Confronto europeo</strong> — spesa per servizi generali della PA in percentuale del PIL (Eurostat gov_10a_exp, cofog99=GF01) e numero di dipendenti pubblici su popolazione attiva (OCSE "Government at a Glance")</li>
+    <li><strong>Confronto europeo — dipendenti pubblici su popolazione attiva</strong> — fonte probabile: OCSE "Government at a Glance"</li>
     <li><strong>Debito per livello di governo</strong> — scomposizione dello stock di debito pubblico (non solo il saldo annuale) tra Stato, enti locali ed enti di previdenza, fonte probabile: Banca d'Italia</li>
   </ul>
 </section>
@@ -865,6 +898,70 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   })();
+  // ── GRAFICO: Confronto europeo GF01 2024 ──
+  (function() {
+    const ctx = document.getElementById('paEuropaChart').getContext('2d');
+    const dati = [
+      {p:'Irlanda', v:2.0}, {p:'Paesi Bassi', v:4.1}, {p:'Svezia', v:5.5}, {p:'Spagna', v:5.8},
+      {p:'Portogallo', v:5.8}, {p:'Danimarca', v:5.7}, {p:'Austria', v:6.0}, {p:'Francia', v:6.2},
+      {p:'Germania', v:6.4}, {p:'Finlandia', v:7.1}, {p:'Belgio', v:7.1}, {p:'Italia', v:7.7}, {p:'Grecia', v:8.3}
+    ].sort((a,b) => a.v - b.v);
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: dati.map(d => d.p),
+        datasets: [{
+          label: '% PIL',
+          data: dati.map(d => d.v),
+          backgroundColor: dati.map(d => d.p === 'Italia' ? '#c0392b' : '#2a78d6'),
+          borderRadius: 3
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x}% del PIL` } }
+        },
+        scales: {
+          x: { grid: { color: '#e0ddd4' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
+            title: { display: true, text: '% del PIL', font: { size: 10 }, color: '#7a7a7a' } },
+          y: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#0d0d0d' } }
+        }
+      }
+    });
+  })();
+
+  // ── GRAFICO: Italia serie storica GF01 2016-2024 ──
+  (function() {
+    const ctx = document.getElementById('paEuropaStoriaChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [2016,2017,2018,2019,2020,2021,2022,2023,2024],
+        datasets: [{
+          label: 'Servizi generali PA (% PIL)',
+          data: [8.0,7.7,7.7,7.3,8.0,7.7,8.1,7.4,7.7],
+          borderColor: '#c0392b', backgroundColor: 'rgba(192,57,43,0.08)',
+          borderWidth: 2.5, pointRadius: 4, fill: true, tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.y}% del PIL` } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#7a7a7a' } },
+          y: { grid: { color: '#e0ddd4' }, min: 6, max: 9,
+            ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' } }
+        }
+      }
+    });
+  })();
+
   // ── GRAFICO: Scomposizione della voce Altro ──
   (function() {
     const ctx = document.getElementById('paAltroChart').getContext('2d');
