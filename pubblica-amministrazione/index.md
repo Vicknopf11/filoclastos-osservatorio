@@ -28,10 +28,15 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </button>
   <div class="nav-links" id="navLinks">
     <a href="#pa-sottosettori">Per livello di governo</a>
-    <a href="#pa-saldo">Saldo nazionale</a>
-    <a href="#pa-dipendenti">Dipendenti per comparto</a>
-    <a href="#pa-europa">Confronto europeo</a>
-    <a href="#pa-debito-locale">Debito per livello</a>
+    <div class="nav-group" id="approfondimentiGroup">
+      <button class="nav-group__toggle" aria-haspopup="true" aria-expanded="false">Altre sezioni <span class="nav-caret">▾</span></button>
+      <div class="nav-group__menu">
+        <a href="#pa-saldo">Saldo nazionale</a>
+        <a href="#pa-dipendenti">Dipendenti per comparto</a>
+        <a href="#pa-europa">Confronto europeo</a>
+        <a href="#pa-debito-locale">Debito per livello</a>
+      </div>
+    </div>
     <a href="{{ '/spesa-pubblica/' | relative_url }}">← Panoramica generale</a>
   </div>
 </nav>
@@ -869,6 +874,20 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  // Dropdown "Altre sezioni"
+  document.querySelectorAll('.nav-group__toggle').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const group = btn.closest('.nav-group');
+      const isOpen = group.classList.toggle('open');
+      btn.setAttribute('aria-expanded', isOpen);
+    });
+  });
+  document.addEventListener('click', (e) => {
+    document.querySelectorAll('.nav-group.open').forEach(g => {
+      if (!g.contains(e.target)) g.classList.remove('open');
+    });
+  });
 
   // ── GRAFICO: Entrate/uscite per sottosettore 2025 ──
   (function() {
