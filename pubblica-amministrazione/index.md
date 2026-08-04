@@ -31,7 +31,7 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
     <a href="#pa-saldo">Saldo nazionale</a>
     <a href="#pa-dipendenti">Dipendenti per comparto</a>
     <a href="#pa-europa">Confronto europeo</a>
-    <a href="#pa-debito-locale">Debito enti locali</a>
+    <a href="#pa-debito-locale">Debito per livello</a>
     <a href="{{ '/spesa-pubblica/' | relative_url }}">← Panoramica generale</a>
   </div>
 </nav>
@@ -355,13 +355,28 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </div>
 </section>
 
-<!-- SEZIONE 5: DEBITO DEGLI ENTI LOCALI -->
+<!-- SEZIONE 5: DEBITO PER LIVELLO DI GOVERNO -->
 <section class="section" id="pa-debito-locale">
   <div class="section-header">
     <span class="section-num">05 /</span>
-    <h2 class="section-title">Debito degli enti locali</h2>
+    <h2 class="section-title">Debito per livello di governo</h2>
   </div>
-  <p class="section-desc">La fonte disponibile (Banca d'Italia) copre solo il debito delle <strong>Amministrazioni locali</strong> (Regioni, Province, Città metropolitane, Comuni) — non esiste una pubblicazione altrettanto puntuale per lo stock di debito dello Stato centrale o degli Enti di previdenza scorporato dal totale nazionale. Il dato che segue va quindi letto come un pezzo, non come la scomposizione completa richiesta.</p>
+  <p class="section-desc">Lo stock di debito pubblico scomposto tra Stato centrale ed enti locali (Banca d'Italia). Non esiste una fonte altrettanto puntuale per isolare lo stock di debito dei soli Enti di previdenza, che per legge non emettono debito in autonomia significativa.</p>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Debito lordo delle Amministrazioni centrali — Italia, 2020-2025 (mld €, fine periodo)</div>
+    <span class="source-tag static"><span class="source-dot"></span>Banca d'Italia — "Debito delle Amministrazioni centrali", serie storica trimestrale</span>
+    <div class="canvas-wrap" style="height:280px;">
+      <canvas id="paDebitoCentraleChart" role="img" aria-label="Debito lordo Amministrazioni centrali, fine periodo: 2.504 miliardi nel 2020, 2.609 nel 2021, 2.690 nel 2022, 2.804 nel 2023, 2.905 nel 2024, 3.039 nel 2025.">Debito Amministrazioni centrali, serie storica 2020-2025.</canvas>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>Confermato con numeri esatti:</strong> il debito lordo dello Stato centrale (3.038,8 miliardi di euro a fine 2025) è circa <strong>29 volte</strong> quello degli enti locali (105,4 miliardi, debito non consolidato). Il debito pubblico italiano è quindi, in pratica, quasi interamente debito dello Stato centrale: gli enti locali, sottoposti a vincoli di bilancio stringenti, ne rappresentano solo il 3,4%.
+  </div>
+
+  <h3 style="font-size:1rem; font-weight:500; margin: 2.5rem 0 0.5rem;">Debito degli enti locali</h3>
+  <p class="section-desc" style="margin-bottom:1.5rem;">Regioni, Province, Città metropolitane e Comuni: qui il dettaglio serie storica e regionale.</p>
 
   <div class="chart-wrap" style="margin-bottom:1.5rem;">
     <div class="chart-title">Debito delle Amministrazioni locali — Italia, serie storica 2020-2025 (mld €)</div>
@@ -384,10 +399,10 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </div>
 
   <div class="insight">
-    <strong>Gli enti locali pesano poco sul debito pubblico italiano complessivo:</strong> il debito consolidato delle Amministrazioni locali (79,1 miliardi di euro a fine 2025) è una frazione minima del debito pubblico italiano totale, che secondo i dati Eurostat già presenti in <a href="{{ '/spesa-pubblica/#debito' | relative_url }}">Della spesa pubblica</a> è al 137% del PIL — quindi nell'ordine delle migliaia di miliardi. Il debito pubblico italiano è quindi quasi interamente debito dello <strong>Stato centrale</strong>: Regioni e Comuni, sottoposti a vincoli di bilancio stringenti (patto di stabilità interno e regole SEC), non possono accumulare debito significativo. Lazio (15,4 mld, spinto soprattutto dal debito sanitario regionale storico) e Lombardia (10,1 mld) sono le regioni con lo stock più alto in valore assoluto.
+    <strong>Lazio e Lombardia in testa in valore assoluto:</strong> Lazio (15,4 mld, spinto soprattutto dal debito sanitario regionale storico) e Lombardia (10,1 mld) sono le regioni con lo stock più alto. Il dato non è normalizzato per popolazione o PIL regionale — una lettura pro capite richiederebbe un ulteriore passaggio.
   </div>
   <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
-    <strong>Nota metodologica:</strong> "consolidato" esclude le passività verso altri enti delle Amministrazioni pubbliche (es. anticipazioni MEF); "non consolidato" le include, ed è quindi più alto (105,4 mld nel 2025) — utile per capire l'esposizione debitoria complessiva degli enti, indipendentemente da chi sia il creditore. Non disponiamo di una fonte altrettanto puntuale per isolare lo stock di debito del solo Stato centrale o degli Enti di previdenza (questi ultimi, per legge, non possono tipicamente emettere debito autonomo, ma non abbiamo una conferma diretta da fonte primaria per questa affermazione).
+    <strong>Nota metodologica:</strong> "consolidato" esclude le passività verso altri enti delle Amministrazioni pubbliche (es. anticipazioni MEF); "non consolidato" le include, ed è quindi più alto (105,4 mld nel 2025) — utile per capire l'esposizione debitoria complessiva degli enti, indipendentemente da chi sia il creditore. Il confronto Stato/enti locali sopra usa in entrambi i casi il dato non consolidato per omogeneità. Resta non disponibile una fonte altrettanto puntuale per lo stock di debito dei soli Enti di previdenza.
   </div>
 </section>
 
@@ -938,6 +953,35 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   })();
+  // ── GRAFICO: Debito Amministrazioni centrali serie storica 2020-2025 ──
+  (function() {
+    const ctx = document.getElementById('paDebitoCentraleChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: [2020,2021,2022,2023,2024,2025],
+        datasets: [{
+          label: 'Debito lordo non consolidato',
+          data: [2503.97, 2609.35, 2690.42, 2803.75, 2904.93, 3038.80],
+          borderColor: '#c0392b', backgroundColor: 'rgba(192,57,43,0.08)',
+          borderWidth: 2.5, pointRadius: 4, fill: true, tension: 0.3
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.y.toLocaleString('it-IT')} mld €` } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 12 }, color: '#7a7a7a' } },
+          y: { grid: { color: '#e0ddd4' }, min: 2000, max: 3200,
+            ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v.toLocaleString('it-IT') + ' mld' } }
+        }
+      }
+    });
+  })();
+
   // ── GRAFICO: Debito enti locali serie storica 2020-2025 ──
   (function() {
     const ctx = document.getElementById('paDebitoLocaleChart').getContext('2d');
