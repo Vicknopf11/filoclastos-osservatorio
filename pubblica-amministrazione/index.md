@@ -337,6 +337,21 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
     <strong>Nota metodologica importante:</strong> la categoria COFOG GF01 non misura solo la "burocrazia" in senso stretto — include anche gli <strong>interessi sul debito pubblico</strong> e i trasferimenti generali tra livelli di governo, classificati da Eurostat come "servizi generali". Per un paese con un debito pubblico alto come l'Italia, una parte non trascurabile di questo 7,7% è probabilmente spesa per interessi, non per amministrazione in senso proprio — non disponiamo ancora di un dato scorporato per confermare quanto esattamente. Questo numero va quindi letto come limite superiore del costo amministrativo, non come stima pura della burocrazia.
   </div>
+
+  <h3 style="font-size:1rem; font-weight:500; margin: 2.5rem 0 0.5rem;">Dipendenti pubblici in rapporto all'occupazione totale</h3>
+  <p class="section-desc" style="margin-bottom:1.5rem;">Un indicatore diverso dalla spesa: quanta parte dell'occupazione totale di un paese lavora per la pubblica amministrazione (Stato, enti locali, enti di previdenza — non include sanità/scuola dove privatizzate, coerentemente con la definizione OCSE di "general government").</p>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Dipendenti pubblici su occupazione totale — 2023 (%)</div>
+    <span class="source-tag static"><span class="source-dot"></span>OCSE — Government at a Glance 2025, Figura 13.1 (OECD National Accounts Statistics)</span>
+    <div class="canvas-wrap" style="height:340px;">
+      <canvas id="paOcseChart" role="img" aria-label="Dipendenti pubblici su occupazione totale 2023: Germania 11,5%, Paesi Bassi 12,3%, Italia 13,7%, Portogallo 15,0%, Grecia 15,5%, Spagna 15,3%, Austria 16,7%, media OCSE 18,4%, Belgio 18,3%, Irlanda 20,1%, Francia 20,7%, Finlandia 25,2%, Danimarca 27,3%, Svezia 28,1%.">Confronto europeo dipendenti pubblici su occupazione totale, 2023.</canvas>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>Su questo indicatore l'Italia si colloca tra i più bassi in Europa</strong> (13,7% dell'occupazione totale nel 2023) — sotto la media OCSE (18,4%) e ben sotto Francia (20,7%) e i paesi nordici (Svezia 28,1%, Danimarca 27,3%). Il quadro è quindi opposto a quello della spesa GF01: l'Italia spende relativamente <em>tanto</em> per i servizi generali della PA (soprattutto per via degli interessi sul debito, vedi nota sopra), ma impiega relativamente <em>poche</em> persone rispetto alla propria forza lavoro totale.
+  </div>
 </section>
 
 <!-- SEZIONE: DATI IN ARRIVO -->
@@ -347,7 +362,6 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </div>
   <p class="section-desc">Coerentemente con il principio di questo Osservatorio di non pubblicare mai dati stimati o inventati, le seguenti sezioni previste per questa pagina restano in attesa delle tavole sorgente e non sono ancora popolate:</p>
   <ul style="margin: 0 0 1rem 1.4rem; color: var(--is-ink-2); line-height: 1.9;">
-    <li><strong>Confronto europeo — dipendenti pubblici su popolazione attiva</strong> — fonte probabile: OCSE "Government at a Glance"</li>
     <li><strong>Debito per livello di governo</strong> — scomposizione dello stock di debito pubblico (non solo il saldo annuale) tra Stato, enti locali ed enti di previdenza, fonte probabile: Banca d'Italia</li>
   </ul>
 </section>
@@ -957,6 +971,42 @@ window.addEventListener('DOMContentLoaded', () => {
           x: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#7a7a7a' } },
           y: { grid: { color: '#e0ddd4' }, min: 6, max: 9,
             ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' } }
+        }
+      }
+    });
+  })();
+
+  // ── GRAFICO: OCSE dipendenti pubblici su occupazione totale 2023 ──
+  (function() {
+    const ctx = document.getElementById('paOcseChart').getContext('2d');
+    const dati = [
+      {p:'Germania', v:11.53}, {p:'Paesi Bassi', v:12.34}, {p:'Italia', v:13.66}, {p:'Portogallo', v:15.04},
+      {p:'Spagna', v:15.25}, {p:'Grecia', v:15.50}, {p:'Austria', v:16.70}, {p:'Media OCSE', v:18.41},
+      {p:'Belgio', v:18.33}, {p:'Irlanda', v:20.15}, {p:'Francia', v:20.74}, {p:'Finlandia', v:25.24},
+      {p:'Danimarca', v:27.26}, {p:'Svezia', v:28.15}
+    ].sort((a,b) => a.v - b.v);
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: dati.map(d => d.p),
+        datasets: [{
+          label: '% occupazione totale',
+          data: dati.map(d => d.v),
+          backgroundColor: dati.map(d => d.p === 'Italia' ? '#c0392b' : (d.p === 'Media OCSE' ? '#eda100' : '#2a78d6')),
+          borderRadius: 3
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x.toFixed(1)}% dell'occupazione totale` } }
+        },
+        scales: {
+          x: { grid: { color: '#e0ddd4' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
+            title: { display: true, text: '% occupazione totale', font: { size: 10 }, color: '#7a7a7a' } },
+          y: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#0d0d0d' } }
         }
       }
     });
