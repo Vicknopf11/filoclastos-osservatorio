@@ -219,6 +219,81 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
     </table>
   </div>
 
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Dentro la voce "Altro" — scomposizione (Anno 2024)</div>
+    <span class="source-tag static"><span class="source-dot"></span>RGS — Conto Annuale 2024, dati aperti (tabella OCCUPAZIONE)</span>
+    <div class="canvas-wrap" style="height:280px;">
+      <canvas id="paAltroChart" role="img" aria-label="Scomposizione della voce Altro: Corpi di polizia 302.695, Forze armate 173.747, Vigili del fuoco 36.299, Enti Lista S13 ISTAT 32.974, Enti di ricerca 24.604, Magistratura 11.224, altri enti e carriere minori 24.036.">Scomposizione della voce Altro, 2024.</canvas>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto; margin-bottom:1.5rem;">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Dentro "Altro"</th>
+          <th class="num">Dipendenti</th>
+          <th class="num">Costo del lavoro (mld €)</th>
+          <th class="num">Costo medio annuo (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="ita">
+          <td>Corpi di polizia</td>
+          <td class="num">302.695</td>
+          <td class="num">19,17</td>
+          <td class="num">63.343</td>
+        </tr>
+        <tr>
+          <td>Forze armate</td>
+          <td class="num">173.747</td>
+          <td class="num">10,98</td>
+          <td class="num">63.173</td>
+        </tr>
+        <tr>
+          <td>Vigili del fuoco</td>
+          <td class="num">36.299</td>
+          <td class="num">2,14</td>
+          <td class="num">58.925</td>
+        </tr>
+        <tr>
+          <td>Enti Lista S13 ISTAT</td>
+          <td class="num">32.974</td>
+          <td class="num">2,62</td>
+          <td class="num">79.327</td>
+        </tr>
+        <tr>
+          <td>Enti di ricerca</td>
+          <td class="num">24.604</td>
+          <td class="num">2,08</td>
+          <td class="num">84.733</td>
+        </tr>
+        <tr>
+          <td>Magistratura</td>
+          <td class="num">11.224</td>
+          <td class="num">2,46</td>
+          <td class="num">218.748</td>
+        </tr>
+        <tr>
+          <td>Altri enti e carriere minori <span style="font-size:11px;color:var(--is-ink-3);">(AFAM, carriera diplomatica/prefettizia/penitenziaria, Autorità indipendenti, Presidenza Consiglio, enti art. 60, Unioncamere)</span></td>
+          <td class="num">24.036</td>
+          <td class="num">2,39</td>
+          <td class="num">99.458</td>
+        </tr>
+        <tr>
+          <td><strong>Totale "Altro"</strong></td>
+          <td class="num"><strong>605.579</strong></td>
+          <td class="num"><strong>41,83</strong></td>
+          <td class="num"><strong>69.074</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight">
+    <strong>Le forze dell'ordine sono la componente più grande:</strong> Corpi di polizia e Forze armate insieme (476.442 persone) rappresentano quasi l'80% della voce "Altro" — più della somma di Stato e Università messe insieme. La Magistratura è la categoria più piccola per numero (11.224 persone) ma con il costo medio annuo più alto di qualsiasi comparto in questa pagina (218.748 €), riflettendo una struttura salariale specifica per la carriera giudiziaria.
+  </div>
+
   <div class="insight">
     <strong>La scuola è di gran lunga il comparto più numeroso</strong> (1,25 milioni di dipendenti, oltre un terzo del totale) ma con il costo medio annuo più basso (40.751 €) tra tutte le categorie — riflette una struttura di carriera piatta e un corpo docente numericamente enorme rispetto agli altri comparti. All'estremo opposto, l'università ha il costo medio più alto tra le cinque categorie richieste (82.505 €), spiegato dalla componente di docenti e ricercatori. La voce "Altro" (605 mila persone, che include forze dell'ordine, forze armate, magistratura e enti di ricerca) ha in realtà il costo medio più alto in assoluto tra tutte le sotto-categorie del Conto Annuale — la magistratura da sola supera 218.000 €/anno medio, ma pesa solo su 11 mila persone.
   </div>
@@ -786,6 +861,34 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   })();
+  // ── GRAFICO: Scomposizione della voce Altro ──
+  (function() {
+    const ctx = document.getElementById('paAltroChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Corpi di\\npolizia', 'Forze\\narmate', 'Vigili del\\nfuoco', 'Enti Lista\\nS13 ISTAT', 'Enti di\\nricerca', 'Magistratura', 'Altri enti\\nminori'],
+        datasets: [{
+          label: 'Dipendenti',
+          data: [302695, 173747, 36299, 32974, 24604, 11224, 24036],
+          backgroundColor: '#c0392b',
+          borderRadius: 3
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.y.toLocaleString('it-IT')} dipendenti` } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 10 }, color: '#7a7a7a' } },
+          y: { grid: { color: '#e0ddd4' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => (v/1000) + 'k' } }
+        }
+      }
+    });
+  })();
+
   // ── GRAFICO: Dipendenti pubblici per comparto ──
   (function() {
     const ctx = document.getElementById('paDipendentiChart').getContext('2d');
