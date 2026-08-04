@@ -27,15 +27,15 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
     <span></span><span></span><span></span>
   </button>
   <div class="nav-links" id="navLinks">
-    <a href="#spesa">Spesa</a>
-    <div class="nav-group" id="pensioniGroup">
-      <button class="nav-group__toggle" aria-haspopup="true" aria-expanded="false">Pensioni <span class="nav-caret">▾</span></button>
+    <div class="nav-group" id="spesaGroup">
+      <button class="nav-group__toggle" aria-haspopup="true" aria-expanded="false">Spesa <span class="nav-caret">▾</span></button>
       <div class="nav-group__menu">
-        <a href="#pensioni">Panoramica</a>
-        <a href="{{ '/pensioni/' | relative_url }}">Approfondimento →</a>
+        <a href="#spesa">Panoramica</a>
+        <a href="#pensioni">Pensioni — Panoramica</a>
+        <a href="{{ '/pensioni/' | relative_url }}">Pensioni — Approfondimento →</a>
+        <a href="{{ '/sanita/' | relative_url }}">Sanità — Approfondimento →</a>
       </div>
     </div>
-    <a href="{{ '/sanita/' | relative_url }}">Sanità →</a>
     <a href="#confronto">Europa</a>
     <a href="#debito">Debito</a>
     <a href="#aggiornamenti">Manovre</a>
