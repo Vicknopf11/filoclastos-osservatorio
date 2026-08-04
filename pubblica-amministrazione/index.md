@@ -29,6 +29,7 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   <div class="nav-links" id="navLinks">
     <a href="#pa-sottosettori">Per livello di governo</a>
     <a href="#pa-saldo">Saldo nazionale</a>
+    <a href="#pa-dipendenti">Dipendenti per comparto</a>
     <a href="{{ '/spesa-pubblica/' | relative_url }}">← Panoramica generale</a>
   </div>
 </nav>
@@ -145,6 +146,87 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </div>
 </section>
 
+<!-- SEZIONE 3: DIPENDENTI PUBBLICI PER COMPARTO -->
+<section class="section" id="pa-dipendenti">
+  <div class="section-header">
+    <span class="section-num">03 /</span>
+    <h2 class="section-title">Numero e costo dei dipendenti pubblici per comparto</h2>
+  </div>
+  <p class="section-desc">Personale a tempo indeterminato e dirigenti in servizio al 31 dicembre 2024, per comparto di contrattazione. Esclude personale con contratti flessibili/a termine (rilevati separatamente dal Conto Annuale) e non è espresso in equivalenti a tempo pieno — chi lavora part-time è conteggiato come una unità di personale, non come frazione.</p>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Dipendenti pubblici per comparto — Anno 2024</div>
+    <span class="source-tag static"><span class="source-dot"></span>RGS — Conto Annuale 2024, dati aperti (tabella OCCUPAZIONE)</span>
+    <div class="canvas-wrap" style="height:340px;">
+      <canvas id="paDipendentiChart" role="img" aria-label="Dipendenti pubblici 2024 per comparto: Scuola 1,25 milioni, Sanità 714 mila, Altro (forze dell'ordine, magistratura, ricerca) 606 mila, Enti locali 499 mila, Stato 211 mila, Università 104 mila.">Dipendenti pubblici per comparto, 2024.</canvas>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto; margin-bottom:1.5rem;">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Comparto</th>
+          <th class="num">Dipendenti</th>
+          <th class="num">Costo del lavoro (mld €)</th>
+          <th class="num">Costo medio annuo (€)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="ita">
+          <td>Scuola</td>
+          <td class="num">1.254.459</td>
+          <td class="num">51,12</td>
+          <td class="num">40.751</td>
+        </tr>
+        <tr>
+          <td>Sanità</td>
+          <td class="num">713.976</td>
+          <td class="num">46,67</td>
+          <td class="num">65.366</td>
+        </tr>
+        <tr>
+          <td>Altro (forze dell'ordine, magistratura, ricerca, ecc.)</td>
+          <td class="num">605.579</td>
+          <td class="num">41,83</td>
+          <td class="num">69.074</td>
+        </tr>
+        <tr>
+          <td>Enti locali (Regioni, Comuni)</td>
+          <td class="num">499.429</td>
+          <td class="num">24,60</td>
+          <td class="num">49.256</td>
+        </tr>
+        <tr>
+          <td>Stato (Ministeri, agenzie fiscali)</td>
+          <td class="num">211.236</td>
+          <td class="num">13,27</td>
+          <td class="num">62.821</td>
+        </tr>
+        <tr>
+          <td>Università (docenti, ricercatori, amministrativo)</td>
+          <td class="num">104.115</td>
+          <td class="num">8,59</td>
+          <td class="num">82.505</td>
+        </tr>
+        <tr>
+          <td><strong>Totale</strong></td>
+          <td class="num"><strong>3.388.794</strong></td>
+          <td class="num"><strong>186,08</strong></td>
+          <td class="num"><strong>54.911</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight">
+    <strong>La scuola è di gran lunga il comparto più numeroso</strong> (1,25 milioni di dipendenti, oltre un terzo del totale) ma con il costo medio annuo più basso (40.751 €) tra tutte le categorie — riflette una struttura di carriera piatta e un corpo docente numericamente enorme rispetto agli altri comparti. All'estremo opposto, l'università ha il costo medio più alto tra le cinque categorie richieste (82.505 €), spiegato dalla componente di docenti e ricercatori. La voce "Altro" (605 mila persone, che include forze dell'ordine, forze armate, magistratura e enti di ricerca) ha in realtà il costo medio più alto in assoluto tra tutte le sotto-categorie del Conto Annuale — la magistratura da sola supera 218.000 €/anno medio, ma pesa solo su 11 mila persone.
+  </div>
+  <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
+    <strong>Nota metodologica:</strong> "Università" qui aggrega due categorie contrattuali distinte nel Conto Annuale — il personale amministrativo (comparto "Istruzione e Ricerca") e i professori/ricercatori universitari (comparto "Personale in regime di diritto pubblico", stesso regime normativo di magistrati e militari) — perché dal punto di vista del lettore sono entrambi "l'università". "Stato" corrisponde al comparto ufficiale "Funzioni centrali" (Ministeri, agenzie fiscali, enti pubblici non economici centrali). Il dato non include il personale con contratti flessibili o a tempo determinato, rilevato a parte dal Conto Annuale.
+  </div>
+</section>
+
 <!-- SEZIONE: DATI IN ARRIVO -->
 <section class="section" id="pa-in-arrivo">
   <div class="section-header">
@@ -153,7 +235,6 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </div>
   <p class="section-desc">Coerentemente con il principio di questo Osservatorio di non pubblicare mai dati stimati o inventati, le seguenti sezioni previste per questa pagina restano in attesa delle tavole sorgente e non sono ancora popolate:</p>
   <ul style="margin: 0 0 1rem 1.4rem; color: var(--is-ink-2); line-height: 1.9;">
-    <li><strong>Numero e costo dei dipendenti pubblici</strong> — per comparto (Stato, Sanità, Enti locali, Scuola, Università), fonte probabile: RGS — Conto Annuale del pubblico impiego</li>
     <li><strong>Confronto europeo</strong> — spesa per servizi generali della PA in percentuale del PIL (Eurostat gov_10a_exp, cofog99=GF01) e numero di dipendenti pubblici su popolazione attiva (OCSE "Government at a Glance")</li>
     <li><strong>Debito per livello di governo</strong> — scomposizione dello stock di debito pubblico (non solo il saldo annuale) tra Stato, enti locali ed enti di previdenza, fonte probabile: Banca d'Italia</li>
   </ul>
@@ -701,6 +782,35 @@ window.addEventListener('DOMContentLoaded', () => {
         scales: {
           x: { grid: { display: false }, ticks: { font: { size: 12 }, color: '#7a7a7a' } },
           y: { grid: { color: '#e0ddd4' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + ' mld' } }
+        }
+      }
+    });
+  })();
+  // ── GRAFICO: Dipendenti pubblici per comparto ──
+  (function() {
+    const ctx = document.getElementById('paDipendentiChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Scuola', 'Sanità', 'Altro', 'Enti locali', 'Stato', 'Università'],
+        datasets: [{
+          label: 'Dipendenti',
+          data: [1254459, 713976, 605579, 499429, 211236, 104115],
+          backgroundColor: '#2a78d6',
+          borderRadius: 3
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x.toLocaleString('it-IT')} dipendenti` } }
+        },
+        scales: {
+          x: { grid: { color: '#e0ddd4' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => (v/1e6).toFixed(1) + 'M' },
+            title: { display: true, text: 'Dipendenti', font: { size: 10 }, color: '#7a7a7a' } },
+          y: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#0d0d0d' } }
         }
       }
     });
