@@ -31,6 +31,7 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
     <a href="#pa-saldo">Saldo nazionale</a>
     <a href="#pa-dipendenti">Dipendenti per comparto</a>
     <a href="#pa-europa">Confronto europeo</a>
+    <a href="#pa-debito-locale">Debito enti locali</a>
     <a href="{{ '/spesa-pubblica/' | relative_url }}">← Panoramica generale</a>
   </div>
 </nav>
@@ -354,17 +355,42 @@ description: "Approfondimento sulla Pubblica Amministrazione italiana: confronto
   </div>
 </section>
 
-<!-- SEZIONE: DATI IN ARRIVO -->
-<section class="section" id="pa-in-arrivo">
+<!-- SEZIONE 5: DEBITO DEGLI ENTI LOCALI -->
+<section class="section" id="pa-debito-locale">
   <div class="section-header">
-    <span class="section-num">— /</span>
-    <h2 class="section-title">Sezioni ancora da completare</h2>
+    <span class="section-num">05 /</span>
+    <h2 class="section-title">Debito degli enti locali</h2>
   </div>
-  <p class="section-desc">Coerentemente con il principio di questo Osservatorio di non pubblicare mai dati stimati o inventati, le seguenti sezioni previste per questa pagina restano in attesa delle tavole sorgente e non sono ancora popolate:</p>
-  <ul style="margin: 0 0 1rem 1.4rem; color: var(--is-ink-2); line-height: 1.9;">
-    <li><strong>Debito per livello di governo</strong> — scomposizione dello stock di debito pubblico (non solo il saldo annuale) tra Stato, enti locali ed enti di previdenza, fonte probabile: Banca d'Italia</li>
-  </ul>
+  <p class="section-desc">La fonte disponibile (Banca d'Italia) copre solo il debito delle <strong>Amministrazioni locali</strong> (Regioni, Province, Città metropolitane, Comuni) — non esiste una pubblicazione altrettanto puntuale per lo stock di debito dello Stato centrale o degli Enti di previdenza scorporato dal totale nazionale. Il dato che segue va quindi letto come un pezzo, non come la scomposizione completa richiesta.</p>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Debito delle Amministrazioni locali — Italia, serie storica 2020-2025 (mld €)</div>
+    <span class="source-tag static"><span class="source-dot"></span>Banca d'Italia — "Debito delle Amministrazioni locali", 27 febbraio 2026 (Tavola 3)</span>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;margin:0.75rem 0;font-size:11px;color:var(--is-ink-3);">
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:16px;height:3px;background:#2a78d6;display:inline-block;"></span>Debito consolidato</span>
+      <span style="display:flex;align-items:center;gap:4px;"><span style="width:16px;height:3px;background:#e34948;display:inline-block;border-top:3px dashed #e34948;height:0;"></span>Debito non consolidato</span>
+    </div>
+    <div class="canvas-wrap" style="height:280px;">
+      <canvas id="paDebitoLocaleChart" role="img" aria-label="Debito enti locali, consolidato: 85,6 miliardi nel 2020, sceso a 79,1 nel 2025. Non consolidato: 123,5 miliardi nel 2020, sceso a 105,4 nel 2025.">Debito enti locali, serie storica 2020-2025.</canvas>
+    </div>
+  </div>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Debito consolidato degli enti locali per regione — Dicembre 2025 (mld €)</div>
+    <span class="source-tag static"><span class="source-dot"></span>Banca d'Italia — "Debito delle Amministrazioni locali", 27 febbraio 2026 (Tavole 13-32)</span>
+    <div class="canvas-wrap" style="height:480px;">
+      <canvas id="paDebitoRegioneChart" role="img" aria-label="Debito consolidato enti locali per regione, dicembre 2025: Lazio 15,4 miliardi (il più alto), seguito da Lombardia 10,1, Campania 9,2, Piemonte 8,9, Sicilia 6,1, Veneto 4,7, Toscana 4,6, Calabria 3,8, Emilia-Romagna 2,9, Puglia 2,1, Liguria 2,3, Sardegna 1,8, Abruzzo 1,6, Marche 1,6, Umbria 1,2, Friuli-Venezia Giulia 1,0, Trentino-Alto Adige 1,0, Basilicata 0,5, Molise 0,3, Valle d'Aosta 0,08.">Debito enti locali per regione, dicembre 2025.</canvas>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>Gli enti locali pesano poco sul debito pubblico italiano complessivo:</strong> il debito consolidato delle Amministrazioni locali (79,1 miliardi di euro a fine 2025) è una frazione minima del debito pubblico italiano totale, che secondo i dati Eurostat già presenti in <a href="{{ '/spesa-pubblica/#debito' | relative_url }}">Della spesa pubblica</a> è al 137% del PIL — quindi nell'ordine delle migliaia di miliardi. Il debito pubblico italiano è quindi quasi interamente debito dello <strong>Stato centrale</strong>: Regioni e Comuni, sottoposti a vincoli di bilancio stringenti (patto di stabilità interno e regole SEC), non possono accumulare debito significativo. Lazio (15,4 mld, spinto soprattutto dal debito sanitario regionale storico) e Lombardia (10,1 mld) sono le regioni con lo stock più alto in valore assoluto.
+  </div>
+  <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
+    <strong>Nota metodologica:</strong> "consolidato" esclude le passività verso altri enti delle Amministrazioni pubbliche (es. anticipazioni MEF); "non consolidato" le include, ed è quindi più alto (105,4 mld nel 2025) — utile per capire l'esposizione debitoria complessiva degli enti, indipendentemente da chi sia il creditore. Non disponiamo di una fonte altrettanto puntuale per isolare lo stock di debito del solo Stato centrale o degli Enti di previdenza (questi ultimi, per legge, non possono tipicamente emettere debito autonomo, ma non abbiamo una conferma diretta da fonte primaria per questa affermazione).
+  </div>
 </section>
+
 
 </main>
 
@@ -912,6 +938,74 @@ window.addEventListener('DOMContentLoaded', () => {
       }
     });
   })();
+  // ── GRAFICO: Debito enti locali serie storica 2020-2025 ──
+  (function() {
+    const ctx = document.getElementById('paDebitoLocaleChart').getContext('2d');
+    const anni = [2020,2021,2022,2023,2024,2025];
+    new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: anni,
+        datasets: [
+          { label: 'Debito consolidato', data: [85.586,88.786,88.527,84.823,82.488,79.130],
+            borderColor: '#2a78d6', backgroundColor: 'rgba(42,120,214,0.08)', borderWidth: 2.5, pointRadius: 4, fill: true, tension: 0.3 },
+          { label: 'Debito non consolidato', data: [123.490,120.592,116.971,112.408,109.391,105.417],
+            borderColor: '#e34948', backgroundColor: 'transparent', borderWidth: 2, borderDash: [6,3], pointRadius: 4, fill: false, tension: 0.3 }
+        ]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y} mld €` } }
+        },
+        scales: {
+          x: { grid: { display: false }, ticks: { font: { size: 12 }, color: '#7a7a7a' } },
+          y: { grid: { color: '#e0ddd4' }, min: 60, max: 130,
+            ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + ' mld' } }
+        }
+      }
+    });
+  })();
+
+  // ── GRAFICO: Debito enti locali per regione dic. 2025 ──
+  (function() {
+    const ctx = document.getElementById('paDebitoRegioneChart').getContext('2d');
+    const dati = [
+      {r:"Valle d'Aosta", v:0.079}, {r:'Molise', v:0.327}, {r:'Basilicata', v:0.464},
+      {r:'Friuli-Venezia Giulia', v:1.035}, {r:'Trentino-Alto Adige', v:1.017}, {r:'Umbria', v:1.151},
+      {r:'Marche', v:1.565}, {r:'Abruzzo', v:1.609}, {r:'Sardegna', v:1.848}, {r:'Liguria', v:2.268},
+      {r:'Puglia', v:2.071}, {r:'Emilia-Romagna', v:2.887}, {r:'Calabria', v:3.842}, {r:'Toscana', v:4.611},
+      {r:'Veneto', v:4.654}, {r:'Sicilia', v:6.067}, {r:'Piemonte', v:8.947}, {r:'Campania', v:9.159},
+      {r:'Lombardia', v:10.143}, {r:'Lazio', v:15.387}
+    ];
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: dati.map(d => d.r),
+        datasets: [{
+          label: 'Debito consolidato',
+          data: dati.map(d => d.v),
+          backgroundColor: '#2a78d6',
+          borderRadius: 3
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x.toFixed(2)} mld €` } }
+        },
+        scales: {
+          x: { grid: { color: '#e0ddd4' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + ' mld' },
+            title: { display: true, text: 'Debito consolidato (mld €)', font: { size: 10 }, color: '#7a7a7a' } },
+          y: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#0d0d0d' } }
+        }
+      }
+    });
+  })();
+
   // ── GRAFICO: Confronto europeo GF01 2024 ──
   (function() {
     const ctx = document.getElementById('paEuropaChart').getContext('2d');
