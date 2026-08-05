@@ -47,10 +47,10 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
     <span class="section-num">01 /</span>
     <h2 class="section-title">Spesa per Missione e Programma</h2>
   </div>
-  <p class="section-desc">La spesa per difesa, ordine pubblico e soccorso pubblico non sta in un solo bilancio: il <strong>Ministero della Difesa</strong> copre le Forze Armate e l'Arma dei Carabinieri come corpo, mentre il <strong>Ministero dell'Interno</strong> copre la Polizia di Stato, il Corpo Nazionale dei Vigili del Fuoco e — separatamente — un contributo aggiuntivo all'Arma dei Carabinieri per le sue funzioni di ordine pubblico.</p>
+  <p class="section-desc">La spesa per difesa, ordine pubblico e soccorso pubblico non sta in un solo bilancio: il <strong>Ministero della Difesa</strong> copre le Forze Armate e l'Arma dei Carabinieri come corpo, il <strong>Ministero dell'Interno</strong> copre la Polizia di Stato, il Corpo Nazionale dei Vigili del Fuoco e un contributo aggiuntivo ai Carabinieri, e il <strong>Ministero dell'Economia e delle Finanze</strong> copre la Guardia di Finanza — oltre a una voce meno ovvia, i servizi di intelligence.</p>
 
   <div class="insight" style="margin-top:0; margin-bottom:1.5rem; border-color: var(--is-ink-3);">
-    <strong>Attenzione alla numerazione delle Missioni:</strong> Difesa e Interno hanno ciascuno una propria numerazione interna delle Missioni, indipendente l'una dall'altra — non è la stessa sequenza continuata. Qui sotto vedrai la <strong>Missione 1</strong> della Difesa e le <strong>Missioni 3 e 4</strong> dell'Interno: la Missione 2 esiste in entrambi i bilanci ma è stata esclusa perché fuori tema (per la Difesa è "Sviluppo sostenibile e tutela del territorio", i Carabinieri forestali; per l'Interno è "Relazioni finanziarie con le autonomie territoriali", i trasferimenti a Comuni e Regioni). Non è un dato mancante: è stata una scelta editoriale.
+    <strong>Attenzione alla numerazione delle Missioni:</strong> ciascun ministero ha una propria numerazione interna delle Missioni, indipendente dagli altri — non è la stessa sequenza continuata, e lo stesso numero può significare cose diverse. Qui sotto vedrai la <strong>Missione 1</strong> della Difesa, le <strong>Missioni 3 e 4</strong> dell'Interno, e la <strong>Missione 5</strong> del MEF — che non ha nulla a che fare con la Missione 5 dell'Interno ("Immigrazione, accoglienza e garanzia dei diritti"), pur avendo lo stesso numero. Le Missioni 2 di Difesa e Interno esistono ma sono state escluse perché fuori tema (per la Difesa è "Sviluppo sostenibile e tutela del territorio", i Carabinieri forestali; per l'Interno è "Relazioni finanziarie con le autonomie territoriali", i trasferimenti a Comuni e Regioni). Non è un dato mancante: è stata una scelta editoriale.
   </div>
 
   <div class="cards-grid" style="margin-bottom:1.5rem;">
@@ -70,9 +70,14 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
       <div class="stat-card-sub">quasi tutto Vigili del Fuoco</div>
     </div>
     <div class="stat-card">
-      <div class="stat-card-label">Totale nei due bilanci</div>
-      <div class="stat-card-val">41,48 mld €</div>
-      <div class="stat-card-sub">CP 2025, esclude altri corpi (v. limiti)</div>
+      <div class="stat-card-label">Ordine pubblico (MEF, Missione 5)</div>
+      <div class="stat-card-val">3,12 mld €</div>
+      <div class="stat-card-sub">Guardia di Finanza + intelligence</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Totale nei tre bilanci</div>
+      <div class="stat-card-val">44,60 mld €</div>
+      <div class="stat-card-sub">CP 2025, esclude Polizia Penitenziaria (v. limiti)</div>
     </div>
   </div>
 
@@ -207,8 +212,49 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
   <div class="insight">
     <strong>L'Arma dei Carabinieri è finanziata da due bilanci diversi, per due funzioni diverse:</strong> il grosso del suo bilancio (7,35 mld €) sta nella Missione Difesa come corpo militare a tutti gli effetti (organicamente è la quarta Forza Armata). Ma il Ministero dell'Interno versa un contributo aggiuntivo (490 milioni, Programma 3.2) specificamente per il "servizio permanente" di ordine pubblico che i Carabinieri svolgono sul territorio — riconoscendo che il loro lavoro quotidiano è in gran parte sovrapponibile a quello della Polizia di Stato. Il Corpo Nazionale dei Vigili del Fuoco, da solo, assorbe il 99,7% della Missione "Soccorso civile" — la voce "difesa civile" (coordinamento, pianificazione) pesa appena lo 0,25%.
   </div>
+
+  <div class="chart-wrap" style="margin-top:2rem; margin-bottom:1.5rem;">
+    <div class="chart-title">Ministero dell'Economia e delle Finanze — Missione "Ordine pubblico e sicurezza" per Programma, CP 2025 (mln €)</div>
+    <span class="source-tag static"><span class="source-dot"></span>MEF — Nota Integrativa a Legge di Bilancio 2025-2027</span>
+    <div class="canvas-wrap" style="height:240px;">
+      <canvas id="dopMefChart" role="img" aria-label="Spesa MEF Missione Ordine pubblico per programma, competenza 2025: Guardia di Finanza 1.734 milioni, Sicurezza democratica (servizi di intelligence) 1.385 milioni.">Spesa MEF per programma, competenza 2025.</canvas>
+    </div>
+  </div>
+
+  <div style="overflow-x:auto; margin-bottom:1.5rem;">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Programma (Ministero dell'Economia e delle Finanze)</th>
+          <th class="num">CP 2025 (€)</th>
+          <th class="num">% Missione</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="ita">
+          <td>5.1 — Concorso della Guardia di Finanza alla sicurezza interna ed esterna</td>
+          <td class="num">1.734.284.767</td>
+          <td class="num">55,6%</td>
+        </tr>
+        <tr>
+          <td>5.2 — Sicurezza democratica <span style="font-size:11px;color:var(--is-ink-3);">(sistema di informazione per la sicurezza della Repubblica)</span></td>
+          <td class="num">1.384.944.299</td>
+          <td class="num">44,4%</td>
+        </tr>
+        <tr>
+          <td><strong>Totale Missione 5 — Ordine pubblico e sicurezza (MEF)</strong></td>
+          <td class="num"><strong>3.119.229.066</strong></td>
+          <td class="num"><strong>100%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight">
+    <strong>Il bilancio dei servizi segreti italiani sta, contabilmente, dentro "Ordine pubblico e sicurezza" del MEF, non dentro un bilancio dedicato all'intelligence.</strong> Il Programma 5.2 "Sicurezza democratica" — che copre il "sistema di informazione per la sicurezza della Repubblica" (AISE, AISI e il coordinamento del DIS) — vale 1,38 miliardi di euro, quasi tanto quanto la Guardia di Finanza (1,73 miliardi) nella stessa Missione. È una collocazione poco intuitiva ma spiegabile: il finanziamento dei servizi segreti passa storicamente dalla Presidenza del Consiglio tramite il MEF, non da un dicastero della sicurezza in senso stretto.
+  </div>
   <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
-    <strong>Nota metodologica e limite dichiarato:</strong> questa pagina copre solo Ministero della Difesa e Ministero dell'Interno. Restano fuori due corpi con funzioni di ordine pubblico ma bilancio altrove: la <strong>Guardia di Finanza</strong> (Ministero dell'Economia e delle Finanze) e la <strong>Polizia Penitenziaria</strong> (Ministero della Giustizia) — entrambe non ancora coperte da una Nota Integrativa caricata in questa sessione. Il totale di 41,48 miliardi € qui presentato è quindi un sottoinsieme, non il totale della funzione COFOG "Difesa e ordine pubblico" nella sua interezza (il riferimento statico usato nella <a href="{{ '/spesa-pubblica/' | relative_url }}">panoramica generale</a>, circa 55 miliardi, include probabilmente anche questi corpi).
+    <strong>Nota metodologica e limite dichiarato:</strong> questa pagina copre Ministero della Difesa, Ministero dell'Interno e Ministero dell'Economia e delle Finanze. Resta fuori un solo corpo con funzioni di ordine pubblico: la <strong>Polizia Penitenziaria</strong> (Ministero della Giustizia), non ancora coperta da una Nota Integrativa caricata in questa sessione. Il totale di 44,60 miliardi € qui presentato è quindi ancora un sottoinsieme, non il totale della funzione COFOG "Difesa e ordine pubblico" nella sua interezza (il riferimento statico usato nella <a href="{{ '/spesa-pubblica/' | relative_url }}">panoramica generale</a>, circa 55 miliardi, include probabilmente anche la Polizia Penitenziaria e altre voci minori).
   </div>
 </section>
 
@@ -282,8 +328,8 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
   <div class="insight" style="border-color: var(--is-ink-3);">
     <strong>Confronto europeo:</strong> serve estendere <code>scripts/fetch_eurostat.py</code> con le categorie COFOG GF02 (Difesa) e GF03 (Ordine pubblico e sicurezza) — stessa architettura già usata per l'istruzione (GF09) — più un confronto con il target NATO del 2% del PIL, che richiederebbe il report ufficiale NATO "Defence Expenditure of NATO Countries" (non raggiungibile dalla rete di questo ambiente: va caricato).
   </div>
-  <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
-    <strong>Guardia di Finanza e Polizia Penitenziaria:</strong> servono le rispettive Note Integrative (Ministero dell'Economia e delle Finanze per la Guardia di Finanza, Ministero della Giustizia per la Polizia Penitenziaria) per completare il quadro dei corpi con funzioni di ordine pubblico.
+  <div class="insight" style="border-color: var(--is-ink-3);">
+    <strong>Polizia Penitenziaria:</strong> serve la Nota Integrativa del Ministero della Giustizia per completare il quadro dei corpi con funzioni di ordine pubblico.
   </div>
   <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
     <strong>Personale per singola Forza/corpo:</strong> la sezione 02 mostra solo gli aggregati "Forze armate" e "Corpi di polizia" — una tabella più granulare del Conto Annuale RGS permetterebbe di scomporre in Esercito/Marina/Aeronautica/Carabinieri e Polizia di Stato/Guardia di Finanza separatamente.
@@ -296,7 +342,7 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
 
 <footer class="pens-footer">
   <div style="max-width:980px; margin:0 auto;">
-    Fonti: Ministero della Difesa — Nota Integrativa al disegno di Legge di Bilancio 2025-2027; Ministero dell'Interno — Nota Integrativa al disegno di Legge di Bilancio 2025-2027; RGS — Conto Annuale 2024.<br>
+    Fonti: Ministero della Difesa — Nota Integrativa al disegno di Legge di Bilancio 2025-2027; Ministero dell'Interno — Nota Integrativa al disegno di Legge di Bilancio 2025-2027; Ministero dell'Economia e delle Finanze — Nota Integrativa a Legge di Bilancio 2025-2027; RGS — Conto Annuale 2024.<br>
     Dati raccolti ed elaborati manualmente al momento; nessuna automazione di aggiornamento è ancora attiva per questa pagina.
   </div>
 </footer>
@@ -624,6 +670,36 @@ window.addEventListener('DOMContentLoaded', () => {
           label: 'Milioni €',
           data: dati.map(d => d.v),
           backgroundColor: dati.map(d => d.p.startsWith('3') ? '#c0392b' : '#1baf7a'),
+          borderRadius: 3
+        }]
+      },
+      options: {
+        indexAxis: 'y',
+        responsive: true, maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x.toLocaleString('it-IT')} mln €` } }
+        },
+        scales: {
+          x: { grid: { color: '#e0ddd4' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v.toLocaleString('it-IT') + ' mln' },
+            title: { display: true, text: 'Milioni €', font: { size: 10 }, color: '#7a7a7a' } },
+          y: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#0d0d0d' } }
+        }
+      }
+    });
+  })();
+
+  // ── GRAFICO: MEF per Programma (ordine pubblico) ──
+  (function() {
+    const ctx = document.getElementById('dopMefChart').getContext('2d');
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['5.2 — Sicurezza democratica\n(intelligence)', '5.1 — Guardia di Finanza'],
+        datasets: [{
+          label: 'Milioni €',
+          data: [1384.9, 1734.3],
+          backgroundColor: '#2a78d6',
           borderRadius: 3
         }]
       },
