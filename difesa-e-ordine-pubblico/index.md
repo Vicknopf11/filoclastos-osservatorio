@@ -49,6 +49,10 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
   </div>
   <p class="section-desc">La spesa per difesa, ordine pubblico e soccorso pubblico non sta in un solo bilancio: il <strong>Ministero della Difesa</strong> copre le Forze Armate e l'Arma dei Carabinieri come corpo, mentre il <strong>Ministero dell'Interno</strong> copre la Polizia di Stato, il Corpo Nazionale dei Vigili del Fuoco e — separatamente — un contributo aggiuntivo all'Arma dei Carabinieri per le sue funzioni di ordine pubblico.</p>
 
+  <div class="insight" style="margin-top:0; margin-bottom:1.5rem; border-color: var(--is-ink-3);">
+    <strong>Attenzione alla numerazione delle Missioni:</strong> Difesa e Interno hanno ciascuno una propria numerazione interna delle Missioni, indipendente l'una dall'altra — non è la stessa sequenza continuata. Qui sotto vedrai la <strong>Missione 1</strong> della Difesa e le <strong>Missioni 3 e 4</strong> dell'Interno: la Missione 2 esiste in entrambi i bilanci ma è stata esclusa perché fuori tema (per la Difesa è "Sviluppo sostenibile e tutela del territorio", i Carabinieri forestali; per l'Interno è "Relazioni finanziarie con le autonomie territoriali", i trasferimenti a Comuni e Regioni). Non è un dato mancante: è stata una scelta editoriale.
+  </div>
+
   <div class="cards-grid" style="margin-bottom:1.5rem;">
     <div class="stat-card">
       <div class="stat-card-label">Difesa (Min. Difesa, Missione 1)</div>
