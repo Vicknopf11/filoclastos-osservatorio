@@ -29,10 +29,12 @@ GEO_CODES = list(GEO_TO_LABEL.keys())
 GEO_QS = "&".join(f"geo={g}" for g in GEO_CODES)
 
 COFOG_CODES = {
-    "sanita":     {"dataset": "gov_10a_exp", "dim": "cofog99", "code": "GF07", "na_item": "TE"},
-    "istruzione": {"dataset": "gov_10a_exp", "dim": "cofog99", "code": "GF09", "na_item": "TE"},
-    "pensioni":   {"dataset": "gov_10a_exp", "dim": "cofog99", "code": "GF10", "na_item": "TE"},
-    "interessi":  {"dataset": "gov_10a_main", "dim": None, "code": None, "na_item": "D41PAY"},
+    "sanita":         {"dataset": "gov_10a_exp", "dim": "cofog99", "code": "GF07", "na_item": "TE"},
+    "istruzione":     {"dataset": "gov_10a_exp", "dim": "cofog99", "code": "GF09", "na_item": "TE"},
+    "pensioni":       {"dataset": "gov_10a_exp", "dim": "cofog99", "code": "GF10", "na_item": "TE"},
+    "difesa":         {"dataset": "gov_10a_exp", "dim": "cofog99", "code": "GF02", "na_item": "TE"},
+    "ordine_pubblico": {"dataset": "gov_10a_exp", "dim": "cofog99", "code": "GF03", "na_item": "TE"},
+    "interessi":      {"dataset": "gov_10a_main", "dim": None, "code": None, "na_item": "D41PAY"},
 }
 
 
@@ -96,6 +98,8 @@ def main():
         "sanita": {},
         "istruzione": {},
         "pensioni": {},
+        "difesa": {},
+        "ordine_pubblico": {},
         "interessi": {},
         "ok": [],
         "errori": [],

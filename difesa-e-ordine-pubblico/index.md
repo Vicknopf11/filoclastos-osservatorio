@@ -31,6 +31,7 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
       <button class="nav-group__toggle" aria-haspopup="true" aria-expanded="false">Altre sezioni <span class="nav-caret">▾</span></button>
       <div class="nav-group__menu">
         <a href="#dop-personale">Personale per corpo</a>
+        <a href="#dop-europa">Confronto europeo</a>
         <a href="#dop-limiti">Dimensioni da completare</a>
       </div>
     </div>
@@ -371,7 +372,41 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
   </div>
 </section>
 
-<!-- SEZIONE: DIMENSIONI DA COMPLETARE -->
+<!-- SEZIONE 3: CONFRONTO EUROPEO -->
+<section class="section" id="dop-europa">
+  <div class="section-header">
+    <span class="section-num">03 /</span>
+    <h2 class="section-title">Confronto europeo — Difesa e Ordine pubblico</h2>
+  </div>
+  <p class="section-desc">Le categorie COFOG <strong>GF02 "Difesa"</strong> e <strong>GF03 "Ordine pubblico e sicurezza"</strong> sono gli indicatori Eurostat comparabili tra paesi, in percentuale del PIL. Questa sezione legge lo stesso file <code>eurostat.json</code> aggiornato periodicamente da GitHub Actions e già usato per <a href="{{ '/istruzione/' | relative_url }}">istruzione</a> e nella <a href="{{ '/spesa-pubblica/' | relative_url }}#confronto">panoramica generale</a>.</p>
+
+  <div id="dopEuropaPending" class="insight" style="border-color: var(--is-ink-3); display:none;">
+    <strong>Dati non ancora disponibili.</strong> Lo script <code>scripts/fetch_eurostat.py</code> è stato esteso con le categorie GF02 e GF03, ma il file <code>assets/data/eurostat.json</code> non le contiene ancora — significa che la GitHub Action che lo genera non è stata ancora eseguita con la versione aggiornata dello script. Vai su GitHub → Actions → "Aggiorna dati Eurostat" → <em>Run workflow</em> per generarli subito, invece di aspettare il prossimo aggiornamento mensile automatico.
+  </div>
+
+  <div id="dopEuropaContent">
+    <div class="chart-wrap" style="margin-bottom:1.5rem;">
+      <div class="chart-title">Spesa per Difesa (COFOG GF02) — % del PIL</div>
+      <span class="source-tag static" id="dopDifesaEuropaSourceTag"><span class="source-dot"></span>in attesa di dati</span>
+      <div class="canvas-wrap" style="height:340px;">
+        <canvas id="dopEuropaDifesaChart" role="img" aria-label="Confronto europeo spesa per difesa, percentuale del PIL, per paese.">Confronto europeo spesa difesa.</canvas>
+      </div>
+    </div>
+
+    <div class="chart-wrap" style="margin-bottom:1.5rem;">
+      <div class="chart-title">Spesa per Ordine pubblico e sicurezza (COFOG GF03) — % del PIL</div>
+      <span class="source-tag static" id="dopOrdinePubblicoEuropaSourceTag"><span class="source-dot"></span>in attesa di dati</span>
+      <div class="canvas-wrap" style="height:340px;">
+        <canvas id="dopEuropaOrdinePubblicoChart" role="img" aria-label="Confronto europeo spesa per ordine pubblico e sicurezza, percentuale del PIL, per paese.">Confronto europeo spesa ordine pubblico.</canvas>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight" style="border-color: var(--is-ink-3);">
+    <strong>Manca ancora il confronto con il target NATO del 2% del PIL</strong> per la sola componente Difesa — richiede il report ufficiale NATO "Defence Expenditure of NATO Countries" (non raggiungibile dalla rete di questo ambiente: va caricato per aggiungerlo).
+  </div>
+</section>
+
 <section class="section" id="dop-limiti" style="border-bottom:none;">
   <div class="section-header">
     <span class="section-num">— /</span>
@@ -379,7 +414,7 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
   </div>
   <p class="section-desc">Per completezza, quanto previsto per questa pagina ma non ancora popolato con dati verificati:</p>
   <div class="insight" style="border-color: var(--is-ink-3);">
-    <strong>Confronto europeo:</strong> serve estendere <code>scripts/fetch_eurostat.py</code> con le categorie COFOG GF02 (Difesa) e GF03 (Ordine pubblico e sicurezza) — stessa architettura già usata per l'istruzione (GF09) — più un confronto con il target NATO del 2% del PIL, che richiederebbe il report ufficiale NATO "Defence Expenditure of NATO Countries" (non raggiungibile dalla rete di questo ambiente: va caricato).
+    <strong>Confronto con il target NATO del 2% del PIL:</strong> richiede il report ufficiale NATO "Defence Expenditure of NATO Countries" — non raggiungibile dalla rete di questo ambiente, va caricato.
   </div>
   <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
     <strong>Personale per singola Forza/corpo:</strong> la sezione 02 mostra solo gli aggregati "Forze armate" e "Corpi di polizia" — una tabella più granulare del Conto Annuale RGS permetterebbe di scomporre in Esercito/Marina/Aeronautica/Carabinieri e Polizia di Stato/Guardia di Finanza/Polizia Penitenziaria separatamente.
@@ -625,6 +660,7 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
     border-radius: 2px; margin-bottom: 0.75rem;
   }
   .ita-spende .source-tag.static { background: var(--is-paper-3); color: var(--is-ink-3); }
+  .ita-spende .source-tag.live { background: var(--is-green-light); color: var(--is-green); }
   .ita-spende .source-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
 
   .pens-footer {
@@ -639,7 +675,114 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.js"></script>
 <script>
+
+// ── DATI STATICI PERIODICI (confronto europeo) ──────────────────────────────
+//
+// Il file assets/data/eurostat.json viene rigenerato periodicamente da una
+// GitHub Action (scripts/fetch_eurostat.py), che interroga l'API Eurostat dal
+// proprio ambiente e scrive un JSON datato e con fonte dichiarata. Questa
+// pagina legge quel file statico — non chiama mai Eurostat dal browser di chi
+// visita il sito. A differenza di istruzione/pensioni/sanità, per Difesa e
+// Ordine pubblico non esiste ancora un dato di riferimento incorporato: se il
+// file non contiene le chiavi "difesa"/"ordine_pubblico", questa sezione lo
+// segnala esplicitamente invece di mostrare numeri inventati.
+
+const DOP_CODE_TO_LABEL = {
+  IT: 'Italia', FR: 'Francia', AT: 'Austria', BE: 'Belgio',
+  FI: 'Finlandia', DK: 'Danimarca', SE: 'Svezia', PT: 'Portogallo',
+  DE: 'Germania', NL: 'Paesi Bassi', ES: 'Spagna', EL: 'Grecia',
+  IE: 'Irlanda'
+};
+
+let dopDifesaChartInstance, dopOrdinePubblicoChartInstance;
+
+function dopFetchWithTimeout(url, ms) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), ms);
+  return fetch(url, { signal: controller.signal }).finally(() => clearTimeout(timeout));
+}
+
+function dopRenderEuropaBarChart(canvasId, values) {
+  const ctx = document.getElementById(canvasId).getContext('2d');
+  const dati = Object.entries(values)
+    .map(([code, v]) => ({ p: DOP_CODE_TO_LABEL[code] || code, v: Number(v) }))
+    .filter(d => Number.isFinite(d.v))
+    .sort((a, b) => a.v - b.v);
+  return new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: dati.map(d => d.p),
+      datasets: [{
+        label: '% PIL',
+        data: dati.map(d => d.v),
+        backgroundColor: dati.map(d => d.p === 'Italia' ? '#c0392b' : '#2a78d6'),
+        borderRadius: 3
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x}% del PIL` } }
+      },
+      scales: {
+        x: { grid: { color: '#e0ddd4' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
+          title: { display: true, text: '% del PIL', font: { size: 10 }, color: '#7a7a7a' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#0d0d0d' } }
+      }
+    }
+  });
+}
+
+async function dopLoadEurostatData() {
+  const pending = document.getElementById('dopEuropaPending');
+  const content = document.getElementById('dopEuropaContent');
+  try {
+    const res = await dopFetchWithTimeout("{{ '/assets/data/eurostat.json' | relative_url }}", 8000);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const difesa = data.difesa;
+    const ordinePubblico = data.ordine_pubblico;
+    const haDifesa = difesa && Object.keys(difesa).length >= 5;
+    const haOrdinePubblico = ordinePubblico && Object.keys(ordinePubblico).length >= 5;
+
+    if (!haDifesa && !haOrdinePubblico) {
+      if (pending) pending.style.display = 'block';
+      if (content) content.style.display = 'none';
+      return;
+    }
+
+    const d = new Date(data.generated_at);
+    const dataFmt = d.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' });
+
+    if (haDifesa) {
+      dopDifesaChartInstance = dopRenderEuropaBarChart('dopEuropaDifesaChart', difesa);
+      const tag = document.getElementById('dopDifesaEuropaSourceTag');
+      if (tag) { tag.className = 'source-tag live'; tag.innerHTML = `<span class="source-dot"></span>Eurostat — aggiornato il ${dataFmt}`; }
+    } else {
+      const wrap = document.getElementById('dopEuropaDifesaChart')?.closest('.chart-wrap');
+      if (wrap) wrap.innerHTML = '<div class="chart-title">Spesa per Difesa (COFOG GF02) — % del PIL</div><p style="font-size:13px;color:var(--is-ink-3);">Dato non ancora disponibile.</p>';
+    }
+
+    if (haOrdinePubblico) {
+      dopOrdinePubblicoChartInstance = dopRenderEuropaBarChart('dopEuropaOrdinePubblicoChart', ordinePubblico);
+      const tag = document.getElementById('dopOrdinePubblicoEuropaSourceTag');
+      if (tag) { tag.className = 'source-tag live'; tag.innerHTML = `<span class="source-dot"></span>Eurostat — aggiornato il ${dataFmt}`; }
+    } else {
+      const wrap = document.getElementById('dopEuropaOrdinePubblicoChart')?.closest('.chart-wrap');
+      if (wrap) wrap.innerHTML = '<div class="chart-title">Spesa per Ordine pubblico e sicurezza (COFOG GF03) — % del PIL</div><p style="font-size:13px;color:var(--is-ink-3);">Dato non ancora disponibile.</p>';
+    }
+  } catch (e) {
+    console.warn('Dati Eurostat difesa/ordine pubblico non disponibili:', e.message);
+    if (pending) pending.style.display = 'block';
+    if (content) content.style.display = 'none';
+  }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
+  dopLoadEurostatData();
+
   // Menu mobile (hamburger) — stessa logica delle altre pagine del sito
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
