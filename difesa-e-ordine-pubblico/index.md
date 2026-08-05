@@ -47,10 +47,10 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
     <span class="section-num">01 /</span>
     <h2 class="section-title">Spesa per Missione e Programma</h2>
   </div>
-  <p class="section-desc">La spesa per difesa, ordine pubblico e soccorso pubblico non sta in un solo bilancio: il <strong>Ministero della Difesa</strong> copre le Forze Armate e l'Arma dei Carabinieri come corpo, il <strong>Ministero dell'Interno</strong> copre la Polizia di Stato, il Corpo Nazionale dei Vigili del Fuoco e un contributo aggiuntivo ai Carabinieri, e il <strong>Ministero dell'Economia e delle Finanze</strong> copre la Guardia di Finanza — oltre a una voce meno ovvia, i servizi di intelligence.</p>
+  <p class="section-desc">La spesa per difesa, ordine pubblico e soccorso pubblico non sta in un solo bilancio: il <strong>Ministero della Difesa</strong> copre le Forze Armate e l'Arma dei Carabinieri come corpo, il <strong>Ministero dell'Interno</strong> copre la Polizia di Stato, il Corpo Nazionale dei Vigili del Fuoco e un contributo aggiuntivo ai Carabinieri, il <strong>Ministero dell'Economia e delle Finanze</strong> copre la Guardia di Finanza e i servizi di intelligence, e il <strong>Ministero della Giustizia</strong> copre l'amministrazione penitenziaria (incl. Polizia Penitenziaria).</p>
 
   <div class="insight" style="margin-top:0; margin-bottom:1.5rem; border-color: var(--is-ink-3);">
-    <strong>Attenzione alla numerazione delle Missioni:</strong> ciascun ministero ha una propria numerazione interna delle Missioni, indipendente dagli altri — non è la stessa sequenza continuata, e lo stesso numero può significare cose diverse. Qui sotto vedrai la <strong>Missione 1</strong> della Difesa, le <strong>Missioni 3 e 4</strong> dell'Interno, e la <strong>Missione 5</strong> del MEF — che non ha nulla a che fare con la Missione 5 dell'Interno ("Immigrazione, accoglienza e garanzia dei diritti"), pur avendo lo stesso numero. Le Missioni 2 di Difesa e Interno esistono ma sono state escluse perché fuori tema (per la Difesa è "Sviluppo sostenibile e tutela del territorio", i Carabinieri forestali; per l'Interno è "Relazioni finanziarie con le autonomie territoriali", i trasferimenti a Comuni e Regioni). Non è un dato mancante: è stata una scelta editoriale.
+    <strong>Attenzione alla numerazione delle Missioni:</strong> ciascun ministero ha una propria numerazione interna delle Missioni, indipendente dagli altri — non è la stessa sequenza continuata, e lo stesso numero può significare cose diverse. Qui sotto vedrai la <strong>Missione 1</strong> della Difesa ("Difesa e sicurezza del territorio"), le <strong>Missioni 3 e 4</strong> dell'Interno, la <strong>Missione 5</strong> del MEF, e di nuovo una <strong>Missione 1</strong> per la Giustizia — questa volta chiamata semplicemente "Giustizia", che non ha nulla a che fare con la Missione 1 della Difesa nonostante il numero identico. La Missione 5 del MEF, a sua volta, non ha nulla a che fare con la Missione 5 dell'Interno ("Immigrazione, accoglienza e garanzia dei diritti"). Le Missioni 2 di Difesa e Interno, e le altre Missioni/Programmi di Giustizia non citati, esistono ma sono stati esclusi perché fuori tema (v. dettaglio più sotto). Non è un dato mancante: è stata una scelta editoriale.
   </div>
 
   <div class="cards-grid" style="margin-bottom:1.5rem;">
@@ -75,9 +75,14 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
       <div class="stat-card-sub">Guardia di Finanza + intelligence</div>
     </div>
     <div class="stat-card">
-      <div class="stat-card-label">Totale nei tre bilanci</div>
-      <div class="stat-card-val">44,60 mld €</div>
-      <div class="stat-card-sub">CP 2025, esclude Polizia Penitenziaria (v. limiti)</div>
+      <div class="stat-card-label">Amm. penitenziaria (Giustizia, Missione 1.1)</div>
+      <div class="stat-card-val">3,41 mld €</div>
+      <div class="stat-card-sub">incl. Polizia Penitenziaria</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-card-label">Totale nei quattro bilanci</div>
+      <div class="stat-card-val">48,01 mld €</div>
+      <div class="stat-card-sub">CP 2025 — Difesa, Interno, MEF, Giustizia</div>
     </div>
   </div>
 
@@ -253,8 +258,56 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
   <div class="insight">
     <strong>Il bilancio dei servizi segreti italiani sta, contabilmente, dentro "Ordine pubblico e sicurezza" del MEF, non dentro un bilancio dedicato all'intelligence.</strong> Il Programma 5.2 "Sicurezza democratica" — che copre il "sistema di informazione per la sicurezza della Repubblica" (AISE, AISI e il coordinamento del DIS) — vale 1,38 miliardi di euro, quasi tanto quanto la Guardia di Finanza (1,73 miliardi) nella stessa Missione. È una collocazione poco intuitiva ma spiegabile: il finanziamento dei servizi segreti passa storicamente dalla Presidenza del Consiglio tramite il MEF, non da un dicastero della sicurezza in senso stretto.
   </div>
+
+  <div style="overflow-x:auto; margin-top:2rem; margin-bottom:1.5rem;">
+    <table class="data-table">
+      <thead>
+        <tr>
+          <th>Programma (Ministero della Giustizia)</th>
+          <th class="num">CP 2025 (€)</th>
+          <th class="num">% Missione Giustizia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="ita">
+          <td>1.1 — Amministrazione penitenziaria <span style="font-size:11px;color:var(--is-ink-3);">(incl. Polizia Penitenziaria)</span></td>
+          <td class="num">3.409.272.363</td>
+          <td class="num">30,2%</td>
+        </tr>
+        <tr>
+          <td style="color:var(--is-ink-3);">1.2 — Giustizia civile e penale <span style="font-size:11px;">(fuori tema, non incluso nel totale)</span></td>
+          <td class="num" style="color:var(--is-ink-3);">5.577.543.595</td>
+          <td class="num" style="color:var(--is-ink-3);">49,5%</td>
+        </tr>
+        <tr>
+          <td style="color:var(--is-ink-3);">1.3 — Giustizia minorile e di comunità <span style="font-size:11px;">(fuori tema)</span></td>
+          <td class="num" style="color:var(--is-ink-3);">408.098.359</td>
+          <td class="num" style="color:var(--is-ink-3);">3,6%</td>
+        </tr>
+        <tr>
+          <td style="color:var(--is-ink-3);">1.4 — Servizi di gestione amministrativa attività giudiziaria <span style="font-size:11px;">(fuori tema)</span></td>
+          <td class="num" style="color:var(--is-ink-3);">1.579.939.737</td>
+          <td class="num" style="color:var(--is-ink-3);">14,0%</td>
+        </tr>
+        <tr>
+          <td style="color:var(--is-ink-3);">1.5 — Transizione digitale e analisi statistica <span style="font-size:11px;">(fuori tema)</span></td>
+          <td class="num" style="color:var(--is-ink-3);">294.558.596</td>
+          <td class="num" style="color:var(--is-ink-3);">2,6%</td>
+        </tr>
+        <tr>
+          <td><strong>Totale Missione 1 — Giustizia</strong></td>
+          <td class="num"><strong>11.269.412.650</strong></td>
+          <td class="num"><strong>100%</strong></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="insight">
+    <strong>"Amministrazione penitenziaria" non è solo Polizia Penitenziaria:</strong> il Programma 1.1 (3,41 miliardi €, 30,2% del bilancio Giustizia) copre l'intera gestione degli istituti penitenziari — sicurezza, ma anche trattamento dei detenuti, programmi di lavoro e reinserimento, edilizia carceraria — non solo il costo del corpo di polizia in senso stretto. Isolare la sola componente "Polizia Penitenziaria" richiederebbe sommare le quote di spesa del personale di polizia penitenziaria disseminate tra le singole azioni del programma (un dato presente nel documento, ma frammentato riga per riga) — non fatto in questa sessione per non rischiare errori di somma.
+  </div>
   <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
-    <strong>Nota metodologica e limite dichiarato:</strong> questa pagina copre Ministero della Difesa, Ministero dell'Interno e Ministero dell'Economia e delle Finanze. Resta fuori un solo corpo con funzioni di ordine pubblico: la <strong>Polizia Penitenziaria</strong> (Ministero della Giustizia), non ancora coperta da una Nota Integrativa caricata in questa sessione. Il totale di 44,60 miliardi € qui presentato è quindi ancora un sottoinsieme, non il totale della funzione COFOG "Difesa e ordine pubblico" nella sua interezza (il riferimento statico usato nella <a href="{{ '/spesa-pubblica/' | relative_url }}">panoramica generale</a>, circa 55 miliardi, include probabilmente anche la Polizia Penitenziaria e altre voci minori).
+    <strong>Nota metodologica e limite dichiarato:</strong> questa pagina copre ora quattro ministeri — Difesa, Interno, Economia e Finanze, Giustizia — cioè tutti i grandi corpi con funzioni di difesa, ordine pubblico e soccorso pubblico noti in Italia. Il totale di 48,01 miliardi € qui presentato resta comunque un aggregato costruito bilancio per bilancio, non il dato COFOG "Difesa e ordine pubblico" ufficiale nella sua interezza (il riferimento statico usato nella <a href="{{ '/spesa-pubblica/' | relative_url }}">panoramica generale</a>, circa 55 miliardi, può includere voci minori o una diversa attribuzione contabile di alcune spese qui classificate altrove).
   </div>
 </section>
 
@@ -314,7 +367,7 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
   </div>
 
   <div class="insight">
-    <strong>Il costo del lavoro dei "Corpi di polizia" (19,17 mld €) è più del doppio dell'intera Missione "Ordine pubblico" del Ministero dell'Interno (9,0 mld €, sezione 01).</strong> Non è un errore: la categoria "Corpi di polizia" del Conto Annuale RGS è più ampia di quanto coperto dal solo bilancio dell'Interno — include verosimilmente anche il personale della Guardia di Finanza e della Polizia Penitenziaria, i due corpi segnalati come mancanti nella sezione 01. È un promemoria concreto di quanto la spesa "sicurezza" sia distribuita su più ministeri: guardare un solo bilancio sottostima sistematicamente il costo complessivo delle forze dell'ordine.
+    <strong>Il costo del lavoro dei "Corpi di polizia" (19,17 mld €) è più del doppio dell'intera Missione "Ordine pubblico" del Ministero dell'Interno (9,0 mld €, sezione 01).</strong> Non è un errore: la categoria "Corpi di polizia" del Conto Annuale RGS è più ampia di quanto coperto dal solo bilancio dell'Interno — include verosimilmente anche il personale della Guardia di Finanza e della Polizia Penitenziaria, coperti nella sezione 01 solo con il bilancio complessivo delle rispettive amministrazioni (MEF e Giustizia), non con un dato di personale isolato. È un promemoria concreto di quanto la spesa "sicurezza" sia distribuita su più ministeri: guardare un solo bilancio sottostima sistematicamente il costo complessivo delle forze dell'ordine.
   </div>
 </section>
 
@@ -328,8 +381,11 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
   <div class="insight" style="border-color: var(--is-ink-3);">
     <strong>Confronto europeo:</strong> serve estendere <code>scripts/fetch_eurostat.py</code> con le categorie COFOG GF02 (Difesa) e GF03 (Ordine pubblico e sicurezza) — stessa architettura già usata per l'istruzione (GF09) — più un confronto con il target NATO del 2% del PIL, che richiederebbe il report ufficiale NATO "Defence Expenditure of NATO Countries" (non raggiungibile dalla rete di questo ambiente: va caricato).
   </div>
-  <div class="insight" style="border-color: var(--is-ink-3);">
-    <strong>Polizia Penitenziaria:</strong> serve la Nota Integrativa del Ministero della Giustizia per completare il quadro dei corpi con funzioni di ordine pubblico.
+  <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
+    <strong>Personale per singola Forza/corpo:</strong> la sezione 02 mostra solo gli aggregati "Forze armate" e "Corpi di polizia" — una tabella più granulare del Conto Annuale RGS permetterebbe di scomporre in Esercito/Marina/Aeronautica/Carabinieri e Polizia di Stato/Guardia di Finanza/Polizia Penitenziaria separatamente.
+  </div>
+  <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
+    <strong>Costo isolato della sola Polizia Penitenziaria:</strong> il Programma 1.1 della Giustizia (3,41 mld €) copre l'intera amministrazione penitenziaria, non solo il corpo di polizia — isolare quella componente richiede una somma riga per riga delle quote di personale disseminate nelle singole azioni del programma, non ancora fatta.
   </div>
   <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
     <strong>Personale per singola Forza/corpo:</strong> la sezione 02 mostra solo gli aggregati "Forze armate" e "Corpi di polizia" — una tabella più granulare del Conto Annuale RGS permetterebbe di scomporre in Esercito/Marina/Aeronautica/Carabinieri e Polizia di Stato/Guardia di Finanza separatamente.
@@ -342,7 +398,7 @@ description: "Approfondimento sulla spesa italiana per difesa, forze dell'ordine
 
 <footer class="pens-footer">
   <div style="max-width:980px; margin:0 auto;">
-    Fonti: Ministero della Difesa — Nota Integrativa al disegno di Legge di Bilancio 2025-2027; Ministero dell'Interno — Nota Integrativa al disegno di Legge di Bilancio 2025-2027; Ministero dell'Economia e delle Finanze — Nota Integrativa a Legge di Bilancio 2025-2027; RGS — Conto Annuale 2024.<br>
+    Fonti: Ministero della Difesa — Nota Integrativa al disegno di Legge di Bilancio 2025-2027; Ministero dell'Interno — Nota Integrativa al disegno di Legge di Bilancio 2025-2027; Ministero dell'Economia e delle Finanze — Nota Integrativa a Legge di Bilancio 2025-2027; Ministero della Giustizia — Nota Integrativa alla Legge di Bilancio 2025-2027; RGS — Conto Annuale 2024.<br>
     Dati raccolti ed elaborati manualmente al momento; nessuna automazione di aggiornamento è ancora attiva per questa pagina.
   </div>
 </footer>
