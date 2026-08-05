@@ -35,6 +35,7 @@ description: "Bilanci e flussi della finanza pubblica italiana ed europea, con g
         <a href="{{ '/pensioni/' | relative_url }}">Pensioni — Approfondimento →</a>
         <a href="{{ '/sanita/' | relative_url }}">Sanità — Approfondimento →</a>
         <a href="{{ '/pubblica-amministrazione/' | relative_url }}">PA — Approfondimento →</a>
+        <a href="{{ '/istruzione/' | relative_url }}">Istruzione — Approfondimento →</a>
       </div>
     </div>
     <a href="#confronto">Europa</a>
