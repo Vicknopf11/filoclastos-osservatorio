@@ -12,9 +12,12 @@ description: "Approfondimento sulla scuola statale italiana: spesa per Missione 
   scompone il bilancio del Ministero dell'Istruzione e del Merito (MIM), e quante
   sono le persone coinvolte (alunni, classi, organico docente) e come si
   distribuiscono sul territorio.
-  Alcune dimensioni previste per questa pagina (confronto europeo, spesa per
-  regione) sono ancora in fase di raccolta dati e sono segnalate esplicitamente
-  più sotto, senza valori inventati nel frattempo.
+  Il confronto con il resto d'Europa sulla spesa per istruzione (Eurostat) è
+  incluso più sotto; il confronto OCSE sulla spesa per studente resta ancora da
+  fare, ed è segnalato esplicitamente al termine della pagina, senza valori
+  inventati nel frattempo. La scuola statale è competenza dello Stato centrale
+  in Italia, quindi non esiste una voce di "spesa regionale per istruzione" a
+  sé stante: questa dimensione non è prevista per la pagina.
   Metodo descritto per esteso nella <a href="{{ '/metodologia/' | relative_url }}">nota metodologica</a>.
 </p>
 </div>
@@ -34,11 +37,12 @@ description: "Approfondimento sulla scuola statale italiana: spesa per Missione 
         <a href="#ist-alunni-classi">Alunni e classi</a>
         <a href="#ist-organico">Organico e sostegno</a>
         <a href="#ist-indirizzi">Indirizzi II grado</a>
+        <a href="#ist-europa">Confronto europeo</a>
       </div>
     </div>
     <a href="{{ '/spesa-pubblica/' | relative_url }}">← Panoramica generale</a>
   </div>
-  <div class="nav-tag">Dati fermi al 2024/2025</div>
+  <div class="nav-tag" id="dataStatus">⏺ carico dati…</div>
 </nav>
 
 <main class="ita-spende__main">
@@ -303,18 +307,27 @@ description: "Approfondimento sulla scuola statale italiana: spesa per Missione 
   </div>
 </section>
 
-<!-- SEZIONI ANCORA DA COMPLETARE -->
-<section class="section" id="ist-limiti" style="border-bottom:none;">
+<!-- SEZIONE 5: CONFRONTO EUROPEO -->
+<section class="section" id="ist-europa">
   <div class="section-header">
-    <span class="section-num">— /</span>
-    <h2 class="section-title">Dimensioni ancora da completare</h2>
+    <span class="section-num">05 /</span>
+    <h2 class="section-title">Confronto europeo — spesa per istruzione</h2>
   </div>
-  <p class="section-desc">Per completezza, le due dimensioni previste per questa pagina ma non ancora popolate con dati verificati:</p>
-  <div class="insight" style="border-color: var(--is-ink-3);">
-    <strong>Confronto europeo:</strong> serve un confronto Eurostat GF09 (spesa istruzione in % PIL, per paese e serie storica Italia) più OCSE "Education at a Glance" (spesa per studente comparata a livello internazionale), costruito con la stessa architettura già usata per la pagina <a href="{{ '/pubblica-amministrazione/' | relative_url }}">Pubblica Amministrazione</a> — non ancora realizzato per l'istruzione in modo dedicato (il dato che compare nella <a href="{{ '/spesa-pubblica/' | relative_url }}#confronto">panoramica generale</a> è un riferimento statico 2023, non aggiornato via Eurostat).
+  <p class="section-desc">La categoria COFOG <strong>GF09 "Istruzione"</strong> è l'indicatore Eurostat comparabile tra paesi per la spesa pubblica in istruzione, in percentuale del PIL. Questo grafico legge lo stesso file <code>eurostat.json</code> aggiornato periodicamente da GitHub Actions e già usato nella <a href="{{ '/spesa-pubblica/' | relative_url }}#confronto">panoramica generale</a> — non viene mai interrogato Eurostat dal browser di chi visita il sito.</p>
+
+  <div class="chart-wrap" style="margin-bottom:1.5rem;">
+    <div class="chart-title">Spesa pubblica per istruzione (COFOG GF09) — % del PIL</div>
+    <span class="source-tag static" id="istEuropaSourceTag"><span class="source-dot"></span>dati statici Eurostat 2023</span>
+    <div class="canvas-wrap" style="height:340px;">
+      <canvas id="istEuropaChart" role="img" aria-label="Spesa istruzione percentuale PIL 2023: Irlanda 2,7%, Germania 4,5%, Grecia 4,0%, Spagna 4,2%, Portogallo 4,3%, Italia 3,9%, Austria 4,9%, Francia 5,0%, Paesi Bassi 5,1%, Danimarca 5,6%, Belgio 6,3%, Finlandia 6,1%, Svezia 7,3%.">Confronto europeo spesa istruzione, 2023.</canvas>
+    </div>
+  </div>
+
+  <div class="insight">
+    <strong>L'Italia è tra i paesi che spendono di meno in istruzione</strong> in rapporto al PIL (3,9% nel 2023) — sotto Germania (4,5%), Francia (5,0%) e ben sotto Svezia (7,3%) e Finlandia (6,1%), i due paesi che spendono di più tra quelli qui confrontati. Solo l'Irlanda (2,7%) spende relativamente meno. Va letto insieme alla sezione 01: una quota consistente della spesa italiana per istruzione (92,1% della Missione 1 MIM) è già assorbita da primo e secondo ciclo — cioè da personale e funzionamento delle scuole — lasciando margini più stretti per investimenti aggiuntivi rispetto a paesi con una spesa complessiva più alta.
   </div>
   <div class="insight" style="margin-top:1rem; border-color: var(--is-ink-3);">
-    <strong>Spesa per regione:</strong> la scuola statale è competenza dello Stato centrale in Italia (a differenza della sanità), quindi non esiste una voce di "spesa regionale per istruzione" a sé stante nei bilanci regionali. Un proxy possibile è il costo del personale scolastico per regione dal Conto Annuale RGS (già usato per la pagina Pubblica Amministrazione) — non ancora costruito per questa pagina.
+    <strong>Limiti dichiarati:</strong> il file <code>eurostat.json</code> raccoglie oggi un solo anno di riferimento (2023) per tutte le categorie COFOG, non ancora una serie storica — a differenza della pagina <a href="{{ '/pubblica-amministrazione/' | relative_url }}">Pubblica Amministrazione</a> dove la serie storica GF01 per l'Italia è stata raccolta manualmente. Una serie storica GF09 per l'Italia richiederebbe estendere <code>scripts/fetch_eurostat.py</code> a più anni. Il confronto con l'OCSE "Education at a Glance" (spesa per studente comparata a livello internazionale, PPP) resta inoltre non implementato: non è disponibile una fonte già verificata in questa sessione — va aggiunta caricando il report OCSE pertinente.
   </div>
 </section>
 
@@ -554,7 +567,18 @@ description: "Approfondimento sulla scuola statale italiana: spesa per Missione 
     border-radius: 2px; margin-bottom: 0.75rem;
   }
   .ita-spende .source-tag.static { background: var(--is-paper-3); color: var(--is-ink-3); }
+  .ita-spende .source-tag.live { background: var(--is-green-light); color: var(--is-green); }
   .ita-spende .source-dot { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+
+  .ita-spende #dataStatus {
+    font-family: var(--is-font-mono);
+    font-size: 11px; color: #777;
+    transition: color 0.3s;
+    cursor: default;
+  }
+  .ita-spende #dataStatus.live { color: #5ec98a; }
+  .ita-spende #dataStatus.fallback { color: #d9a441; }
+  .ita-spende #dataStatus.error { color: #e07a6b; }
 
   .pens-footer {
     text-align: center;
@@ -568,7 +592,113 @@ description: "Approfondimento sulla scuola statale italiana: spesa per Missione 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.js"></script>
 <script>
+
+// ── DATI STATICI PERIODICI (confronto europeo) ──────────────────────────────
+//
+// Il file assets/data/eurostat.json viene rigenerato periodicamente da una
+// GitHub Action (scripts/fetch_eurostat.py), che interroga l'API Eurostat dal
+// proprio ambiente e scrive un JSON datato e con fonte dichiarata. Questa
+// pagina legge quel file statico — non chiama mai Eurostat dal browser di chi
+// visita il sito. Se il file non è raggiungibile, restano visibili i valori
+// di riferimento incorporati qui sotto (anno 2023).
+
+const IST_CODE_TO_LABEL = {
+  IT: 'Italia', FR: 'Francia', AT: 'Austria', BE: 'Belgio',
+  FI: 'Finlandia', DK: 'Danimarca', SE: 'Svezia', PT: 'Portogallo',
+  DE: 'Germania', NL: 'Paesi Bassi', ES: 'Spagna', EL: 'Grecia',
+  IE: 'Irlanda'
+};
+
+const istEuropaData = {
+  paesi: ['Irlanda','Grecia','Spagna','Portogallo','Italia','Germania','Austria','Francia','Paesi Bassi','Danimarca','Finlandia','Belgio','Svezia'],
+  valori: [2.7,4.0,4.2,4.3,3.9,4.5,4.9,5.0,5.1,5.6,6.1,6.3,7.3]
+};
+
+let istEuropaChartInstance;
+
+function istFetchWithTimeout(url, ms) {
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), ms);
+  return fetch(url, { signal: controller.signal }).finally(() => clearTimeout(timeout));
+}
+
+function istSetSourceTag(isLive, extra) {
+  const el = document.getElementById('istEuropaSourceTag');
+  if (!el) return;
+  el.className = 'source-tag ' + (isLive ? 'live' : 'static');
+  el.innerHTML = '<span class="source-dot"></span>' +
+    (isLive ? `dati ${extra || 'live Eurostat'}` : `dati statici ${extra || 'Eurostat 2023'}`);
+}
+
+function istRenderEuropaChart() {
+  const ctx = document.getElementById('istEuropaChart').getContext('2d');
+  const dati = istEuropaData.paesi.map((p, i) => ({ p, v: istEuropaData.valori[i] })).sort((a,b) => a.v - b.v);
+  if (istEuropaChartInstance) istEuropaChartInstance.destroy();
+  istEuropaChartInstance = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: dati.map(d => d.p),
+      datasets: [{
+        label: '% PIL',
+        data: dati.map(d => d.v),
+        backgroundColor: dati.map(d => d.p === 'Italia' ? '#c0392b' : '#2a78d6'),
+        borderRadius: 3
+      }]
+    },
+    options: {
+      indexAxis: 'y',
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: ctx => ` ${ctx.parsed.x}% del PIL` } }
+      },
+      scales: {
+        x: { grid: { color: '#e0ddd4' }, ticks: { font: { size: 11 }, color: '#7a7a7a', callback: v => v + '%' },
+          title: { display: true, text: '% del PIL', font: { size: 10 }, color: '#7a7a7a' } },
+        y: { grid: { display: false }, ticks: { font: { size: 11 }, color: '#0d0d0d' } }
+      }
+    }
+  });
+}
+
+async function istLoadEurostatData() {
+  try {
+    const res = await istFetchWithTimeout("{{ '/assets/data/eurostat.json' | relative_url }}", 8000);
+    if (!res.ok) throw new Error('HTTP ' + res.status);
+    const data = await res.json();
+    const values = data.istruzione;
+    let aggiornato = false;
+    if (values) {
+      istEuropaData.paesi.forEach((label, i) => {
+        const code = Object.keys(IST_CODE_TO_LABEL).find(c => IST_CODE_TO_LABEL[c] === label);
+        if (code && values[code] !== undefined) {
+          istEuropaData.valori[i] = Number(values[code]);
+          aggiornato = true;
+        }
+      });
+    }
+    istRenderEuropaChart();
+    const d = new Date(data.generated_at);
+    const dataFmt = d.toLocaleDateString('it-IT', { year: 'numeric', month: 'long', day: 'numeric' });
+    if (aggiornato) {
+      const status = document.getElementById('dataStatus');
+      if (status) { status.className = 'live'; status.textContent = `⏺ dati aggiornati il ${dataFmt}`; }
+      istSetSourceTag(true, `Eurostat — aggiornato il ${dataFmt}`);
+    } else {
+      const status = document.getElementById('dataStatus');
+      if (status) { status.className = 'fallback'; status.textContent = '⏺ dati di riferimento 2023 (file statico vuoto o incompleto)'; }
+    }
+  } catch (e) {
+    console.warn('Dati statici non disponibili, uso i valori di riferimento incorporati:', e.message);
+    istRenderEuropaChart();
+    const status = document.getElementById('dataStatus');
+    if (status) { status.className = 'error'; status.textContent = '⏺ dati di riferimento 2023 — file non raggiungibile'; }
+  }
+}
+
 window.addEventListener('DOMContentLoaded', () => {
+  istLoadEurostatData();
+
   // Menu mobile (hamburger) — stessa logica delle altre pagine del sito
   const navToggle = document.getElementById('navToggle');
   const navLinks = document.getElementById('navLinks');
